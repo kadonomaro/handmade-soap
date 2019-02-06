@@ -11,9 +11,66 @@
     <title>Мыло ручной работы</title>
 </head>
 <body class="page">
+
+    <div class="all-wrapper">
+        <header class="header">
+
+        </header>
+
+        <main class="main">
+            <div class="main-slider">
+                <div class="main-slider__inner">
+
+                    <div class="main-slider__slide"></div>
+                    <div class="main-slider__slide"></div>
+                    <div class="main-slider__slide"></div>
+                    <div class="main-slider__slide"></div>
+                    <div class="main-slider__slide"></div>
+                    <div class="main-slider__slide"></div>
+                    <div class="main-slider__slide"></div>
+                </div>
+
+                <button class="main-slider__next">next</button>
+                <button class="main-slider__prev">prev</button>
+                
+            </div><!--main-slider-->
+        </main>
+
+        
+    </div><!--all-wrapper-->
     
     <script src="plugins/jquery-3.3.1.min.js"></script>
     <script src="plugins/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.main-slider__inner').slick({
+                infinite: true,
+                arrows: false,
+                centerMode: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+
+            });
+            // $('.main-slider__next').slick('slickNext');
+            // $('.main-slider__prev').slick('slickPrev');
+            $(".main-slider__next").click(function(e) { 
+                $(".main-slider__inner").slick('slickNext');
+            });
+            $(".main-slider__prev").click(function(e) { 
+                $(".main-slider__inner").slick('slickPrev');
+            });
+
+            $('main-slider__inner').on('init', function() {
+                $('.slick-center').addClass('main-slider__slide_active');
+            });
+            $('.main-slider__inner').on('afterChange', function(event, slick, currentSlide, nextSlide){
+                $('.slick-active').removeClass('main-slider__slide_active');
+                $('.slick-center').addClass('main-slider__slide_active');        
+            });
+
+
+            });
+    </script>
     <script src="js/main.js"></script>
 </body>
 </html>
