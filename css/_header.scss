@@ -1,0 +1,82 @@
+.header {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin-bottom: 20px;
+    font-family: $font-cursive;
+    font-size: 32px;
+
+    &__background {
+        background: linear-gradient(235deg, $color-sea-green, $color-sea-blue);
+        background-size: 300%;
+        animation: background 20s ease infinite;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 50% 100%, 0 90%);
+    }
+    &__background-bubble {
+        background: 
+                    url('../images/bubbles/bubble-1.png'),
+                    url('../images/bubbles/bubble-2.png'),
+                    url('../images/bubbles/bubble-3.png'),
+                    url('../images/bubbles/bubble-4.png'),
+                    url('../images/bubbles/bubble-1.png'),
+                    url('../images/bubbles/bubble-2.png'),
+                    url('../images/bubbles/bubble-3.png'),
+                    url('../images/bubbles/bubble-4.png'),
+                    url('../images/bubbles/bubble-1.png'),
+                    url('../images/bubbles/bubble-2.png'),
+                    url('../images/bubbles/bubble-3.png'),
+                    url('../images/bubbles/bubble-1.png'),
+                    url('../images/bubbles/bubble-3.png');
+        background-repeat: no-repeat;
+        background-position: 
+                            top 10% left 7%,
+                            bottom 35% right 27%,
+                            bottom 45% left 30%,
+                            bottom 35% left 40%,
+                            bottom 10% left 35%,
+                            top 5% right 22%,
+                            bottom 45% right 16%,
+                            bottom 25% left 12%,
+                            top 35% left 17%,
+                            top 25% right 5%,
+                            top 25% right 30%,
+                            top 10% left 40%,
+                            bottom 45% left -7%;
+    }
+    &__title {
+        color: $color-sea-green;
+        text-shadow: 0 0 3px #000000;
+        animation: title-color 20s ease infinite;
+    }
+
+}
+
+
+@keyframes background { 
+    0% {
+        background-position:0% 100%;
+    }
+    50% {
+        background-position:100% 0%;
+    }
+    100% {
+        background-position:0% 100%;
+    }
+}
+
+@keyframes title-color {
+    0% {
+        color: $color-sea-green;
+    }
+    50% {
+        color: $color-sea-blue;
+    }
+    100% {
+        color: $color-sea-green;
+    }
+}
+
+
