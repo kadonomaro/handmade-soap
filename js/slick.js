@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+    //init sliders
     $('.main-slider-base').slick({
         infinite: true,
         arrows: false,
