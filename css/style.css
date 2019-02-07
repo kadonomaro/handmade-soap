@@ -64,7 +64,7 @@ img {
 .header__background-bubble {
   background: url("../images/bubbles/bubble-1.png"), url("../images/bubbles/bubble-2.png"), url("../images/bubbles/bubble-3.png"), url("../images/bubbles/bubble-4.png"), url("../images/bubbles/bubble-1.png"), url("../images/bubbles/bubble-2.png"), url("../images/bubbles/bubble-3.png"), url("../images/bubbles/bubble-4.png"), url("../images/bubbles/bubble-1.png"), url("../images/bubbles/bubble-2.png"), url("../images/bubbles/bubble-3.png"), url("../images/bubbles/bubble-1.png"), url("../images/bubbles/bubble-3.png"), url("../images/bubbles/bubble-1.png");
   background-repeat: no-repeat;
-  background-position: top 10% left 7%, bottom 35% right 27%, bottom 45% left 30%, bottom 35% left 40%, bottom 10% left 35%, top 5% right 22%, bottom 45% right 16%, bottom 25% left 12%, top 35% left 17%, top 25% right 5%, top 25% right 30%, top 10% left 40%, bottom 45% left -7%, bottom 0% right 25%;
+  background-position: top 10% left 7%, top 65% right 27%, top 55% left 30%, top 65% left 40%, top 90% left 35%, top 5% right 22%, top 55% right 16%, top 75% left 12%, top 35% left 17%, top 25% right 5%, top 25% right 30%, top 10% left 40%, top 55% left -7%, top 100% right 25%;
 }
 
 .header__background-bubble::before {
@@ -139,12 +139,19 @@ img {
   .header__background-bubble {
     background: url("../images/bubbles/min/bubble-1-min.png"), url("../images/bubbles/min/bubble-2-min.png"), url("../images/bubbles/min/bubble-3-min.png"), url("../images/bubbles/min/bubble-4-min.png"), url("../images/bubbles/min/bubble-1-min.png"), url("../images/bubbles/min/bubble-2-min.png"), url("../images/bubbles/min/bubble-3-min.png"), url("../images/bubbles/min/bubble-4-min.png"), url("../images/bubbles/min/bubble-1-min.png"), url("../images/bubbles/min/bubble-2-min.png"), url("../images/bubbles/min/bubble-3-min.png"), url("../images/bubbles/min/bubble-1-min.png"), url("../images/bubbles/min/bubble-3-min.png"), url("../images/bubbles/min/bubble-1-min.png");
     background-repeat: no-repeat;
-    background-position: top 10% left 7%, bottom 35% right 27%, bottom 45% left 30%, bottom 35% left 40%, bottom 10% left 35%, top 5% right 22%, bottom 45% right 16%, bottom 25% left 12%, top 35% left 17%, top 25% right 5%, top 25% right 30%, top 10% left 40%, bottom 45% left -7%, bottom -5% right 25%;
+    background-position: top 10% left 7%, top 65% right 27%, top 55% left 30%, top 65% left 40%, top 90% left 35%, top 5% right 22%, top 55% right 16%, top 75% left 12%, top 35% left 17%, top 25% right 5%, top 25% right 30%, top 10% left 40%, top 55% left -7%, top 100% right 25%;
   }
 }
 
 .main {
+  position: relative;
   min-height: 100vh;
+}
+
+.main__background {
+  background: url("../images/background/main-background.jpg") no-repeat;
+  background-size: cover;
+  opacity: 0.5;
 }
 
 .main-slider {
@@ -153,16 +160,32 @@ img {
 }
 
 .main-slider__slide {
+  position: relative;
   width: 80px;
-  height: 120px;
+  height: 250px;
   margin: 0 10px;
-  background-color: #f60;
+  border-radius: 5px;
   -webkit-transform: scale(0.7);
           transform: scale(0.7);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  -webkit-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3);
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
+  overflow: hidden;
+}
+
+.main-slider__slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("../images/background/water-bubbles.jpg");
+  background-size: cover;
+  opacity: 0.7;
 }
 
 .main-slider__slide_active {
@@ -175,6 +198,10 @@ img {
 .main-slider__next, .main-slider__prev {
   position: absolute;
   top: 50%;
+  width: 50px;
+  height: 50px;
+  border: 0;
+  border-radius: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
