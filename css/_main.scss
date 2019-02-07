@@ -1,22 +1,45 @@
 .main {
     position: relative;
     min-height: 100vh; //delete
+    color: $color-text;
     &__background {
         background: url('../images/background/main-background.jpg') no-repeat;
         background-size: cover;
         opacity: 0.5;
+    }
+    &__title {
+        position: relative;
+        margin: 0 10px 60px;
+        font-family: $font-cursive;
+        font-size: 32px;
+        text-align: center;
+        color: #eaeaea;
+        text-shadow: 0 0 5px #000000, 0 0 5px #000000;
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            top: -50%;
+            left: 50%;
+            width: 242px;
+            height: 90px;
+            background: url('../images/background/title-decal.png') no-repeat;
+            transform: translateX(-50%);
+            opacity: 0.7;
+            filter: hue-rotate(235deg);
+        }
     }
 }
 
 
 .main-slider {
     position: relative;
-    margin-bottom: 20px;
-    
+    margin-bottom: 40px;
+
     &__slide {
         position: relative;
-        width: 80px;
-        height: 250px;
+        min-width: 80px;
+        min-height: 250px;
         margin: 0 10px;
         border-radius: 5px;
         transform: scale(0.7);
@@ -27,15 +50,12 @@
         &::before {
             content: '';
             position: absolute;
-            top: 0;
-            bottom: 0;
+            top: -10px;
+            bottom: -10px;
             left: 0;
             right: 0;
-            background-image: url('../images/background/water-bubbles.jpg');
-            background-size: cover;
-            opacity: 0.7;
-
-
+            background: linear-gradient(45deg, rgba(183,222,237,0.5) 0%,rgba(33,180,226,0.5) 35%,rgba(33,180,226,0.5) 41%,rgba(113,206,239,0.5) 61%,rgba(183,222,237,0.5) 100%); 
+            filter: blur(3px);
         }
     }
     &__slide_active {
@@ -49,7 +69,14 @@
         height: 50px;
         border: 0;
         border-radius: 50%;
+        background: url('../images/bubbles/min/bubble-2-min.png');
         transform: translateY(-50%);
+        transition: box-shadow 0.3s;
+        cursor: pointer;
+        filter: hue-rotate(235deg);
+        &:hover {
+            box-shadow: 0 0 5px 3px rgba($color: #000000, $alpha: 0.2);
+        }
     }
     &__next {
         right: 30%;
@@ -57,5 +84,8 @@
     }
     &__prev {
         left: 30%;
+    }
+    &__img {
+        margin: 0 auto;
     }
 }
