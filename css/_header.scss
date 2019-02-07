@@ -4,17 +4,13 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    margin-bottom: 40px;
     font-family: $font-cursive;
-    font-size: 32px;
     text-align: center;
-
+    overflow: hidden;
     &__background {
         background: linear-gradient(235deg, $color-sea-green, $color-sea-blue);
         background-size: 300%;
         animation: background 20s ease infinite;
-        // clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 50% 100%, 0 90%);
-
     }
     &__background-bubble {
         background: 
@@ -48,7 +44,6 @@
                             top 10% left 40%,
                             top 55% left -7%,
                             top 100% right 25%;
-        
         &::before {
             content: '';
             position: absolute;
@@ -56,7 +51,7 @@
             left: 0;
             right: 0;
             height: 90px;
-            background: url('../images/background/bg-bottom.png') no-repeat;
+            background: url('../images/background/bg-bottom-new.png') no-repeat;
             background-size: contain;
             background-position: bottom;
         }
@@ -64,10 +59,57 @@
     &__title {
         margin: 10px;
         color: $color-sea-green;
+        font-size: 64px;
         text-shadow: 0 0 3px #000000;
         animation: title-color 20s ease infinite;
     }
 
+}
+
+
+.header-nav {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    min-width: 200px;
+    height: 95%;
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 3px rgba($color: #000000, $alpha: 0.3);
+    transition: transform 0.5s;
+    overflow: hidden;
+    &__list {
+        overflow: hidden;
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            top: -5px;
+            bottom: -5px;
+            left: -5px;
+            right: -5px;
+            background: linear-gradient(135deg, rgba(235,241,246,0.7) 0%,rgba(235,241,246,0.7) 1%,rgba(0,0,0,0.7) 50%,rgba(0,0,0,0.7) 52%,rgba(213,235,251,0.7) 100%);
+            filter: blur(3px);
+        }
+    }
+    &__item {
+        list-style: none;
+    }
+    &__link {
+        display: block;
+        padding: 8px 16px;
+        color: #ffffff;
+        text-decoration: none;
+    }
+    &__toggle {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateX(100%);
+    }
+}
+.header-nav_hidden {
+    transform: translateX(-100%);
 }
 
 

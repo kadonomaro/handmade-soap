@@ -48,10 +48,9 @@ img {
       -ms-flex-align: center;
           align-items: center;
   min-height: 100vh;
-  margin-bottom: 40px;
   font-family: "Lobster", cursive;
-  font-size: 32px;
   text-align: center;
+  overflow: hidden;
 }
 
 .header__background {
@@ -74,7 +73,7 @@ img {
   left: 0;
   right: 0;
   height: 90px;
-  background: url("../images/background/bg-bottom.png") no-repeat;
+  background: url("../images/background/bg-bottom-new.png") no-repeat;
   background-size: contain;
   background-position: bottom;
 }
@@ -82,9 +81,68 @@ img {
 .header__title {
   margin: 10px;
   color: #4ecead;
+  font-size: 64px;
   text-shadow: 0 0 3px #000000;
   -webkit-animation: title-color 20s ease infinite;
           animation: title-color 20s ease infinite;
+}
+
+.header-nav {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  min-width: 200px;
+  height: 95%;
+  font-size: 20px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.3);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  overflow: hidden;
+}
+
+.header-nav__list {
+  overflow: hidden;
+}
+
+.header-nav__list::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: -5px;
+  bottom: -5px;
+  left: -5px;
+  right: -5px;
+  background: linear-gradient(135deg, rgba(235, 241, 246, 0.7) 0%, rgba(235, 241, 246, 0.7) 1%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.7) 52%, rgba(213, 235, 251, 0.7) 100%);
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+}
+
+.header-nav__item {
+  list-style: none;
+}
+
+.header-nav__link {
+  display: block;
+  padding: 8px 16px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.header-nav__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.header-nav_hidden {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 
 @-webkit-keyframes background {
@@ -157,7 +215,7 @@ img {
 }
 
 .main__background {
-  background: url("../images/background/main-background.jpg") no-repeat;
+  background: url("../images/background/main-background-new.jpg") no-repeat;
   background-size: cover;
   opacity: 0.5;
 }

@@ -2,8 +2,6 @@ window.addEventListener('load', function () {
     let bubbleBG = document.querySelector('.header__background-bubble');
     let bubbleBGCurrentStyles = window.getComputedStyle(bubbleBG, null).getPropertyValue('background-position-y').replace(/%/g, '').split(', ');
     
-
-    
     window.addEventListener('scroll', function () {
         bubbleBG.style.backgroundPositionY = `${+ bubbleBGCurrentStyles[0] + (window.pageYOffset / 7)}%, 
                                             ${+ bubbleBGCurrentStyles[1] + (window.pageYOffset / 11)}%,
@@ -21,5 +19,11 @@ window.addEventListener('load', function () {
                                             ${+ bubbleBGCurrentStyles[13] - (window.pageYOffset / 18)}%`;
     })
 
+    let headerNav = document.querySelector('.header-nav');
+    let headerNavToggle = document.querySelector('.header-nav__toggle');
+
+    headerNavToggle.addEventListener('click', function () {
+        headerNav.classList.toggle('header-nav_hidden');
+    })
 
 });
