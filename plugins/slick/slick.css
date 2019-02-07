@@ -81,7 +81,16 @@
 
     height: 100%;
     min-height: 1px;
+    /*my styles*/
+    transform: scale(0.7);
+    transition: all 0.5s;
+    filter: grayscale(1);
 }
+.slick-center {
+    transform: scale(1);
+    filter: grayscale(0);
+}
+/*my style end*/
 [dir='rtl'] .slick-slide
 {
     float: right;

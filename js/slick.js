@@ -8,6 +8,7 @@ $(document).ready(function () {
         centerMode: true,
         slidesToShow: 3,
         slidesToScroll: 1,
+        variableWidth: true
 
     });
     
@@ -19,6 +20,7 @@ $(document).ready(function () {
         centerMode: true,
         slidesToShow: 3,
         slidesToScroll: 1,
+        variableWidth: true
 
     });
 
@@ -30,6 +32,7 @@ $(document).ready(function () {
         centerMode: true,
         slidesToShow: 3,
         slidesToScroll: 1,
+        variableWidth: true
 
     });
 
@@ -60,10 +63,10 @@ $(document).ready(function () {
 
 
     // added class for center slide
-    $('.main-slider__inner').on('afterChange', function(event, slick, currentSlide, nextSlide){
-        $('.slick-active').removeClass('main-slider__slide_active');
-        $('.slick-center').addClass('main-slider__slide_active');        
-    });
+    // $('.main-slider__inner').on('afterChange', function(event, slick, currentSlide, nextSlide){
+    //     $('.slick-active').removeClass('main-slider__slide_active');
+    //     $('.slick-center').addClass('main-slider__slide_active');        
+    // });
 
 
 });

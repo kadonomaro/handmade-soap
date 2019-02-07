@@ -149,6 +149,13 @@ img {
   color: #303030;
 }
 
+.main__inner {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 30px 10px;
+  overflow: hidden;
+}
+
 .main__background {
   background: url("../images/background/main-background.jpg") no-repeat;
   background-size: cover;
@@ -160,6 +167,7 @@ img {
   margin: 0 10px 60px;
   font-family: "Lobster", cursive;
   font-size: 32px;
+  letter-spacing: 2px;
   text-align: center;
   color: #eaeaea;
   text-shadow: 0 0 5px #000000, 0 0 5px #000000;
@@ -176,7 +184,7 @@ img {
   background: url("../images/background/title-decal.png") no-repeat;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  opacity: 0.7;
+  opacity: 0.5;
   -webkit-filter: hue-rotate(235deg);
           filter: hue-rotate(235deg);
 }
@@ -188,18 +196,12 @@ img {
 
 .main-slider__slide {
   position: relative;
-  min-width: 80px;
-  min-height: 250px;
+  min-width: 300px;
+  min-height: 300px;
   margin: 0 10px;
   border-radius: 5px;
-  -webkit-transform: scale(0.7);
-          transform: scale(0.7);
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
   -webkit-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3);
           box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3);
-  -webkit-filter: grayscale(1);
-          filter: grayscale(1);
   overflow: hidden;
 }
 
@@ -213,13 +215,6 @@ img {
   background: linear-gradient(45deg, rgba(183, 222, 237, 0.5) 0%, rgba(33, 180, 226, 0.5) 35%, rgba(33, 180, 226, 0.5) 41%, rgba(113, 206, 239, 0.5) 61%, rgba(183, 222, 237, 0.5) 100%);
   -webkit-filter: blur(3px);
           filter: blur(3px);
-}
-
-.main-slider__slide_active {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-filter: grayscale(0);
-          filter: grayscale(0);
 }
 
 .main-slider__next, .main-slider__prev {
