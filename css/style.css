@@ -65,6 +65,69 @@ img {
           transform: translateY(-3px);
 }
 
+.scroll-top {
+  position: fixed;
+  z-index: 99;
+  right: 50%;
+  bottom: 10px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.scroll-top:hover {
+  opacity: 1;
+}
+
+.scroll-top:hover .scroll-top__svg-path {
+  -webkit-animation: dash 10s linear forwards;
+          animation: dash 10s linear forwards;
+  fill: #51bee6;
+}
+
+.scroll-top__link {
+  display: block;
+  font-size: 20px;
+  line-height: 40px;
+  color: #ffffff;
+}
+
+.scroll-top__svg-path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+.scroll-top_active {
+  visibility: visible;
+  opacity: 0.3;
+}
+
+@-webkit-keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    fill: #51bee6;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    fill: #51bee6;
+    stroke-dashoffset: 0;
+  }
+}
+
 .header {
   position: relative;
   display: -webkit-box;

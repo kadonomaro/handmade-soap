@@ -42,4 +42,14 @@ window.addEventListener('load', function () {
         target.classList.toggle(className);
     }
 
+    let scrollTopButton = document.querySelector('.scroll-top');
+    window.addEventListener('scroll', function () {
+
+        if (window.pageYOffset > window.innerHeight) {
+            scrollTopButton.classList.add('scroll-top_active');
+        } else {
+            scrollTopButton.classList.remove('scroll-top_active');
+        }
+    });
+
 });

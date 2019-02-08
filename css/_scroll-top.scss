@@ -1,0 +1,50 @@
+.scroll-top {
+    position: fixed;
+    z-index: 99;
+    right: 50%;
+    bottom: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    // background-color: #303030;
+    // border-radius: 3px;
+    transform: translateX(50%);
+    transition: opacity 1s;
+    visibility: hidden;
+    opacity: 0;
+    &:hover {
+        opacity: 1;
+    }
+    &:hover .scroll-top__svg-path {
+        animation: dash 10s linear forwards;
+        fill: #51bee6;
+    }
+    &__link {
+        display: block;
+        font-size: 20px;
+        line-height: 40px;
+        color: #ffffff;
+    }
+    &__svg-path {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+    }
+}
+
+.scroll-top_active {
+    visibility: visible;
+    opacity: 0.3;
+}
+
+
+
+  
+@keyframes dash {
+    from {
+        stroke-dashoffset: 1000;
+    }
+    to {
+        fill: #51bee6;
+        stroke-dashoffset: 0;
+    }
+}
