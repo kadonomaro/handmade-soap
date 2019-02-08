@@ -11,6 +11,7 @@
     &__background {
         background: url('../images/background/main-background-new.jpg') no-repeat;
         background-size: cover;
+        background-position: center;
         opacity: 0.5;
     }
     &__title {
@@ -50,9 +51,35 @@
     position: relative;
     max-width: 900px;
     margin: 0 auto 40px;
-    border: 60px solid transparent;
-    border-image: url('../images/background/border-image.png') 20% round;
-
+    padding: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba($color: #000000, $alpha: 0.5);
+    overflow: hidden;
+    &:nth-of-type(2)::before {
+        filter: blur(5px) hue-rotate(180deg);
+    }
+    &:nth-of-type(3)::before {
+        filter: blur(5px) hue-rotate(0deg);
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        bottom: -10px;
+        left: -10px;
+        right: -10px;
+        // background: linear-gradient(45deg, rgba(250,230,190,1) 0%,
+        //                                     rgba(255,150,0,1) 50%,
+        //                                     rgba(250,130,0,1) 52%,
+        //                                     rgba(250,220,160,1) 100%);
+        background: linear-gradient(45deg, rgba(183,222,237,0.5) 0%,
+                                            rgba(33,180,226,0.5) 35%,
+                                            rgba(33,180,226,0.5) 40%,
+                                            rgba(113,206,239,0.5) 60%,
+                                            rgba(183,222,237,0.5) 100%);
+        filter: blur(5px) hue-rotate(235deg);
+        opacity: 0.7;
+    }
     &__slide {
         position: relative;
         min-width: 300px;

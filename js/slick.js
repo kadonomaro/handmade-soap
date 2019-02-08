@@ -30,7 +30,7 @@ $(document).ready(function () {
         speed: 300,
         cssEase: 'linear',
         centerMode: true,
-        slidesToShow: 3,
+        slidesToShow: 2,
         slidesToScroll: 1,
         variableWidth: true
 
