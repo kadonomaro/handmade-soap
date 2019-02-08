@@ -3,8 +3,9 @@
     z-index: 99;
     right: 50%;
     bottom: 10px;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
+    background: url('../images/bubbles/min/bubble-2-min.png') no-repeat;
     transform: translateX(50%);
     transition: opacity 1s;
     visibility: hidden;
@@ -13,13 +14,15 @@
         opacity: 1;
     }
     &:hover .scroll-top__svg-path {
-        animation: dash 10s linear forwards;
-        fill: #51bee6;
+        // animation: dash 10s linear forwards;
+        stroke-dashoffset: 0;
     }
     &__link {
         display: block;
+        
     }
     &__svg-path {
+        transition: all 8s;
         stroke-dasharray: 1000;
         stroke-dashoffset: 1000;
     }
@@ -38,7 +41,6 @@
         stroke-dashoffset: 1000;
     }
     to {
-        fill: #51bee6;
         stroke-dashoffset: 0;
     }
 }
