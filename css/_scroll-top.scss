@@ -5,9 +5,6 @@
     bottom: 10px;
     width: 40px;
     height: 40px;
-    text-align: center;
-    // background-color: #303030;
-    // border-radius: 3px;
     transform: translateX(50%);
     transition: opacity 1s;
     visibility: hidden;
@@ -21,9 +18,6 @@
     }
     &__link {
         display: block;
-        font-size: 20px;
-        line-height: 40px;
-        color: #ffffff;
     }
     &__svg-path {
         stroke-dasharray: 1000;
