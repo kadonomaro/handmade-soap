@@ -1,6 +1,5 @@
 .main {
     position: relative;
-    min-height: 100vh; //delete
     color: $color-text;
     &__inner {
         max-width: 1600px;
@@ -9,10 +8,21 @@
         overflow: hidden;
     }
     &__background {
-        background: url('../images/background/main-background-new.jpg') no-repeat;
+        background: url('../images/background/main-background-new.jpg');
+        background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
         opacity: 0.5;
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 600px;
+            height: 373px;
+            background: url('../images/background/blowing-bubbles-min.png');
+            background-size: contain;
+        }
     }
     &__title {
         position: relative;
