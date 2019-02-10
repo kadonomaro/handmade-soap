@@ -91,22 +91,43 @@
         <main class="main">
             <div class="main__background background"></div>
 
+            <svg width="0" heigth="0">
+                <clipPath id="slide-clip">
+                    <path d="M151.466 6.46457C155.772 6.91438 160.115 6.89682 164.417 6.41217L209.656 1.31604C237.578 -1.82937 263.943 14.8243 273.098 41.3898L295.431 106.195C298.601 115.392 299.487 125.223 298.012 134.838L283.626 228.649C279.849 253.284 261.235 273.019 236.863 278.229L168.874 292.764C159.141 294.845 149.044 294.471 139.491 291.678L46.8073 264.577C26.4996 258.639 10.715 242.477 6.90187 221.665C0.757393 188.129 -5.11788 138.797 8.80861 120.198C19.5927 105.796 29.89 75.5126 37.5717 48.4481C45.9697 18.8599 73.9123 -1.63688 104.503 1.55865L151.466 6.46457Z" fill="#C4C4C4"/>
+                </clipPath>
+                <filter id="slide-filter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
+                    <feMorphology operator="dilate" radius="3 3" in="SourceAlpha" result="morphology"/>
+                    <feFlood flood-color="#00a2d7" flood-opacity="0.7" result="flood"/>
+                    <feComposite in="flood" in2="morphology" operator="in" result="composite"/>
+                    <feMerge result="merge">
+                        <feMergeNode in="composite" result="mergeNode"/>
+                        <feMergeNode in="SourceGraphic" result="mergeNode1"/>
+                    </feMerge>
+                </filter>
+            </svg>
+
             <div class="main__inner">
 
                 <h2 class="main__title">Мыльная основа</h2>
                 <div class="main-slider">
                     <div class="main-slider__inner main-slider-base">
-                        <div class="main-slider__slide main-slider__slide_active">
-                            <img class="main-slider__img" src="images/soap-base/transparent/soap-base-1.png" alt="soap base">
-                            <span class="main-slider__desc">Белая мыльная основа</span>
+                        <div class="main-slider__slide-wrapper">
+                            <div class="main-slider__slide">
+                                <img class="main-slider__img" src="images/soap-base/transparent/soap-base-1.png" alt="soap base">
+                                <span class="main-slider__desc">Белая мыльная основа</span>
+                            </div>
                         </div>
-                        <div class="main-slider__slide">
-                            <img class="main-slider__img" src="images/soap-base/transparent/soap-base-2.png" alt="soap base">
-                            <span class="main-slider__desc">Мыльная основа Active SLS Free</span>
+                        <div class="main-slider__slide-wrapper">
+                            <div class="main-slider__slide">
+                                <img class="main-slider__img" src="images/soap-base/transparent/soap-base-2.png" alt="soap base">
+                                <span class="main-slider__desc">Мыльная основа Active SLS Free</span>
+                            </div>
                         </div>
-                        <div class="main-slider__slide">
-                            <img class="main-slider__img" src="images/soap-base/transparent/soap-base-3.png" alt="soap base">
-                            <span class="main-slider__desc">Мыльная основа с добавлением ослиного молока</span>
+                        <div class="main-slider__slide-wrapper">
+                            <div class="main-slider__slide">
+                                <img class="main-slider__img" src="images/soap-base/transparent/soap-base-3.png" alt="soap base">
+                                <span class="main-slider__desc">Мыльная основа с добавлением ослиного молока</span>
+                            </div>
                         </div>
 
                     </div>
