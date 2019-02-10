@@ -3,9 +3,15 @@ window.addEventListener('load', function () {
     let bubbleBGCurrentStyles = window.getComputedStyle(bubbleBG, null).getPropertyValue('background-position-y').replace(/%/g, '').split(', ');
 
     window.addEventListener('scroll', shiftBubbleBackground);
+    window.addEventListener('scroll',mediaSize);
 
-    if (window.matchMedia("(max-width: 425px)").matches) {
-        window.removeEventListener('scroll', shiftBubbleBackground);
+
+    function mediaSize() {
+        if (window.matchMedia("(max-width: 425px)").matches) {
+            window.removeEventListener('scroll', shiftBubbleBackground);
+        } else {
+            window.addEventListener('scroll', shiftBubbleBackground);
+        }
     }
 
     function shiftBubbleBackground() {
