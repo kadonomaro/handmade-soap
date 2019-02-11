@@ -1,0 +1,14 @@
+.footer {
+    position: relative;
+    min-height: 300px;
+    &__background {
+        background-color: #303030;
+    }
+    &__inner {
+        display: flex;
+        padding: 20px 0;
+    }
+    &__social {
+
+    }
+}
