@@ -2,6 +2,15 @@
     position: relative;
     min-height: 50vh;
     &__background {
-
+        background-image: url('../images/background/natural-soap.jpg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+    &__background_additional {
+        background-image: url('../images/background/blowing-bubbles-min.png');
+    }
+    &__background_additional-2 {
+        background-image: url('../images/bubbles/bubble-3.png');
     }
 }

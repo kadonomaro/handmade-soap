@@ -1,4 +1,8 @@
+import { parallax } from "./parallax.js";
+
 window.addEventListener('load', function () {
+    parallax('.soap__background');
+
     let bubbleBG = document.querySelector('.header__background-bubble');
     let bubbleBGCurrentStyles = window.getComputedStyle(bubbleBG, null).getPropertyValue('background-position-y').replace(/%/g, '').split(', ');
 
@@ -58,7 +62,4 @@ window.addEventListener('load', function () {
         }
     });
 
-
-    let soapBackground = document.querySelectorAll('.soap__background');
-    console.dir(soapBackground);
 });
