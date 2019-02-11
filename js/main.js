@@ -2,6 +2,7 @@ import { parallax } from "./parallax.js";
 
 window.addEventListener('load', function () {
     parallax('.soap__background');
+    
 
     let bubbleBG = document.querySelector('.header__background-bubble');
     let bubbleBGCurrentStyles = window.getComputedStyle(bubbleBG, null).getPropertyValue('background-position-y').replace(/%/g, '').split(', ');
@@ -42,7 +43,6 @@ window.addEventListener('load', function () {
 
     let headerNav = document.querySelector('.header-nav');
     let headerNavToggle = document.querySelector('.header-nav__toggle');
-
 
     headerNavToggle.addEventListener('click', function () {
         toggleClass(headerNav, 'header-nav_hidden');
