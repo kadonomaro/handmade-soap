@@ -1,16 +1,24 @@
 .soap {
     position: relative;
-    min-height: 50vh;
+    min-height: 100vh;
     &__background {
-        background-image: url('../images/background/natural-soap.jpg');
+        z-index: 1;
+        left: -20%;
+        right: -20%;
+        background-image: url('../images/background/parallax/mountains.png');
         background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
+        background-size: cover;
+
     }
     &__background_additional {
-        background-image: url('../images/background/blowing-bubbles-min.png');
+        z-index: -2;
+        top: 0;
+        // bottom: 20%;
+        background-image: url('../images/background/parallax/clouds.png');
+
+
     }
     &__background_additional-2 {
-        background-image: url('../images/bubbles/bubble-3.png');
+        background-image: url();
     }
 }

@@ -416,17 +416,14 @@ img {
   overflow: hidden;
 }
 
-.main-slider__slide:hover::after, .main-slider__slide:focus::after {
-  opacity: 0.8;
-}
-
 .main-slider__slide:hover .main-slider__desc, .main-slider__slide:focus .main-slider__desc {
   opacity: 1;
+  text-shadow: 0 0 3px black;
 }
 
 .main-slider__slide:hover .main-slider__img, .main-slider__slide:focus .main-slider__img {
-  -webkit-filter: blur(5px);
-          filter: blur(5px);
+  -webkit-filter: blur(8px);
+          filter: blur(8px);
 }
 
 .main-slider__slide::before {
@@ -441,23 +438,6 @@ img {
   background: linear-gradient(to bottom, rgba(183, 222, 237, 0) 0%, rgba(33, 180, 226, 0.3) 50%, rgba(113, 206, 239, 0.5) 51%, rgba(113, 206, 239, 0.8) 100%);
   -webkit-filter: blur(3px);
           filter: blur(3px);
-}
-
-.main-slider__slide::after {
-  content: '';
-  position: absolute;
-  z-index: 0;
-  top: 10%;
-  bottom: 10%;
-  left: 10%;
-  right: 10%;
-  background: linear-gradient(45deg, rgba(183, 222, 237, 0.7) 0%, rgba(33, 180, 226, 0.7) 35%, rgba(33, 180, 226, 0.7) 40%, rgba(113, 206, 239, 0.7) 60%, rgba(183, 222, 237, 0.7) 100%) rgba(48, 48, 48, 0.5);
-  border-radius: 50%;
-  -webkit-box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.3) inset;
-          box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.3) inset;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s ease-in;
-  transition: opacity 0.3s ease-in;
 }
 
 .main-slider__next, .main-slider__prev {
@@ -510,29 +490,33 @@ img {
           transform: translateY(-50%);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-transition: opacity 0.3s ease-in;
-  transition: opacity 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
   opacity: 0;
 }
 
 .soap {
   position: relative;
-  min-height: 50vh;
+  min-height: 100vh;
 }
 
 .soap__background {
-  background-image: url("../images/background/natural-soap.jpg");
+  z-index: 1;
+  left: -20%;
+  right: -20%;
+  background-image: url("../images/background/parallax/mountains.png");
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+  background-size: cover;
 }
 
 .soap__background_additional {
-  background-image: url("../images/background/blowing-bubbles-min.png");
+  z-index: -2;
+  top: 0;
+  background-image: url("../images/background/parallax/clouds.png");
 }
 
 .soap__background_additional-2 {
-  background-image: url("../images/bubbles/bubble-3.png");
+  background-image: url();
 }
 
 .footer {
