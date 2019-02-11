@@ -59,6 +59,6 @@ window.addEventListener('load', function () {
     });
 
 
-    
-
+    let soapBackground = document.querySelectorAll('.soap__background');
+    console.dir(soapBackground);
 });
