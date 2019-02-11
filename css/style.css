@@ -318,9 +318,7 @@ img {
 
 @media screen and (max-width: 1024px) {
   .header__background-bubble {
-    background: url("../images/bubbles/min/bubble-1-min.png"), url("../images/bubbles/min/bubble-2-min.png"), url("../images/bubbles/min/bubble-3-min.png"), url("../images/bubbles/min/bubble-4-min.png"), url("../images/bubbles/min/bubble-1-min.png"), url("../images/bubbles/min/bubble-2-min.png"), url("../images/bubbles/min/bubble-3-min.png"), url("../images/bubbles/min/bubble-4-min.png"), url("../images/bubbles/min/bubble-1-min.png"), url("../images/bubbles/min/bubble-2-min.png"), url("../images/bubbles/min/bubble-3-min.png"), url("../images/bubbles/min/bubble-1-min.png"), url("../images/bubbles/min/bubble-3-min.png"), url("../images/bubbles/min/bubble-1-min.png");
-    background-repeat: no-repeat;
-    background-position: top 10% left 7%, top 65% right 27%, top 55% left 30%, top 65% left 40%, top 90% left 35%, top 5% right 22%, top 55% right 16%, top 75% left 12%, top 35% left 17%, top 25% right 5%, top 25% right 30%, top 10% left 40%, top 55% left -7%, top 100% right 25%;
+    background-image: url("../images/bubbles/min/bubble-1-min.png"), url("../images/bubbles/min/bubble-2-min.png"), url("../images/bubbles/min/bubble-3-min.png"), url("../images/bubbles/min/bubble-4-min.png"), url("../images/bubbles/min/bubble-1-min.png"), url("../images/bubbles/min/bubble-2-min.png"), url("../images/bubbles/min/bubble-3-min.png"), url("../images/bubbles/min/bubble-4-min.png"), url("../images/bubbles/min/bubble-1-min.png"), url("../images/bubbles/min/bubble-2-min.png"), url("../images/bubbles/min/bubble-3-min.png"), url("../images/bubbles/min/bubble-1-min.png"), url("../images/bubbles/min/bubble-3-min.png"), url("../images/bubbles/min/bubble-1-min.png");
   }
 }
 
@@ -495,6 +493,12 @@ img {
   opacity: 0;
 }
 
+@media screen and (max-width: 767px) {
+  .main-slider__next, .main-slider__prev {
+    display: none;
+  }
+}
+
 .soap {
   position: relative;
   min-height: 100vh;
@@ -504,15 +508,14 @@ img {
   z-index: 1;
   left: -20%;
   right: -20%;
-  background-image: url("../images/background/parallax/mountains.png");
+  background-image: url("../images/background/parallax/mountains.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .soap__background_additional {
   z-index: -2;
-  top: 0;
-  background-image: url("../images/background/parallax/clouds.png");
+  background-image: url("../images/background/parallax/clouds.webp");
 }
 
 .soap__background_additional-2 {

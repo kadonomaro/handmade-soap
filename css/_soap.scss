@@ -5,18 +5,13 @@
         z-index: 1;
         left: -20%;
         right: -20%;
-        background-image: url('../images/background/parallax/mountains.png');
+        background-image: url('../images/background/parallax/mountains.webp');
         background-repeat: no-repeat;
         background-size: cover;
-
     }
     &__background_additional {
         z-index: -2;
-        top: 0;
-        // bottom: 20%;
-        background-image: url('../images/background/parallax/clouds.png');
-
-
+        background-image: url('../images/background/parallax/clouds.webp');
     }
     &__background_additional-2 {
         background-image: url();
