@@ -13,45 +13,41 @@
     }
 }
 
+//first slider fade images
 .fade-white {
     background-image: url('../images/soap-base/soap-base-1.png');
 }
-
 .fade-active {
     left: initial;
     right: 0;
     background-image: url('../images/soap-base/soap-base-2.png');
 }
-
 .fade-milk {
     top: 12%;
     background-image: url('../images/soap-base/soap-base-3.png');
 }
 
-
+//second slider fade images
 .fade-coffee {
     top: 35%;
     background-image: url('../images/aroma/coffee-beans.png');
 }
-
 .fade-orange {
     top: 40%;
     left: initial;
     right: 0;
     background-image: url('../images/aroma/orange.png');
 }
-
 .fade-strawberry {
     top: 43%;
     background-image: url('../images/aroma/strawberry.png');
 }
 
-
+//third slider fade images
 .fade-argan {
     top: 63%;
     background-image: url('../images/oil/argan-oil.png');
 }
-
 .fade-coconut {
     z-index: 5;
     top: 65%;
@@ -59,7 +55,6 @@
     right: 0;
     background-image: url('../images/oil/coconut.png');
 }
-
 .fade-shea {
     top: 70%;
     background-image: url('../images/oil/shea-butter.png');

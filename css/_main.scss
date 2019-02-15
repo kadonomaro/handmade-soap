@@ -73,6 +73,7 @@
         margin: 0 10px;
         clip-path: url(#slide-clip);
         overflow: hidden;
+        transition: all 1s;
         &:hover .main-slider__desc, &:focus .main-slider__desc {
             opacity: 1;
             text-shadow: 0 0 3px black;

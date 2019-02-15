@@ -6,6 +6,7 @@ export function parallax (backgroundArr) {
         let coordX = (evt.clientX / window.innerWidth * 100 - 50).toFixed(0);
         for (let i = 0; i < backgrounds.length; i++) {
             backgrounds[i].style = `transform: translateX(${coordX / backgrounds[i].dataset.divider}%)`;
+            
         }
     });
 

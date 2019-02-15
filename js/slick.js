@@ -60,57 +60,23 @@ $(document).ready(function () {
         $(".main-slider-aroma").slick('slickPrev');
     });
 
+
     //change slider background image
-    $('.main-slider-base').on('afterChange', function () {
+    $('.main-slider-base').on('beforeChange', function (evt, slick, currentSlide, nextSlide) {
+        $('.fade-base').fadeOut(1000);
+        $('.fade-base').eq(nextSlide).fadeIn(800);
+    });
 
-        if ($('.main-slider-base .slick-center').hasClass('main-slider__slide-wrapper_soap-white')) {
-            $('.fade').fadeOut(1200);
-            $('.fade-white').fadeIn(1000);
-        }
-        else if ($('.main-slider-base .slick-center').hasClass('main-slider__slide-wrapper_soap-active')) {
-            $('.fade').fadeOut(1200);
-            $('.fade-active').fadeIn(1000);
-        }
-        else if ($('.main-slider-base .slick-center').hasClass('main-slider__slide-wrapper_soap-milk')) {
-            $('.fade').fadeOut(1200);
-            $('.fade-milk').fadeIn(1000);
-        }
+    
+    $('.main-slider-type').on('beforeChange', function (evt, slick, currentSlide, nextSlide) {
+        $('.fade-type').fadeOut(1000);
+        $('.fade-type').eq(nextSlide).fadeIn(800);
     });
 
 
-    $('.main-slider-type').on('afterChange', function () {
-
-        if ($('.main-slider-type .slick-center').hasClass('main-slider__slide-wrapper_aroma-coffee')) {
-            $('.fade').fadeOut(1200);
-            $('.fade-coffee').fadeIn(1000);
-        }
-        else if ($('.main-slider-type .slick-center').hasClass('main-slider__slide-wrapper_aroma-orange')) {
-            $('.fade').fadeOut(1200);
-            $('.fade-orange').fadeIn(1000);
-        }
-        else if ($('.main-slider-type .slick-center').hasClass('main-slider__slide-wrapper_aroma-strawberry')) {
-            $('.fade').fadeOut(1200);
-            $('.fade-strawberry').fadeIn(1000);
-        }
+    $('.main-slider-aroma').on('beforeChange', function (evt, slick, currentSlide, nextSlide) {
+        $('.fade-aroma').fadeOut(1000);
+        $('.fade-aroma').eq(nextSlide).fadeIn(800);
     });
-
-
-    $('.main-slider-aroma').on('afterChange', function () {
-
-        if ($('.main-slider-aroma .slick-center').hasClass('main-slider__slide-wrapper_oil-argan')) {
-            $('.fade').fadeOut(1200);
-            $('.fade-argan').fadeIn(1000);
-        }
-        else if ($('.main-slider-aroma .slick-center').hasClass('main-slider__slide-wrapper_oil-coconut')) {
-            $('.fade').fadeOut(1200);
-            $('.fade-coconut').fadeIn(1000);
-        }
-        else if ($('.main-slider-aroma .slick-center').hasClass('main-slider__slide-wrapper_oil-shea')) {
-            $('.fade').fadeOut(1200);
-            $('.fade-shea').fadeIn(1000);
-        }
-    });
-
-
 
 });

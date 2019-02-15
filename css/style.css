@@ -453,6 +453,8 @@ img {
   -webkit-clip-path: url(#slide-clip);
           clip-path: url(#slide-clip);
   overflow: hidden;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .main-slider__slide:hover .main-slider__desc, .main-slider__slide:focus .main-slider__desc {
