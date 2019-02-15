@@ -1,0 +1,21 @@
+.fade {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    display: none;
+    width: 450px;
+    height: 450px;
+    background-size: cover;
+}
+
+.fade-white {
+    background-image: url('../images/soap-base/soap-base-1.png');
+}
+
+.fade-active {
+    background-image: url('../images/soap-base/soap-base-2.png');
+}
+
+.fade-milk {
+    background-image: url('../images/soap-base/soap-base-3.png');
+}

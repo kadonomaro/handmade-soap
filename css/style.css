@@ -36,6 +36,28 @@ img {
   right: 0;
 }
 
+.fade {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  display: none;
+  width: 450px;
+  height: 450px;
+  background-size: cover;
+}
+
+.fade-white {
+  background-image: url("../images/soap-base/soap-base-1.png");
+}
+
+.fade-active {
+  background-image: url("../images/soap-base/soap-base-2.png");
+}
+
+.fade-milk {
+  background-image: url("../images/soap-base/soap-base-3.png");
+}
+
 .social__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -317,7 +339,7 @@ img {
   opacity: 0.5;
 }
 
-.main__background::before {
+.main__background::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -326,39 +348,6 @@ img {
   height: 373px;
   background: url("../images/background/blowing-bubbles-min.png");
   background-size: contain;
-}
-
-.main__background_white::before {
-  content: '';
-  position: absolute;
-  top: 10%;
-  left: 0;
-  width: 450px;
-  height: 450px;
-  background: url("../images/soap-base/soap-base-1.png");
-  background-size: cover;
-}
-
-.main__background_active::before {
-  content: '';
-  position: absolute;
-  top: 10%;
-  right: 0;
-  width: 450px;
-  height: 450px;
-  background: url("../images/soap-base/soap-base-2.png");
-  background-size: cover;
-}
-
-.main__background_milk::before {
-  content: '';
-  position: absolute;
-  top: 10%;
-  left: 0;
-  width: 450px;
-  height: 450px;
-  background: url("../images/soap-base/soap-base-3.png");
-  background-size: cover;
 }
 
 .main__title {

@@ -13,7 +13,7 @@
         background-size: cover;
         background-position: center;
         opacity: 0.5;
-        &::before {
+        &::after {
             content: '';
             position: absolute;
             bottom: 0;
@@ -23,46 +23,42 @@
             background: url('../images/background/blowing-bubbles-min.png');
             background-size: contain;
         }
+        // &::before {
+        //     content: '';
+        //     position: absolute;
+        //     background-size: cover;
+            
+        // }
     }
-    &__background_white {
-        &::before {
-            content: '';
-            position: absolute;
-            top: 10%;
-            left: 0;
-            width: 450px;
-            height: 450px;
-            background: url('../images/soap-base/soap-base-1.png');
-            background-size: cover;
-        }
-
-    }
-    &__background_active {
-        &::before {
-            content: '';
-            position: absolute;
-            top: 10%;
-            right: 0;
-            width: 450px;
-            height: 450px;
-            background: url('../images/soap-base/soap-base-2.png');
-            background-size: cover;
-        }
-
-    }
-    &__background_milk {
-        &::before {
-            content: '';
-            position: absolute;
-            top: 10%;
-            left: 0;
-            width: 450px;
-            height: 450px;
-            background: url('../images/soap-base/soap-base-3.png');
-            background-size: cover;
-        }
-
-    }
+    //mod for background when changing current slide
+    // &__background_white {
+        
+    //     &::before {
+    //         top: 10%;
+    //         left: 0;
+    //         width: 450px;
+    //         height: 450px;
+    //         background-image: url('../images/soap-base/soap-base-1.png');
+    //     }
+    // }
+    // &__background_active {
+    //     &::before {
+    //         top: 10%;
+    //         right: 0;
+    //         width: 450px;
+    //         height: 450px;
+    //         background-image: url('../images/soap-base/soap-base-2.png');
+    //     }
+    // }
+    // &__background_milk {
+    //     &::before {
+    //         top: 10%;
+    //         left: 0;
+    //         width: 450px;
+    //         height: 450px;
+    //         background-image: url('../images/soap-base/soap-base-3.png');
+    //     }
+    // }
     &__title {
         position: relative;
         margin: 0 10px 60px;
@@ -178,8 +174,6 @@
         opacity: 0;
     }
 }
-
-
 
 
 @include media(767) {
