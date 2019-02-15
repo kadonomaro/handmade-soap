@@ -6,6 +6,8 @@
     width: 20%;
     min-width: 150px;
     background-size: cover;
+    transform: scale(0.5);
+    transition: transform 1s;
     &::before {
         content: '';
         display: block;
@@ -58,4 +60,9 @@
 .fade-shea {
     top: 70%;
     background-image: url('../images/oil/shea-butter.png');
+}
+
+
+.fade-scale {
+    transform: scale(1);
 }

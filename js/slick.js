@@ -63,20 +63,20 @@ $(document).ready(function () {
 
     //change slider background image
     $('.main-slider-base').on('beforeChange', function (evt, slick, currentSlide, nextSlide) {
-        $('.fade-base').fadeOut(1000);
-        $('.fade-base').eq(nextSlide).fadeIn(800);
+        $('.fade-base').removeClass('fade-scale').fadeOut(1000);
+        $('.fade-base').eq(nextSlide).fadeIn({queue: false, duration: 800}).addClass('fade-scale');
     });
 
     
     $('.main-slider-type').on('beforeChange', function (evt, slick, currentSlide, nextSlide) {
-        $('.fade-type').fadeOut(1000);
-        $('.fade-type').eq(nextSlide).fadeIn(800);
+        $('.fade-type').removeClass('fade-scale').fadeOut(1000);
+        $('.fade-type').eq(nextSlide).fadeIn({queue: false, duration: 800}).addClass('fade-scale');
     });
 
 
     $('.main-slider-aroma').on('beforeChange', function (evt, slick, currentSlide, nextSlide) {
-        $('.fade-aroma').fadeOut(1000);
-        $('.fade-aroma').eq(nextSlide).fadeIn(800);
+        $('.fade-aroma').removeClass('fade-scale').fadeOut(1000);
+        $('.fade-aroma').eq(nextSlide).fadeIn({queue: false, duration: 800}).addClass('fade-scale');
     });
 
 });
