@@ -38,7 +38,7 @@ img {
 
 .fade {
   position: absolute;
-  top: 10%;
+  top: 5%;
   left: 0;
   display: none;
   width: 450px;
@@ -47,15 +47,36 @@ img {
 }
 
 .fade-white {
+  display: block;
   background-image: url("../images/soap-base/soap-base-1.png");
 }
 
 .fade-active {
+  left: initial;
+  right: 0;
   background-image: url("../images/soap-base/soap-base-2.png");
 }
 
 .fade-milk {
   background-image: url("../images/soap-base/soap-base-3.png");
+}
+
+.fade-coffee {
+  display: block;
+  top: 30%;
+  background-image: url("../images/aroma/coffee-beans.png");
+}
+
+.fade-orange {
+  top: 30%;
+  left: initial;
+  right: 0;
+  background-image: url("../images/aroma/orange.png");
+}
+
+.fade-strawberry {
+  top: 30%;
+  background-image: url("../images/aroma/strawberry.png");
 }
 
 .social__list {
