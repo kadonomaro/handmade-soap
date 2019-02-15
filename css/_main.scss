@@ -4,15 +4,14 @@
     &__inner {
         max-width: 1600px;
         margin: 0 auto;
-        padding: 30px 10px;
+        padding: 30px 0;
         overflow: hidden;
     }
     &__background {
-        background: url('../images/background/main-background-new.jpg');
+        background: url('../images/background/main-background.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        opacity: 0.5;
         &::after {
             content: '';
             position: absolute;
@@ -22,43 +21,9 @@
             height: 373px;
             background: url('../images/background/blowing-bubbles-min.png');
             background-size: contain;
+            opacity: 0.5;
         }
-        // &::before {
-        //     content: '';
-        //     position: absolute;
-        //     background-size: cover;
-            
-        // }
     }
-    //mod for background when changing current slide
-    // &__background_white {
-        
-    //     &::before {
-    //         top: 10%;
-    //         left: 0;
-    //         width: 450px;
-    //         height: 450px;
-    //         background-image: url('../images/soap-base/soap-base-1.png');
-    //     }
-    // }
-    // &__background_active {
-    //     &::before {
-    //         top: 10%;
-    //         right: 0;
-    //         width: 450px;
-    //         height: 450px;
-    //         background-image: url('../images/soap-base/soap-base-2.png');
-    //     }
-    // }
-    // &__background_milk {
-    //     &::before {
-    //         top: 10%;
-    //         left: 0;
-    //         width: 450px;
-    //         height: 450px;
-    //         background-image: url('../images/soap-base/soap-base-3.png');
-    //     }
-    // }
     &__title {
         position: relative;
         margin: 0 10px 60px;
@@ -103,8 +68,8 @@
     }
     &__slide {
         position: relative;
-        min-width: 300px;
-        min-height: 300px;
+        min-width: 280px;
+        min-height: 280px;
         margin: 0 10px;
         clip-path: url(#slide-clip);
         overflow: hidden;
@@ -177,6 +142,13 @@
 
 
 @include media(767) {
+    .main {
+        &__background {
+            &::after {
+                opacity: 0.2;
+            }
+        }
+    }
     .main-slider {
         &__next, &__prev {
             display: none;
