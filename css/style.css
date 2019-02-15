@@ -374,6 +374,17 @@ img {
   overflow: hidden;
 }
 
+.main-slider::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background: url("../images/oil/coconut.png");
+  background-size: cover;
+}
+
 .main-slider__slide-wrapper {
   -webkit-filter: drop-shadow(0 0 5px black);
           filter: drop-shadow(0 0 5px black);

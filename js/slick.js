@@ -3,7 +3,7 @@ $(document).ready(function () {
     $('.main-slider-base').slick({
         infinite: true,
         arrows: false,
-        speed: 300,
+        speed: 500,
         cssEase: 'linear',
         centerMode: true,
         slidesToShow: 2,
@@ -15,7 +15,7 @@ $(document).ready(function () {
     $('.main-slider-type').slick({
         infinite: true,
         arrows: false,
-        speed: 300,
+        speed: 500,
         cssEase: 'linear',
         centerMode: true,
         slidesToShow: 2,
@@ -27,7 +27,7 @@ $(document).ready(function () {
     $('.main-slider-aroma').slick({
         infinite: true,
         arrows: false,
-        speed: 300,
+        speed: 500,
         cssEase: 'linear',
         centerMode: true,
         slidesToShow: 2,
