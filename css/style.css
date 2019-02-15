@@ -74,38 +74,40 @@ img {
 }
 
 .fade-coffee {
-  top: 35%;
-  background-image: url("../images/aroma/coffee-beans.png");
+  top: 33%;
+  left: -5%;
+  background-image: url("../images/aroma/fade/coffee-fade.png");
 }
 
 .fade-orange {
   top: 40%;
   left: initial;
-  right: 0;
-  background-image: url("../images/aroma/orange.png");
+  right: -5%;
+  background-image: url("../images/aroma/fade/orange-fade.png");
 }
 
 .fade-strawberry {
-  top: 43%;
-  background-image: url("../images/aroma/strawberry.png");
+  top: 45%;
+  left: -10%;
+  background-image: url("../images/aroma/fade/strawberry-fade.png");
 }
 
 .fade-argan {
   top: 63%;
-  background-image: url("../images/oil/argan-oil.png");
+  background-image: url("../images/oil/fade/argan-fade.png");
 }
 
 .fade-coconut {
   z-index: 5;
   top: 65%;
   left: initial;
-  right: 0;
-  background-image: url("../images/oil/coconut.png");
+  right: -5%;
+  background-image: url("../images/oil//fade/coconut-fade.png");
 }
 
 .fade-shea {
-  top: 70%;
-  background-image: url("../images/oil/shea-butter.png");
+  top: 75%;
+  background-image: url("../images/oil//fade/shea-fade.png");
 }
 
 .fade-scale {
