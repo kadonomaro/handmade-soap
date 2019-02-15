@@ -1,7 +1,7 @@
 import { parallax } from "./parallax.js";
 
 window.addEventListener('load', function () {
-    parallax('.soap__background');
+    // parallax('.soap__background');
     
 
     let bubbleBG = document.querySelector('.header__background-bubble');

@@ -60,13 +60,28 @@ $(document).ready(function () {
         $(".main-slider-aroma").slick('slickPrev');
     });
 
+    //change slider background image
+    $('.main-slider-base').on('afterChange', function () {
 
-
-    // added class for center slide
-    // $('.main-slider__inner').on('afterChange', function(event, slick, currentSlide, nextSlide){
-    //     $('.slick-active').removeClass('main-slider__slide_active');
-    //     $('.slick-center').addClass('main-slider__slide_active');        
-    // });
+        if ($('.main-slider-base .slick-center').hasClass('main-slider__slide-wrapper_soap-white')) {
+            console.log('white');
+            $('.main__background').removeClass('main__background_milk');
+            $('.main__background').removeClass('main__background_active');
+            $('.main__background').addClass('main__background_white');
+        }
+        else if ($('.main-slider-base .slick-center').hasClass('main-slider__slide-wrapper_soap-active')) {
+            console.log('active');
+            $('.main__background').removeClass('main__background_white');
+            $('.main__background').removeClass('main__background_soap');
+            $('.main__background').addClass('main__background_active');
+        }
+        else if ($('.main-slider-base .slick-center').hasClass('main-slider__slide-wrapper_soap-milk')) {
+            console.log('milk');
+            $('.main__background').removeClass('main__background_white');
+            $('.main__background').removeClass('main__background_active');
+            $('.main__background').addClass('main__background_milk');
+        }
+    })
 
 
 });

@@ -328,6 +328,39 @@ img {
   background-size: contain;
 }
 
+.main__background_white::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 450px;
+  height: 450px;
+  background: url("../images/soap-base/soap-base-1.png");
+  background-size: cover;
+}
+
+.main__background_active::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  right: 0;
+  width: 450px;
+  height: 450px;
+  background: url("../images/soap-base/soap-base-2.png");
+  background-size: cover;
+}
+
+.main__background_milk::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 450px;
+  height: 450px;
+  background: url("../images/soap-base/soap-base-3.png");
+  background-size: cover;
+}
+
 .main__title {
   position: relative;
   margin: 0 10px 60px;
@@ -372,17 +405,6 @@ img {
   padding: 20px 0;
   border-radius: 5px;
   overflow: hidden;
-}
-
-.main-slider::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100px;
-  height: 100px;
-  background: url("../images/oil/coconut.png");
-  background-size: cover;
 }
 
 .main-slider__slide-wrapper {

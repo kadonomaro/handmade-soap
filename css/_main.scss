@@ -24,6 +24,45 @@
             background-size: contain;
         }
     }
+    &__background_white {
+        &::before {
+            content: '';
+            position: absolute;
+            top: 10%;
+            left: 0;
+            width: 450px;
+            height: 450px;
+            background: url('../images/soap-base/soap-base-1.png');
+            background-size: cover;
+        }
+
+    }
+    &__background_active {
+        &::before {
+            content: '';
+            position: absolute;
+            top: 10%;
+            right: 0;
+            width: 450px;
+            height: 450px;
+            background: url('../images/soap-base/soap-base-2.png');
+            background-size: cover;
+        }
+
+    }
+    &__background_milk {
+        &::before {
+            content: '';
+            position: absolute;
+            top: 10%;
+            left: 0;
+            width: 450px;
+            height: 450px;
+            background: url('../images/soap-base/soap-base-3.png');
+            background-size: cover;
+        }
+
+    }
     &__title {
         position: relative;
         margin: 0 10px 60px;
@@ -63,17 +102,6 @@
     padding: 20px 0;
     border-radius: 5px;
     overflow: hidden;
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100px;
-        height: 100px;
-        background: url('../images/oil/coconut.png');
-        background-size: cover;
-
-    }
     &__slide-wrapper {
         filter: drop-shadow(0 0 5px black);
     }
@@ -84,9 +112,6 @@
         margin: 0 10px;
         clip-path: url(#slide-clip);
         overflow: hidden;
-        // &:hover::after, &:focus::after {
-        //     opacity: 0.8;
-        // }
         &:hover .main-slider__desc, &:focus .main-slider__desc {
             opacity: 1;
             text-shadow: 0 0 3px black;
@@ -153,6 +178,7 @@
         opacity: 0;
     }
 }
+
 
 
 
