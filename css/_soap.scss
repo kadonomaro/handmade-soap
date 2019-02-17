@@ -1,19 +1,36 @@
 .soap {
     position: relative;
-    min-height: 100vh;
+    padding: 60px 0;
     &__background {
-        z-index: 1;
-        left: -20%;
-        right: -20%;
-        background-image: url('../images/background/parallax/mountains.webp');
-        background-repeat: no-repeat;
-        background-size: cover;
+
     }
-    &__background_additional {
-        z-index: -2;
-        background-image: url('../images/background/parallax/clouds.webp');
+    &__inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
     }
-    &__background_additional-2 {
-        background-image: url();
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+    }
+
+}
+
+
+.soap-card {
+    padding: 10px;
+    border: 1px solid #303030;
+    @include flex-columns(4,15px);
+    margin-bottom: 30px;
+    min-width: 300px;
+    box-sizing: border-box;
+}
+
+
+
+@include media(737) {
+    .soap-card {
+        @include flex-columns(6,15px);
     }
 }

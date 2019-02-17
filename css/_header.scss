@@ -71,9 +71,9 @@
 .header-nav {
     position: absolute;
     z-index: 9;
-    top: 5px;
-    left: 5px;
-    min-width: 200px;
+    top: 10px;
+    left: 10px;
+    min-width: 230px;
     height: 98%;
     font-family: $font-main;
     font-size: 18px;
@@ -93,7 +93,10 @@
             bottom: -5px;
             left: -5px;
             right: -5px;
-            background: linear-gradient(135deg, rgba($color-sea-blue, 0.7) 0%, rgba(darken($color: $color-sea-blue, $amount: 10%), 0.7) 10%, rgba(darken($color: $color-sea-blue, $amount: 50%), 0.7) 50%, rgba($color-sea-blue, 0.7) 100%);
+            background: linear-gradient(135deg, rgba($color-sea-blue, 0.7) 0%, 
+                                                rgba(darken($color: $color-sea-blue, $amount: 10%), 0.7) 10%, 
+                                                rgba(darken($color: $color-sea-blue, $amount: 50%), 0.7) 50%, 
+                                                rgba($color-sea-blue, 0.7) 100%);
             filter: blur(5px);
             
         }
@@ -108,7 +111,7 @@
         text-decoration: none;
         transition: all 0.3s;
         &:hover, &:focus {
-            box-shadow: 0 5px 3px 0 rgba($color: #ffffff, $alpha: 0.3) inset, 0 -5px 3px 0 rgba($color: #ffffff, $alpha: 0.3) inset;            
+            box-shadow: 0 10px 3px -5px rgba($color: #ffffff, $alpha: 0.3) inset, 0 -10px 3px -5px rgba($color: #ffffff, $alpha: 0.3) inset;            
         }
     }
     &__toggle {
@@ -139,7 +142,7 @@
 
 }
 .header-nav_hidden {
-    transform: translateX(-105%);
+    transform: translateX(-108%);
 }
 
 
