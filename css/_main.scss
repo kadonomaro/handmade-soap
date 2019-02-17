@@ -19,7 +19,7 @@
             right: 0;
             width: 600px;
             height: 373px;
-            background: url('../images/background/blowing-bubbles-min.png');
+            background: url('../images/background/blowing-bubbles.png');
             background-size: contain;
             opacity: 0.5;
         }
@@ -142,11 +142,13 @@
 }
 
 
-@include media(767) {
+@include media(1024) {
     .main {
         &__background {
             &::after {
-                opacity: 0.2;
+                width: 300px;
+                height: 187px;
+                background: url('../images/background/mobile/blowing-bubbles-mobile.png');
             }
         }
     }

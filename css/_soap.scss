@@ -1,6 +1,6 @@
 .soap {
     position: relative;
-    padding: 60px 0;
+    padding: 80px 0 60px;
     &__background {
         background-image: url('../images/background/soap-background.jpg');
         background-repeat: no-repeat;
@@ -51,7 +51,7 @@
         background-size: cover;
         background-attachment: fixed;
         background-position: 50%;
-        filter: blur(7px);
+        filter: blur(10px);
     }
     &__title {
         text-align: center;
@@ -63,18 +63,32 @@
 
 @include media(1024) {
     .soap {
+        &__background {
+            background-image: url('../images/background/tablet/soap-background-tablet.png');
+        }
         &__inner {
             padding: 0 10px;
         }
     }
     .soap-card {
         @include flex-columns(6,10px);
+        &::before {
+            background-image: url('../images/background/tablet/soap-background-tablet.png');
+        }
     }
 }
 
 
 @include media(767) {
+    .soap {
+        &__background {
+            background-image: url('../images/background/mobile/soap-background-mobile.png');
+        }
+    }
     .soap-card {
         @include flex-columns(12,10px);
+        &::before {
+            background-image: url('../images/background/mobile/soap-background-mobile.png');        }
     }
 }
+
