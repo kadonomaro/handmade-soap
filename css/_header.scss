@@ -74,12 +74,14 @@
     top: 10px;
     left: 10px;
     min-width: 230px;
-    height: 98%;
+    // height: 98%;
+    height: calc(100% - 20px);
     font-family: $font-main;
     font-size: 18px;
     border-radius: 5px;
     box-shadow: 0 0 5px 3px rgba($color: #000000, $alpha: 0.3);
     transition: transform 0.5s;
+    box-sizing: border-box;
     &__list {
         position: relative;
         height: 100%;

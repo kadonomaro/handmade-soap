@@ -236,7 +236,7 @@ img {
   top: 10px;
   left: 10px;
   min-width: 230px;
-  height: 98%;
+  height: calc(100% - 20px);
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   border-radius: 5px;
@@ -246,6 +246,8 @@ img {
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .header-nav__list {
@@ -563,6 +565,14 @@ img {
   padding: 60px 0;
 }
 
+.soap__background {
+  background-image: url("../images/background/soap.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 50%;
+}
+
 .soap__inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -575,21 +585,41 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 0 -15px;
+  margin: 0 -10px;
 }
 
 .soap-card {
+  -ms-flex-preferred-size: calc((100% / 12 * 4) - (10px * 2));
+      flex-basis: calc((100% / 12 * 4) - (10px * 2));
+  max-width: calc((100% / 12 * 4) - (10px * 2));
+  margin-right: 10px;
+  margin-left: 10px;
+  position: relative;
   padding: 10px;
-  border: 1px solid #303030;
-  -ms-flex-preferred-size: calc((100% / 12 * 4) - (15px * 2));
-      flex-basis: calc((100% / 12 * 4) - (15px * 2));
-  max-width: calc((100% / 12 * 4) - (15px * 2));
-  margin-right: 15px;
-  margin-left: 15px;
   margin-bottom: 30px;
   min-width: 300px;
+  min-height: 300px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.5);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.soap-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("../images/background/soap.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 50%;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
 }
 
 @media screen and (max-width: 737px) {
