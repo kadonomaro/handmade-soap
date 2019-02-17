@@ -560,13 +560,18 @@ img {
   }
 }
 
+.section-divider {
+  position: relative;
+  height: 50px;
+}
+
 .soap {
   position: relative;
   padding: 60px 0;
 }
 
 .soap__background {
-  background-image: url("../images/background/soap.png");
+  background-image: url("../images/background/soap-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -596,39 +601,66 @@ img {
   margin-left: 10px;
   position: relative;
   padding: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   min-width: 300px;
   min-height: 300px;
   border-radius: 5px;
-  -webkit-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  overflow: hidden;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.soap-card:hover {
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
 }
 
 .soap-card::before {
   content: '';
+  z-index: -1;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background-image: url("../images/background/soap.png");
+  margin: -10px;
+  background-image: url("../images/background/soap-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: 50%;
-  -webkit-filter: blur(5px);
-          filter: blur(5px);
+  -webkit-filter: blur(7px);
+          filter: blur(7px);
 }
 
-@media screen and (max-width: 737px) {
+.soap-card__title {
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .soap__inner {
+    padding: 0 10px;
+  }
   .soap-card {
-    -ms-flex-preferred-size: calc((100% / 12 * 6) - (15px * 2));
-        flex-basis: calc((100% / 12 * 6) - (15px * 2));
-    max-width: calc((100% / 12 * 6) - (15px * 2));
-    margin-right: 15px;
-    margin-left: 15px;
+    -ms-flex-preferred-size: calc((100% / 12 * 6) - (10px * 2));
+        flex-basis: calc((100% / 12 * 6) - (10px * 2));
+    max-width: calc((100% / 12 * 6) - (10px * 2));
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .soap-card {
+    -ms-flex-preferred-size: calc((100% / 12 * 12) - (10px * 2));
+        flex-basis: calc((100% / 12 * 12) - (10px * 2));
+    max-width: calc((100% / 12 * 12) - (10px * 2));
+    margin-right: 10px;
+    margin-left: 10px;
   }
 }
 

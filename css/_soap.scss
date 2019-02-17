@@ -2,7 +2,7 @@
     position: relative;
     padding: 60px 0;
     &__background {
-        background-image: url('../images/background/soap.png');
+        background-image: url('../images/background/soap-background.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
@@ -26,36 +26,55 @@
     @include flex-columns(4,10px);
     position: relative;
     padding: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     min-width: 300px;
     min-height: 300px;
     border-radius: 5px;
-    box-shadow: 0 0 10px 3px rgba($color: #000000, $alpha: 0.5);
+    box-shadow: 0 0 10px rgba(0,0,0, 0.5);
     box-sizing: border-box;
-
+    overflow: hidden;
+    transition: all 0.2s ease-in;
     &:hover {
-        
+        box-shadow: 0 0 20px rgba(0,0,0, 0.7);
     }
     &::before {
         content: '';
+        z-index: -1;
         position: absolute;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
-        background-image: url('../images/background/soap.png');
+        margin: -10px;
+        background-image: url('../images/background/soap-background.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
         background-position: 50%;
-        filter: blur(5px);
+        filter: blur(7px);
     }
+    &__title {
+        text-align: center;
+    }
+    
 }
 
 
 
-@include media(737) {
+@include media(1024) {
+    .soap {
+        &__inner {
+            padding: 0 10px;
+        }
+    }
     .soap-card {
-        @include flex-columns(6,15px);
+        @include flex-columns(6,10px);
+    }
+}
+
+
+@include media(767) {
+    .soap-card {
+        @include flex-columns(12,10px);
     }
 }
