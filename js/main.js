@@ -1,3 +1,6 @@
+import detectSwipeDirection from "./detectSwipeDirection.js";
+
+
 window.addEventListener('load', function () {
 
     let bubbleBG = document.querySelector('.header__background-bubble');
@@ -35,8 +38,6 @@ window.addEventListener('load', function () {
     }
 
 
-
-
     let headerNav = document.querySelector('.header-nav');
     let headerNavToggle = document.querySelector('.header-nav__toggle');
 
@@ -44,9 +45,13 @@ window.addEventListener('load', function () {
         toggleClass(headerNav, 'header-nav_hidden');
     });
 
+    detectSwipeDirection(headerNav);
+
+
     function toggleClass(target, className) {
         target.classList.toggle(className);
     }
+
     //active /hidden button for scroll page to top
     let scrollTopButton = document.querySelector('.scroll-top');
     window.addEventListener('scroll', function () {
