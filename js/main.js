@@ -3,40 +3,33 @@
 
 window.addEventListener('load', function () {
 
-    let bubbleBG = document.querySelector('.header__background-bubble');
-    let bubbleBGCurrentStyles = window.getComputedStyle(bubbleBG, null).getPropertyValue('background-position-y').replace(/%/g, '').split(', ');
-
-    window.addEventListener('scroll', shiftBubbleBackground);
-    window.addEventListener('scroll',mediaSize);
+    let headerBackground = document.querySelector('.header__background-bubble');
+    let headerBackgroundCurrentStyle = window.getComputedStyle(headerBackground, null).getPropertyValue('background-position-y').replace(/%/g, '').split(', ');
 
 
-    function mediaSize() {
+    window.addEventListener('scroll', animateBackground);
+    window.addEventListener('scroll',changeMediaSize);
+
+
+    function changeMediaSize() {
         if (window.matchMedia("(max-width: 425px)").matches) {
-            window.removeEventListener('scroll', shiftBubbleBackground);
+            window.removeEventListener('scroll', animateBackground);
         } else {
-            window.addEventListener('scroll', shiftBubbleBackground);
+            window.addEventListener('scroll', animateBackground);
         }
     }
 
-    function shiftBubbleBackground() {
+    
+    // floating bubbles animation
+    function animateBackground() {
 
-        bubbleBG.style.backgroundPositionY = `${+ bubbleBGCurrentStyles[0] + (window.pageYOffset / 7)}%, 
-                                                ${+ bubbleBGCurrentStyles[1] + (window.pageYOffset / 11)}%,
-                                                ${+ bubbleBGCurrentStyles[2] + (window.pageYOffset / 7)}%,
-                                                ${+ bubbleBGCurrentStyles[3] + (window.pageYOffset / 10)}%,
-                                                ${+ bubbleBGCurrentStyles[4] - (window.pageYOffset / 14)}%,
-                                                ${+ bubbleBGCurrentStyles[5] + (window.pageYOffset / 8)}%,
-                                                ${+ bubbleBGCurrentStyles[6] + (window.pageYOffset / 11)}%,
-                                                ${+ bubbleBGCurrentStyles[7] - (window.pageYOffset / 22)}%,
-                                                ${+ bubbleBGCurrentStyles[8] + (window.pageYOffset / 9)}%,
-                                                ${+ bubbleBGCurrentStyles[9] + (window.pageYOffset / 8)}%,
-                                                ${+ bubbleBGCurrentStyles[10] + (window.pageYOffset / 5)}%,
-                                                ${+ bubbleBGCurrentStyles[11] + (window.pageYOffset / 8)}%,
-                                                ${+ bubbleBGCurrentStyles[12] + (window.pageYOffset / 9)}%,
-                                                ${+ bubbleBGCurrentStyles[13] - (window.pageYOffset / 18)}%`;
-        
+        let shiftDivider = [7, 11, 7, 10, 14, 8, 11, 22, 9, 8, 5, 8, 9, 18];
+        let newBackgroundPosition = headerBackgroundCurrentStyle.map(function (item, index) {
+            return (+item + window.pageYOffset / shiftDivider[index]).toFixed(2) + '%';
+        });
+        headerBackground.style.backgroundPositionY = newBackgroundPosition;
     }
-
+    
 
     let headerNav = document.querySelector('.header-nav');
     let headerNavToggle = document.querySelector('.header-nav__toggle');
