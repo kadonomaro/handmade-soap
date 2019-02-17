@@ -10,3 +10,12 @@
         background-repeat: no-repeat;
     }
 }
+
+
+@include media(600) {
+    .section-divider {
+        &::before {
+            background-image: url('../images/background/mobile/leaves-mobile.png');
+        }
+    }
+}

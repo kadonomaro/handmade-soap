@@ -64,7 +64,7 @@
 @include media(1024) {
     .soap {
         &__background {
-            background-image: url('../images/background/tablet/soap-background-tablet.png');
+            background-image: url('../images/background/tablet/soap-background-tablet.jpg');
         }
         &__inner {
             padding: 0 10px;
@@ -73,7 +73,7 @@
     .soap-card {
         @include flex-columns(6,10px);
         &::before {
-            background-image: url('../images/background/tablet/soap-background-tablet.png');
+            background-image: url('../images/background/tablet/soap-background-tablet.jpg');
         }
     }
 }
@@ -82,13 +82,13 @@
 @include media(767) {
     .soap {
         &__background {
-            background-image: url('../images/background/mobile/soap-background-mobile.png');
+            background-image: url('../images/background/mobile/soap-background-mobile.jpg');
         }
     }
     .soap-card {
         @include flex-columns(12,10px);
         &::before {
-            background-image: url('../images/background/mobile/soap-background-mobile.png');        }
+            background-image: url('../images/background/mobile/soap-background-mobile.jpg');        }
     }
 }
 

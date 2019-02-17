@@ -411,7 +411,7 @@ img {
 
 .main__title {
   position: relative;
-  margin: 0 10px 60px;
+  margin: 0 10px 30px;
   font-family: "Lobster", cursive;
   font-size: 32px;
   letter-spacing: 2px;
@@ -576,6 +576,12 @@ img {
   background-repeat: no-repeat;
 }
 
+@media screen and (max-width: 600px) {
+  .section-divider::before {
+    background-image: url("../images/background/mobile/leaves-mobile.png");
+  }
+}
+
 .soap {
   position: relative;
   padding: 80px 0 60px;
@@ -654,7 +660,7 @@ img {
 
 @media screen and (max-width: 1024px) {
   .soap__background {
-    background-image: url("../images/background/tablet/soap-background-tablet.png");
+    background-image: url("../images/background/tablet/soap-background-tablet.jpg");
   }
   .soap__inner {
     padding: 0 10px;
@@ -667,13 +673,13 @@ img {
     margin-left: 10px;
   }
   .soap-card::before {
-    background-image: url("../images/background/tablet/soap-background-tablet.png");
+    background-image: url("../images/background/tablet/soap-background-tablet.jpg");
   }
 }
 
 @media screen and (max-width: 767px) {
   .soap__background {
-    background-image: url("../images/background/mobile/soap-background-mobile.png");
+    background-image: url("../images/background/mobile/soap-background-mobile.jpg");
   }
   .soap-card {
     -ms-flex-preferred-size: calc((100% / 12 * 12) - (10px * 2));
@@ -683,7 +689,7 @@ img {
     margin-left: 10px;
   }
   .soap-card::before {
-    background-image: url("../images/background/mobile/soap-background-mobile.png");
+    background-image: url("../images/background/mobile/soap-background-mobile.jpg");
   }
 }
 
