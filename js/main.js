@@ -1,14 +1,18 @@
-// import detectSwipeDirection from "./detectSwipeDirection.js";
+import detectSwipeDirection from "./detectSwipeDirection.js";
 
+// import detectSwipeDirection from "./detectSwipeDirection.js";
 
 window.addEventListener('load', function () {
 
     let headerBackground = document.querySelector('.header__background-bubble');
-    let headerBackgroundCurrentStyle = window.getComputedStyle(headerBackground, null).getPropertyValue('background-position-y').replace(/%/g, '').split(', ');
+    let headerBackgroundCurrentStyle = window.getComputedStyle(headerBackground, null)
+        .getPropertyValue('background-position-y')
+        .replace(/%/g, '')
+        .split(', ');
 
 
     window.addEventListener('scroll', animateBackground);
-    window.addEventListener('scroll',changeMediaSize);
+    window.addEventListener('scroll', changeMediaSize);
 
 
     function changeMediaSize() {
@@ -19,7 +23,7 @@ window.addEventListener('load', function () {
         }
     }
 
-    
+
     // floating bubbles animation
     function animateBackground() {
 
@@ -29,8 +33,9 @@ window.addEventListener('load', function () {
         });
         headerBackground.style.backgroundPositionY = newBackgroundPosition;
     }
-    
 
+
+    // open/close navigation
     let headerNav = document.querySelector('.header-nav');
     let headerNavToggle = document.querySelector('.header-nav__toggle');
 
@@ -38,44 +43,20 @@ window.addEventListener('load', function () {
         toggleClass(headerNav, 'header-nav_hidden');
     });
 
-    // swipe detection 
-    var direction, initialX, initialY, currentX, currentY, diffX, diffY;
+    // swipe detection and close navigation by swipe
+    
+    detectSwipeDirection(headerNav, 'header-nav_hidden');
 
-    headerNav.addEventListener('touchstart', startTouch,false);
+    
 
-    headerNav.addEventListener('touchmove', moveTouch, false);
-
-    function startTouch(evt) {
-        initialX = evt.touches[0].clientX;
-        initialY = evt.touches[0].clientY;
-    }
-
-    function moveTouch(evt) {
-        currentX = evt.touches[0].clientX;
-        currentY = evt.touches[0].clientY;
-        diffX = initialX - currentX;
-        diffY = initialY - currentY;
-
-        if (diffX > 0) {
-            direction = 'left';
-            headerNav.classList.add('header-nav_hidden');
-
-        } else if (diffX < 0) {
-            direction = 'right';
-        } else if (diffY > 0) {
-            direction = 'up';
-        } else {
-            direction = 'down';
-        }
-        
-    }
 
 
     function toggleClass(target, className) {
         target.classList.toggle(className);
     }
 
-    //active /hidden button for scroll page to top
+
+    //active or hidden button for scroll page to top
     let scrollTopButton = document.querySelector('.scroll-top');
     window.addEventListener('scroll', function () {
 
@@ -85,5 +66,6 @@ window.addEventListener('load', function () {
             scrollTopButton.classList.remove('scroll-top_active');
         }
     });
+
 
 });
