@@ -246,7 +246,7 @@ img {
   top: 10px;
   left: 10px;
   min-width: 230px;
-  height: calc(100% - 20px);
+  height: calc(100vh - 20px);
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   border-radius: 5px;

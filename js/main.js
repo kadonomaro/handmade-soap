@@ -45,12 +45,9 @@ window.addEventListener('load', function () {
 
     // swipe detection and close navigation by swipe
     
-    detectSwipeDirection(headerNav, 'header-nav_hidden');
+    detectSwipeDirection(headerNav, 'header-nav_hidden','left');
 
     
-
-
-
     function toggleClass(target, className) {
         target.classList.toggle(className);
     }

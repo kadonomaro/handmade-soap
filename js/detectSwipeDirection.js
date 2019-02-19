@@ -3,9 +3,10 @@
      * 
      * @param {HTMLElement} targetElement 
      * @param {string} className
+     * @param {string} direction
      * @param {boolean} logDirection
      */
-    export default function detectSwipeDirection(targetElement, className, logDirection = false) {
+    export default function detectSwipeDirection(targetElement, className, direction, logDirection = false) {
 
         let swipe = {
             direction: '',
@@ -27,13 +28,16 @@
         
                 if (this.diffX > 0) {
                     this.direction = 'left';
-                    targetElement.classList.add(className);
                 } else if (this.diffX < 0) {
                     this.direction = 'right';
                 } else if (this.diffY > 0) {
                     this.direction = 'up';
                 } else {
                     this.direction = 'down';
+                }
+
+                if (direction == this.direction) {
+                    targetElement.classList.add(className);
                 }
 
                 if (logDirection) {
@@ -44,6 +48,4 @@
 
         targetElement.addEventListener('touchstart', swipe.startTouch, false);
         targetElement.addEventListener('touchmove', swipe.moveTouch, false);
-
-
     }
