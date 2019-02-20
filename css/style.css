@@ -641,11 +641,6 @@ img {
   transition: all 0.2s ease-in;
 }
 
-.soap-card:hover {
-  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-          box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-}
-
 .soap-card::before {
   content: '';
   z-index: -1;
@@ -674,7 +669,7 @@ img {
 
 .soap-card__price {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   text-align: center;
   font-size: 18px;
   font-weight: bold;
@@ -686,17 +681,19 @@ img {
   padding: 5px 20px;
   color: #303030;
   font-family: inherit;
-  border: 2px solid #303030;
-  border-radius: 5px;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
   background-color: transparent;
   cursor: pointer;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
 
-.soap-card__button:hover {
-  color: #ffffff;
-  background-color: #303030;
+.soap-card__button:hover, .soap-card__button:focus {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .soap-card__ingredients {
