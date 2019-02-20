@@ -687,7 +687,7 @@ img {
   color: #303030;
   font-family: inherit;
   border: 2px solid #303030;
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: transparent;
   cursor: pointer;
   -webkit-transition: all 0.2s ease-in;
@@ -695,7 +695,8 @@ img {
 }
 
 .soap-card__button:hover {
-  background-color: #eeeeee;
+  color: #ffffff;
+  background-color: #303030;
 }
 
 .soap-card__ingredients {
@@ -722,7 +723,7 @@ img {
   height: 100%;
   margin-top: -20px;
   padding: 30px 20px;
-  background-color: rgba(238, 238, 238, 0.95);
+  background-color: #a7d8e2;
   border-radius: 5px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -738,7 +739,12 @@ img {
 
 .soap-card-ingredients__item {
   position: relative;
+  margin-bottom: 10px;
   padding-left: 20px;
+}
+
+.soap-card-ingredients__item:hover::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='7.5' fill='%2351BEE6' stroke='black'/%3E%3Cpath d='M13.3536 8.35355V8.35355C13.1448 10.8019 11.3238 12.8079 8.907 13.2519L8.35355 13.3536' stroke='black'/%3E%3Cpath d='M3.33804 4.50706L3.50293 4.3026C4.22431 3.40805 5.22098 2.77684 6.33804 2.50706V2.50706' stroke='black'/%3E%3C/svg%3E%0A");
 }
 
 .soap-card-ingredients__item::before {
@@ -748,10 +754,12 @@ img {
   left: 0;
   width: 16px;
   height: 16px;
-  background-image: url("../images/bubbles/min/bubble-4-min.png");
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='7.5' stroke='black'/%3E%3Cpath d='M13.3536 8.35355V8.35355C13.1448 10.8019 11.3238 12.8079 8.907 13.2519L8.35355 13.3536' stroke='black'/%3E%3Cpath d='M3.33804 4.50706L3.50293 4.3026C4.22431 3.40805 5.22098 2.77684 6.33804 2.50706V2.50706' stroke='black'/%3E%3C/svg%3E");
   background-size: cover;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  -webkit-transition: background-image 0.2s ease-in;
+  transition: background-image 0.2s ease-in;
 }
 
 @media screen and (max-width: 1024px) {
