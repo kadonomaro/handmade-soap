@@ -65,4 +65,16 @@ window.addEventListener('load', function () {
     });
 
 
+    // show/hide ingredients in soap section
+
+    let soapCardButton = document.querySelectorAll('.soap-card__button');
+    
+    soapCardButton.forEach(button => {
+        button.addEventListener('click', function (evt) {
+            evt.preventDefault();
+            button.classList.toggle('soap-card__button_full');
+        });
+    });
+
+
 });

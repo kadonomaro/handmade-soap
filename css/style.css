@@ -668,6 +668,37 @@ img {
   text-align: center;
 }
 
+.soap-card__image-img {
+  margin: 0 auto;
+}
+
+.soap-card__price {
+  display: block;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.soap-card__button {
+  display: block;
+  margin: 0 auto;
+  padding: 5px 10px;
+  color: #ffffff;
+  font-family: inherit;
+  border: 2px solid #51bee6;
+  border-radius: 10px;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.soap-card__button:hover {
+  color: #51bee6;
+  background-color: #ffffff;
+}
+
 @media screen and (max-width: 1024px) {
   .soap__background {
     background-image: url("../images/background/tablet/soap-background-tablet.jpg");

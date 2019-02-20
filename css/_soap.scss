@@ -56,6 +56,35 @@
     &__title {
         text-align: center;
     }
+    &__image {
+
+    }
+    &__image-img {
+        margin: 0 auto;
+    }
+    &__price {
+        display: block;
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    &__button {
+        display: block;
+        margin: 0 auto;
+        padding: 5px 10px;
+        color: #ffffff;
+        font-family: inherit;
+        border: 2px solid $color-sea-blue;
+        border-radius: 10px;
+        background-color: transparent;
+        cursor: pointer;
+        transition: all 0.2s ease-in;
+        &:hover {
+            color: $color-sea-blue;
+            background-color: #ffffff;
+        }
+    }
     
 }
 
