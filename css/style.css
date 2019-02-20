@@ -683,10 +683,10 @@ img {
 .soap-card__button {
   display: block;
   margin: 0 auto;
-  padding: 5px 10px;
-  color: #ffffff;
+  padding: 5px 20px;
+  color: #303030;
   font-family: inherit;
-  border: 2px solid #51bee6;
+  border: 2px solid #303030;
   border-radius: 10px;
   background-color: transparent;
   cursor: pointer;
@@ -695,8 +695,63 @@ img {
 }
 
 .soap-card__button:hover {
-  color: #51bee6;
-  background-color: #ffffff;
+  background-color: #eeeeee;
+}
+
+.soap-card__ingredients {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 80%;
+  height: 85%;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: -webkit-transform 1s cubic-bezier(0.12, 1.4, 0.4, 0.98);
+  transition: -webkit-transform 1s cubic-bezier(0.12, 1.4, 0.4, 0.98);
+  transition: transform 1s cubic-bezier(0.12, 1.4, 0.4, 0.98);
+  transition: transform 1s cubic-bezier(0.12, 1.4, 0.4, 0.98), -webkit-transform 1s cubic-bezier(0.12, 1.4, 0.4, 0.98);
+}
+
+.soap-card__ingredients_active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.soap-card-ingredients {
+  width: 100%;
+  height: 100%;
+  margin-top: -20px;
+  padding: 30px 20px;
+  background-color: rgba(238, 238, 238, 0.95);
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  -webkit-box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, 0.5);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.soap-card-ingredients__list {
+  list-style: none;
+}
+
+.soap-card-ingredients__item {
+  position: relative;
+  padding-left: 20px;
+}
+
+.soap-card-ingredients__item::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background-image: url("../images/bubbles/min/bubble-4-min.png");
+  background-size: cover;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 @media screen and (max-width: 1024px) {
