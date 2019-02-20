@@ -5,23 +5,22 @@ import detectSwipeDirection from "./detectSwipeDirection.js";
 window.addEventListener('load', function () {
 
     let headerBackground = document.querySelector('.header__background-bubble');
+
+    //get css styles for background position
     let headerBackgroundCurrentStyle = window.getComputedStyle(headerBackground, null)
         .getPropertyValue('background-position-y')
         .replace(/%/g, '')
         .split(', ');
 
 
-    window.addEventListener('scroll', animateBackground);
-    window.addEventListener('scroll', changeMediaSize);
-
-
-    function changeMediaSize() {
-        if (window.matchMedia("(max-width: 425px)").matches) {
-            window.removeEventListener('scroll', animateBackground);
-        } else {
+    //animation for header background on first screen and device more than 600px screen
+    window.addEventListener('scroll', function () {
+        if (window.pageYOffset <= headerBackground.clientHeight && window.matchMedia('(min-width: 600px)').matches) {
             window.addEventListener('scroll', animateBackground);
+        } else {
+            window.removeEventListener('scroll', animateBackground);
         }
-    }
+    });
 
 
     // floating bubbles animation
@@ -43,8 +42,8 @@ window.addEventListener('load', function () {
         toggleClass(headerNav, 'header-nav_hidden');
     });
 
+
     // swipe detection and close navigation by swipe
-    
     detectSwipeDirection(headerNav, 'header-nav_hidden','left');
 
     
@@ -66,7 +65,6 @@ window.addEventListener('load', function () {
 
 
     // show/hide ingredients in soap section
-
     let soapCardButton = document.querySelectorAll('.soap-card__button');
 
     soapCardButton.forEach(button => {
