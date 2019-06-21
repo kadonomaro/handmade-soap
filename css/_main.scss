@@ -95,7 +95,7 @@
         border-radius: 50%;
         background: url('../images/bubbles/min/bubble-2-min.png');
         transform: translateY(-50%);
-        transition: box-shadow 0.3s;
+        transition: box-shadow 0.2s ease-in;
         cursor: pointer;
         &:hover {
             box-shadow: 0 0 5px 3px rgba($color: #000000, $alpha: 0.1);

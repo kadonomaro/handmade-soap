@@ -1,18 +1,6 @@
 $(document).ready(function () {
-    //init sliders
-    $('.main-slider-base').slick({
-        infinite: true,
-        arrows: false,
-        speed: 500,
-        cssEase: 'linear',
-        centerMode: true,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        variableWidth: true,
-        
-    });
-    
-    $('.main-slider-type').slick({
+
+    var sliderSettings = {
         infinite: true,
         arrows: false,
         speed: 500,
@@ -21,20 +9,11 @@ $(document).ready(function () {
         slidesToShow: 2,
         slidesToScroll: 1,
         variableWidth: true
-
-    });
-
-    $('.main-slider-aroma').slick({
-        infinite: true,
-        arrows: false,
-        speed: 500,
-        cssEase: 'linear',
-        centerMode: true,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        variableWidth: true
-
-    });
+    };
+    //init sliders on main section
+    $('.main-slider-base').slick(sliderSettings);
+    $('.main-slider-type').slick(sliderSettings);
+    $('.main-slider-aroma').slick(sliderSettings);
 
     //custom navigation
     $(".main-slider-base__next").click(function(e) { 
@@ -62,7 +41,6 @@ $(document).ready(function () {
 
 
     //change slider background image
-    
     if (window.matchMedia("(min-width: 425px)").matches) {
 
         $('.main-slider-base').on('beforeChange', function (evt, slick, currentSlide, nextSlide) {

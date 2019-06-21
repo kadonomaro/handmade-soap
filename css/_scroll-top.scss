@@ -5,15 +5,17 @@
     bottom: 10px;
     width: 50px;
     height: 50px;
-    background: url('../images/icons/scroll-top.png') no-repeat;
-    background-size: cover;
-    border-radius: 50%;
     transform: translateX(50%);
     transition: opacity 1s;
     visibility: hidden;
     opacity: 0;
     &:hover {
         opacity: 1;
+    }
+    &:hover .soap-icon,
+    &:hover .soap-icon__bubble,
+    &:hover .soap-icon__star {
+        animation-play-state: running;
     }
     &__link {
         display: block;
@@ -25,4 +27,56 @@
 .scroll-top_active {
     visibility: visible;
     opacity: 0.5;
+}
+
+.soap-icon {
+    transform-origin: bottom;
+    animation: soap-icon-anim 1s infinite forwards linear;
+    animation-play-state: paused;
+    &__bubble {
+        animation: bubble-anim 1.5s infinite forwards ease;
+        animation-play-state: paused;
+    }
+    &__star {
+        animation: star-anim 1.5s infinite forwards ease;
+        animation-play-state: paused;
+    }
+}
+
+
+
+@keyframes bubble-anim {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(0, -10%);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes star-anim {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(0, 20%);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes soap-icon-anim {
+    0% {
+        transform: translate(0, 0);
+    }
+    50%{
+        transform: translate(0, 15%);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
 }

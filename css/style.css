@@ -161,9 +161,6 @@ img {
   bottom: 10px;
   width: 50px;
   height: 50px;
-  background: url("../images/icons/scroll-top.png") no-repeat;
-  background-size: cover;
-  border-radius: 50%;
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
   -webkit-transition: opacity 1s;
@@ -176,6 +173,13 @@ img {
   opacity: 1;
 }
 
+.scroll-top:hover .soap-icon,
+.scroll-top:hover .soap-icon__bubble,
+.scroll-top:hover .soap-icon__star {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+
 .scroll-top__link {
   display: block;
   width: 100%;
@@ -185,6 +189,119 @@ img {
 .scroll-top_active {
   visibility: visible;
   opacity: 0.5;
+}
+
+.soap-icon {
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-animation: soap-icon-anim 1s infinite forwards linear;
+          animation: soap-icon-anim 1s infinite forwards linear;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.soap-icon__bubble {
+  -webkit-animation: bubble-anim 1.5s infinite forwards ease;
+          animation: bubble-anim 1.5s infinite forwards ease;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.soap-icon__star {
+  -webkit-animation: star-anim 1.5s infinite forwards ease;
+          animation: star-anim 1.5s infinite forwards ease;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+@-webkit-keyframes bubble-anim {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(0, -10%);
+            transform: translate(0, -10%);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@keyframes bubble-anim {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(0, -10%);
+            transform: translate(0, -10%);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@-webkit-keyframes star-anim {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(0, 20%);
+            transform: translate(0, 20%);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@keyframes star-anim {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(0, 20%);
+            transform: translate(0, 20%);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@-webkit-keyframes soap-icon-anim {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(0, 15%);
+            transform: translate(0, 15%);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@keyframes soap-icon-anim {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(0, 15%);
+            transform: translate(0, 15%);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
 }
 
 .header {
@@ -505,10 +622,10 @@ img {
   background: url("../images/bubbles/min/bubble-2-min.png");
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  -webkit-transition: -webkit-box-shadow 0.3s;
-  transition: -webkit-box-shadow 0.3s;
-  transition: box-shadow 0.3s;
-  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
+  -webkit-transition: -webkit-box-shadow 0.2s ease-in;
+  transition: -webkit-box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in, -webkit-box-shadow 0.2s ease-in;
   cursor: pointer;
 }
 
