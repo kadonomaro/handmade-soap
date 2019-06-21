@@ -1,8 +1,9 @@
 import detectSwipeDirection from "./detectSwipeDirection.js";
 
-// import detectSwipeDirection from "./detectSwipeDirection.js";
 
 window.addEventListener('load', function () {
+
+    
 
     let headerBackground = document.querySelector('.header__background-bubble');
 
@@ -30,6 +31,7 @@ window.addEventListener('load', function () {
         let newBackgroundPosition = headerBackgroundCurrentStyle.map(function (item, index) {
             return (+item + window.pageYOffset / shiftDivider[index]).toFixed(2) + '%';
         });
+        
         headerBackground.style.backgroundPositionY = newBackgroundPosition;
     }
 
