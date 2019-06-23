@@ -37,13 +37,37 @@
                 <nav class="blog-nav">
                     <ul class="blog-nav__list">
                         <li class="blog-nav__item"><a href="index.html" class="blog-nav__link">На главную</a></li>
-                        <li class="blog-nav__item"><a href="#articles" class="blog-nav__link">Статьи</a></li>
                         <li class="blog-nav__item"><a href="#gallery" class="blog-nav__link">Галерея</a></li>
+                        <li class="blog-nav__item">
+
+                            <a href="#articles" class="blog-nav__link">Статьи</a>
+                            <nav class="blog-nav__dropdown blog-nav-dropdown">
+                                <ul class="blog-nav-dropdown__list">
+                                    <li class="blog-nav-dropdown__item">
+                                        <a href="#article-1" class="blog-nav-dropdown__link">Как создаются шедевры</a>
+                                    </li>
+                                    <li class="blog-nav-dropdown__item">
+                                        <a href="#article-2" class="blog-nav-dropdown__link">Приступаем к работе</a>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                        </li>
                         <li class="blog-nav__item"><a href="#" class="blog-nav__link">lorem</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
+
+        <div class="gallery">
+            <div class="container">
+                <div class="gallery__inner">
+
+
+
+                </div><!--gallery inner-->
+            </div><!--container-->
+        </div>
 
         <section class="blog">
             <div class="blog__background background"></div>
@@ -51,7 +75,7 @@
                 <div class="blog__inner">
 
                     <div class="blog__articles" id="articles">
-                        <article class="blog-article">
+                        <article class="blog-article" id="article-1">
 
                             <header class="blog-article__header">
                                 <h2 class="blog-article__title">Как создаются шедевры</h2>
@@ -124,7 +148,7 @@
                             </div>
                         </article>
 
-                        <article class="blog-article">
+                        <article class="blog-article" id="article-2">
                             <header class="blog-article__header">
                                 <h2 class="blog-article__title">Приступаем к работе</h2>
                                 <span class="blog-article__subtitle">Начинаем творить!</span>
