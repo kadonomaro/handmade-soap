@@ -67,9 +67,9 @@ $(document).ready(function () {
         arrows: false,
         speed: 500,
         cssEase: 'linear',
-        asNavFor: '.gallery-slider-thumb'
+        asNavFor: '.gallery-slider-thumb__inner'
     });
-    $('.gallery-slider-thumb').slick({
+    $('.gallery-slider-thumb__inner').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
         infinite: true,
@@ -78,6 +78,13 @@ $(document).ready(function () {
         cssEase: 'linear',
         asNavFor: '.gallery-slider',
         centerMode: true
+    });
+
+    $(".gallery-slider-thumb__next").click(function(e) { 
+        $(".gallery-slider-thumb__inner").slick('slickNext');
+    });
+    $(".gallery-slider-thumb__prev").click(function(e) { 
+        $(".gallery-slider-thumb__inner").slick('slickPrev');
     });
 
 
