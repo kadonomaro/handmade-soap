@@ -69,42 +69,42 @@ img {
 }
 
 .fade-white {
-  background-image: url("../images/soap-base/soap-base-1.png");
+  background-image: url("../images/slider/soap-base/soap-base-1.png");
 }
 
 .fade-active {
   left: initial;
   right: 0;
-  background-image: url("../images/soap-base/soap-base-2.png");
+  background-image: url("../images/slider/soap-base/soap-base-2.png");
 }
 
 .fade-milk {
   top: 12%;
-  background-image: url("../images/soap-base/soap-base-3.png");
+  background-image: url("../images/slider/soap-base/soap-base-3.png");
 }
 
 .fade-coffee {
   top: 33%;
   left: -5%;
-  background-image: url("../images/aroma/fade/coffee-fade.png");
+  background-image: url("../images/slider/aroma/fade/coffee-fade.png");
 }
 
 .fade-orange {
   top: 40%;
   left: initial;
   right: -5%;
-  background-image: url("../images/aroma/fade/orange-fade.png");
+  background-image: url("../images/slider/aroma/fade/orange-fade.png");
 }
 
 .fade-strawberry {
   top: 45%;
   left: -10%;
-  background-image: url("../images/aroma/fade/strawberry-fade.png");
+  background-image: url("../images/slider/aroma/fade/strawberry-fade.png");
 }
 
 .fade-argan {
   top: 63%;
-  background-image: url("../images/oil/fade/argan-fade.png");
+  background-image: url("../images/slider/oil/fade/argan-fade.png");
 }
 
 .fade-coconut {
@@ -112,12 +112,12 @@ img {
   top: 65%;
   left: initial;
   right: -5%;
-  background-image: url("../images/oil//fade/coconut-fade.png");
+  background-image: url("../images/slider/oil//fade/coconut-fade.png");
 }
 
 .fade-shea {
   top: 75%;
-  background-image: url("../images/oil//fade/shea-fade.png");
+  background-image: url("../images/slider/oil//fade/shea-fade.png");
 }
 
 .fade-scale {
@@ -186,7 +186,7 @@ img {
   height: 100%;
 }
 
-.scroll-top_active {
+.scroll-top--active {
   visibility: visible;
   opacity: 0.5;
 }
@@ -355,10 +355,14 @@ img {
           animation: title-color 20s ease infinite;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .header-nav {
-  position: absolute;
+  position: fixed;
   z-index: 9;
   top: 10px;
   left: 10px;
@@ -446,7 +450,7 @@ img {
   margin-bottom: 10px;
 }
 
-.header-nav_hidden {
+.header-nav--hidden {
   -webkit-transform: translateX(-108%);
           transform: translateX(-108%);
 }
@@ -900,10 +904,60 @@ img {
   }
 }
 
-.blog {
-  max-width: 1600px;
+.blog-header__title {
+  margin-bottom: 1px;
+  padding: 20px 0;
+  color: #4ecead;
+  font-family: "Lobster", cursive;
+  font-size: 64px;
+  text-shadow: 0 0 3px #000000;
+  text-align: center;
+  background-color: #4ecead;
+  -webkit-animation: title-color 20s ease infinite;
+          animation: title-color 20s ease infinite;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.blog-nav {
+  background-color: #4ecead;
+  border-left: none;
+  border-right: none;
+}
+
+.blog-nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 30px 0;
+  text-align: center;
+  list-style: none;
+}
+
+.blog-nav__item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-transition: background-color 0.2s ease-in;
+  transition: background-color 0.2s ease-in;
+}
+
+.blog-nav__item:hover {
+  background-color: #33b694;
+}
+
+.blog-nav__link {
+  display: block;
+  padding: 8px 4px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.blog__inner {
+  padding: 20px 0;
 }
 
 .footer {

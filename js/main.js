@@ -1,13 +1,15 @@
 import detectSwipeDirection from "./detectSwipeDirection.js";
+import scrollTop from "./modules/scrollTop.js";
 
 
-window.addEventListener('load', function () {
 
+document.addEventListener('DOMContentLoaded', function () {
+    
+    scrollTop(document.querySelector('.scroll-top'), 'scroll-top--active');
     
 
-    let headerBackground = document.querySelector('.header__background-bubble');
-
     //get css styles for background position
+    let headerBackground = document.querySelector('.header__background-bubble');
     let headerBackgroundCurrentStyle = window.getComputedStyle(headerBackground, null)
         .getPropertyValue('background-position-y')
         .replace(/%/g, '')
@@ -41,7 +43,8 @@ window.addEventListener('load', function () {
     let headerNavToggle = document.querySelector('.header-nav__toggle');
 
     headerNavToggle.addEventListener('click', function () {
-        toggleClass(headerNav, 'header-nav_hidden');
+        // toggleClass(headerNav, 'header-nav_hidden');
+        headerNav.classList.toggle('header-nav--hidden');
     });
 
 
@@ -64,6 +67,8 @@ window.addEventListener('load', function () {
             scrollTopButton.classList.remove('scroll-top_active');
         }
     });
+
+    
 
 
     // show/hide ingredients in soap section

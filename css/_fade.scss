@@ -17,51 +17,51 @@
 
 //first slider fade images
 .fade-white {
-    background-image: url('../images/soap-base/soap-base-1.png');
+    background-image: url('../images/slider/soap-base/soap-base-1.png');
 }
 .fade-active {
     left: initial;
     right: 0;
-    background-image: url('../images/soap-base/soap-base-2.png');
+    background-image: url('../images/slider/soap-base/soap-base-2.png');
 }
 .fade-milk {
     top: 12%;
-    background-image: url('../images/soap-base/soap-base-3.png');
+    background-image: url('../images/slider/soap-base/soap-base-3.png');
 }
 
 //second slider fade images
 .fade-coffee {
     top: 33%;
     left: -5%;
-    background-image: url('../images/aroma/fade/coffee-fade.png');
+    background-image: url('../images/slider/aroma/fade/coffee-fade.png');
 }
 .fade-orange {
     top: 40%;
     left: initial;
     right: -5%;
-    background-image: url('../images/aroma/fade/orange-fade.png');
+    background-image: url('../images/slider/aroma/fade/orange-fade.png');
 }
 .fade-strawberry {
     top: 45%;
     left: -10%;
-    background-image: url('../images/aroma/fade/strawberry-fade.png');
+    background-image: url('../images/slider/aroma/fade/strawberry-fade.png');
 }
 
 //third slider fade images
 .fade-argan {
     top: 63%;
-    background-image: url('../images/oil/fade/argan-fade.png');
+    background-image: url('../images/slider/oil/fade/argan-fade.png');
 }
 .fade-coconut {
     z-index: 5;
     top: 65%;
     left: initial;
     right: -5%;
-    background-image: url('../images/oil//fade/coconut-fade.png');
+    background-image: url('../images/slider/oil//fade/coconut-fade.png');
 }
 .fade-shea {
     top: 75%;
-    background-image: url('../images/oil//fade/shea-fade.png');
+    background-image: url('../images/slider/oil//fade/shea-fade.png');
 }
 
 

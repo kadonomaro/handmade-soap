@@ -63,13 +63,14 @@
         text-shadow: 0 0 3px #000000;
         animation: title-color 20s ease infinite;
         transition: all 0.5s;
+        user-select: none;
     }
 
 }
 
 
 .header-nav {
-    position: absolute;
+    position: fixed;
     z-index: 9;
     top: 10px;
     left: 10px;
@@ -142,7 +143,7 @@
     }
 
 }
-.header-nav_hidden {
+.header-nav--hidden {
     transform: translateX(-108%);
 }
 
