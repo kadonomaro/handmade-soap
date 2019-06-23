@@ -61,5 +61,17 @@ $(document).ready(function () {
         });
     }
 
+    //gallery slider
+    $('.gallery-slider').slick({
+        infinite: true,
+        arrows: false,
+        speed: 500,
+        cssEase: 'linear',
+        centerMode: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        variableWidth: true
+    });
+
 
 });

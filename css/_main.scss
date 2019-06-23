@@ -65,6 +65,13 @@
     overflow: hidden;
     &__slide-wrapper {
         filter: drop-shadow(0 0 5px black);
+        transform: scale(0.7);
+        opacity: 0.3;
+        transition: all 0.5s ease-in;
+    }
+    &__slide-wrapper.slick-center {
+        transform: scale(1);
+        opacity: 1
     }
     &__slide {
         position: relative;
@@ -75,6 +82,9 @@
         background-color: rgba($color: $color-sea-blue, $alpha: 0.2);
         overflow: hidden;
         transition: all 1s;
+
+
+
         &:hover .main-slider__desc, 
         &:focus .main-slider__desc {
             opacity: 1;
@@ -84,7 +94,6 @@
         &:focus .main-slider__img {
             filter: blur(8px);
         }
-
     }
     &__next, &__prev {
         position: absolute;
