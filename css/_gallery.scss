@@ -10,12 +10,12 @@
     max-width: 900px;
     margin: 0 auto;
     overflow: hidden;
-    &:hover .gallery-slider__title,
-    &:hover .gallery-slider__desc {
-        transform: translateY(0);
-    }
     &__item {
         position: relative;
+        &:hover .gallery-slider__title,
+        &:hover .gallery-slider__desc {
+            transform: translateY(0);
+        }
     }
     &__title,
     &__desc {
@@ -82,4 +82,21 @@
     &__next {
         right: 0;
     }
+}
+
+
+
+@media screen and (max-width: 767px) {
+
+    .gallery-slider {
+        &__title,
+        &__desc {
+            height: 25%;
+            padding: 5px;
+        }
+        &__title {
+            font-size: 1em;
+        }
+    }
+
 }
