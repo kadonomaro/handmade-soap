@@ -6,8 +6,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let blogNavToggle = document.querySelector('.blog-nav__toggle');
     let blogNavList = document.querySelector('.blog-nav__list');
+    let blogNavItems = blogNavList.querySelectorAll('.blog-nav__item');
+
 
     blogNavToggle.addEventListener('click', function (evt) {
+        evt.preventDefault();
+
+        //fade-in animation of nav items
+        blogNavItems.forEach((item, index) => {
+            item.style.transitionDelay = (index / 5).toFixed(2) + 's';
+            
+        });
+        setTimeout(function () {
+            blogNavItems.forEach((item, index) => {
+                item.classList.toggle('blog-nav__item--active');
+                
+                setTimeout(function () {
+                    item.style.transitionDelay = '0s';
+                },300);
+            });
+        }, 10);
 
         if (blogNavList.classList.contains('blog-nav__list--active')) {
             blogNavList.classList.remove('blog-nav__list--active');

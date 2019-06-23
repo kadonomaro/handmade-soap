@@ -62,7 +62,7 @@
     &__item {
         position: relative;
         flex: 1;
-        transition: background-color 0.2s ease-in;
+        transition: background-color 0.2s ease-in, transform 0.3s linear;
         &:hover,
         &:focus {
             background-color: darken($color: $color-sea-green, $amount: 10%);
@@ -178,7 +178,7 @@
     .blog-header {
 
         &__nav {
-            border: none;
+            // border: none;
         }
     }
     .blog-nav {
@@ -189,11 +189,10 @@
         &__list {
             position: absolute;
             z-index: 999;
-            top: 50px;
+            top: 51px;
             left: 0;
             flex-direction: column;
             width: 200px;
-            // background-color: $color-sea-green;
             transition: transform 0.5s ease-in;
             transform: translateX(-100%);
         }
@@ -202,13 +201,21 @@
         }
         &__item {
             background-color: $color-sea-green;
+            transform: translateX(-100%);
+            
+            &:not(:last-child) {
+                border-bottom: 1px solid darken($color: $color-sea-green, $amount: 10%);
+            }
+        }
+        &__item--active {
+            transform: translateX(0);
         }
     }
 
 }
 
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 600px) {
 
     .blog-nav__list {
         width: 100vw;
