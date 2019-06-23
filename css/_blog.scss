@@ -45,6 +45,7 @@
         display: none;
         width: 50px;
         height: 50px;
+        margin-left: 10px;
         background-color: transparent;
         background-image: url('../images/icons/soap-burger.svg');
         background-size: cover;
@@ -172,17 +173,16 @@
 
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 
     .blog-header {
 
         &__nav {
-            width: auto;
             border: none;
         }
     }
     .blog-nav {
-        background-color: transparent;
+
         &__toggle {
             display: block;
         }
@@ -193,17 +193,25 @@
             left: 0;
             flex-direction: column;
             width: 200px;
-            background-color: $color-sea-green;
+            // background-color: $color-sea-green;
             transition: transform 0.5s ease-in;
             transform: translateX(-100%);
         }
         &__list--active {
             transform: translateX(0);
         }
-        &__dropdown {
-            top: 0;
-            left: 100%;
+        &__item {
+            background-color: $color-sea-green;
         }
+    }
+
+}
+
+
+@media screen and (max-width: 425px) {
+
+    .blog-nav__list {
+        width: 100vw;
     }
 
 }

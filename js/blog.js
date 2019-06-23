@@ -11,16 +11,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (blogNavList.classList.contains('blog-nav__list--active')) {
             blogNavList.classList.remove('blog-nav__list--active');
-            // blogNavList.addEventListener('transitionend', function () {
-                
-            // });
             setTimeout(function () {
                 blogNavList.style.display = 'none';
             },500);
         } else {
             blogNavList.style.display = 'block';
-            blogNavList.classList.add('blog-nav__list--active');
-
+            setTimeout(function () {
+                blogNavList.classList.add('blog-nav__list--active');
+            }, 100);
         }
         
     });
