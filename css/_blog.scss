@@ -1,7 +1,6 @@
 .blog-header {
 
     &__title {
-        margin-bottom: 1px;
         padding: 20px 0;
         color: $color-sea-green;
         font-family: $font-cursive;
@@ -13,7 +12,9 @@
         user-select: none;
     }
     &__nav {
-
+        border: 1px solid darken($color: $color-sea-green, $amount: 10%);
+        border-left: none;
+        border-right: none;
     }
 }
 
@@ -46,7 +47,10 @@
 }
 
 .blog {
-
+    position: relative;
+    &__background {
+        background-color: $color-background-light;
+    }
     &__inner {
         padding: 20px 0;
     }
@@ -62,7 +66,7 @@
     color: $color-text;
 
     &__header {
-        margin-bottom: 30px;
+        margin-bottom: 10px;
         text-align: center;
     }
     &__title {
@@ -76,7 +80,7 @@
         display: block;
         max-width: 100%;
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
     &__desc {
 
@@ -84,7 +88,7 @@
         h4,
         h5
         {
-            margin-bottom: 10px;
+            margin-bottom: 5px;
             color: $color-sea-blue;
         }
         ul,
@@ -94,7 +98,7 @@
         }
 
         p {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
     }
 
