@@ -963,9 +963,20 @@ img {
 }
 
 .blog-nav {
+  position: relative;
   background-color: #4ecead;
   border-left: none;
   border-right: none;
+}
+
+.blog-nav__toggle {
+  display: none;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  background-image: url("../images/icons/soap-burger.svg");
+  background-size: cover;
+  border: none;
 }
 
 .blog-nav__list {
@@ -1099,6 +1110,45 @@ img {
 
 .blog-article__desc p {
   margin-bottom: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .blog-header__nav {
+    width: auto;
+    border: none;
+  }
+  .blog-nav {
+    background-color: transparent;
+  }
+  .blog-nav__toggle {
+    display: block;
+  }
+  .blog-nav__list {
+    position: absolute;
+    z-index: 999;
+    top: 50px;
+    left: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 200px;
+    background-color: #4ecead;
+    -webkit-transition: -webkit-transform 0.5s ease-in;
+    transition: -webkit-transform 0.5s ease-in;
+    transition: transform 0.5s ease-in;
+    transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  .blog-nav__list--active {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .blog-nav__dropdown {
+    top: 0;
+    left: 100%;
+  }
 }
 
 .gallery {

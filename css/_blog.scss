@@ -37,17 +37,27 @@
 
 
 .blog-nav {
+    position: relative;
     background-color: $color-sea-green;
     border-left: none;
     border-right: none;
+    &__toggle {
+        display: none;
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+        background-image: url('../images/icons/soap-burger.svg');
+        background-size: cover;
+        border: none;
+    }
     &__list {
         display: flex;
         max-width: 1200px;
         margin: 0 auto;
         text-align: center;
         list-style: none;
-
     }
+
     &__item {
         position: relative;
         flex: 1;
@@ -155,6 +165,44 @@
 
         p {
             margin-bottom: 15px;
+        }
+    }
+
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    .blog-header {
+
+        &__nav {
+            width: auto;
+            border: none;
+        }
+    }
+    .blog-nav {
+        background-color: transparent;
+        &__toggle {
+            display: block;
+        }
+        &__list {
+            position: absolute;
+            z-index: 999;
+            top: 50px;
+            left: 0;
+            flex-direction: column;
+            width: 200px;
+            background-color: $color-sea-green;
+            transition: transform 0.5s ease-in;
+            transform: translateX(-100%);
+        }
+        &__list--active {
+            transform: translateX(0);
+        }
+        &__dropdown {
+            top: 0;
+            left: 100%;
         }
     }
 
