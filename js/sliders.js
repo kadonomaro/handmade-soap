@@ -67,10 +67,17 @@ $(document).ready(function () {
         arrows: false,
         speed: 500,
         cssEase: 'linear',
-        centerMode: true,
-        slidesToShow: 1,
+        asNavFor: '.gallery-slider-thumb'
+    });
+    $('.gallery-slider-thumb').slick({
+        slidesToShow: 3,
         slidesToScroll: 1,
-        variableWidth: true
+        infinite: true,
+        arrows: false,
+        speed: 500,
+        cssEase: 'linear',
+        asNavFor: '.gallery-slider',
+        centerMode: true
     });
 
 
