@@ -1,4 +1,5 @@
 import scrollTop from "./modules/scrollTop.js";
+import typeWrite from "./modules/typeWrite.js";
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -52,5 +53,11 @@ document.addEventListener('DOMContentLoaded', function () {
             blogHeaderNav.classList.remove('blog-header__nav--fixed');
         }
     });
+
+    // typeWrite(
+    //     document.querySelector('.blog-article__subtitle').textContent,
+    //     150,
+    //     document.querySelector('.blog-article__subtitle')
+    // );
     
 });
