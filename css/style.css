@@ -10,6 +10,7 @@ html {
 img {
   display: block;
   max-width: 100%;
+  width: 100%;
 }
 
 .visually-hidden {
@@ -673,11 +674,6 @@ img {
 }
 
 @media screen and (max-width: 1024px) {
-  .main__background::after {
-    width: 300px;
-    height: 187px;
-    background: url("../images/background/mobile/blowing-bubbles-mobile.png");
-  }
   .main-slider__next, .main-slider__prev {
     display: none;
   }
@@ -1091,33 +1087,41 @@ img {
   color: #606060;
 }
 
-.blog-article__image {
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-.blog-article__desc {
-  padding: 20px;
+.blog-article__content {
   background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 
-.blog-article__desc h3,
-.blog-article__desc h4,
-.blog-article__desc h5 {
+.blog-article__text {
+  padding: 20px;
+}
+
+.blog-article__text h3,
+.blog-article__text h4,
+.blog-article__text h5 {
   margin-bottom: 5px;
   color: #51bee6;
 }
 
-.blog-article__desc ul,
-.blog-article__desc ol {
+.blog-article__text ul,
+.blog-article__text ol {
   margin-bottom: 10px;
   padding-left: 25px;
 }
 
-.blog-article__desc p {
+.blog-article__text p {
   margin-bottom: 15px;
+}
+
+@media screen and (max-width: 1024px) {
+  .blog__background::after {
+    width: 300px;
+    height: 187px;
+    background: url("../images/background/mobile/blowing-bubbles-mobile.png");
+  }
 }
 
 @media screen and (max-width: 767px) {

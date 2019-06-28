@@ -89,10 +89,10 @@ $(document).ready(function () {
         centerMode: true
     });
 
-    $(".gallery-slider-thumb__next").click(function(e) { 
+    $(".gallery-slider-thumb__next").click(function() { 
         $(".gallery-slider-thumb__inner").slick('slickNext');
     });
-    $(".gallery-slider-thumb__prev").click(function(e) { 
+    $(".gallery-slider-thumb__prev").click(function() { 
         $(".gallery-slider-thumb__inner").slick('slickPrev');
     });
 
