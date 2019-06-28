@@ -12,17 +12,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 600px;
-            height: 373px;
-            background: url('../images/background/blowing-bubbles.png');
-            background-size: contain;
-            opacity: 0.5;
-        }
+
     }
     &__title {
         position: relative;

@@ -528,18 +528,6 @@ img {
   background-position: center;
 }
 
-.main__background::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 600px;
-  height: 373px;
-  background: url("../images/background/blowing-bubbles.png");
-  background-size: contain;
-  opacity: 0.5;
-}
-
 .main__title {
   position: relative;
   margin: 0 10px 30px;
@@ -965,8 +953,6 @@ img {
 .blog-nav {
   position: relative;
   background-color: #4ecead;
-  border-left: none;
-  border-right: none;
 }
 
 .blog-nav__toggle {
@@ -1065,6 +1051,18 @@ img {
   background-color: #f3f9ff;
 }
 
+.blog__background::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 600px;
+  height: 373px;
+  background: url("../images/background/blowing-bubbles.png");
+  background-size: contain;
+  opacity: 0.2;
+}
+
 .blog__inner {
   padding: 20px 0;
 }
@@ -1096,6 +1094,13 @@ img {
 .blog-article__image {
   width: 100%;
   margin-bottom: 10px;
+}
+
+.blog-article__desc {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .blog-article__desc h3,
@@ -1151,6 +1156,9 @@ img {
   .blog-nav__item--active {
     -webkit-transform: translateX(0);
             transform: translateX(0);
+  }
+  .blog-nav__dropdown {
+    position: relative;
   }
 }
 

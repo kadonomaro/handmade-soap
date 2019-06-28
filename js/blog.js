@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 blogNavList.style.display = 'none';
             },500);
         } else {
-            blogNavList.style.display = 'block';
+            blogNavList.style.display = 'flex';
             setTimeout(function () {
                 blogNavList.classList.add('blog-nav__list--active');
             }, 100);
