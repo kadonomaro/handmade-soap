@@ -1,14 +1,15 @@
 function typeWrite(text, speed, htmlElement) {
     let counter = 0;
-    speed = speed || 100;
+    let textCopy = htmlElement.textContent;
+    htmlElement.textContent = '';
+    speed = speed;
 
     
 
     function writeText() {
         if (counter < text.length) {
             if (htmlElement) {
-                htmlElement.textContent = '';
-                htmlElement.textContent += text.charAt(counter);
+                htmlElement.textContent += textCopy.charAt(counter);
             }
             counter++;
             setTimeout(writeText, speed);

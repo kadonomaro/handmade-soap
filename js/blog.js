@@ -54,10 +54,11 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // typeWrite(
-    //     document.querySelector('.blog-article__subtitle').textContent,
-    //     150,
-    //     document.querySelector('.blog-article__subtitle')
-    // );
+    // type writting effect for header subtitle
+    typeWrite(
+        document.querySelector('.blog-header__subtitle').textContent,
+        100,
+        document.querySelector('.blog-header__subtitle')
+    );
     
 });
