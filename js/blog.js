@@ -43,16 +43,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-    // let blogHeaderNav = document.querySelector('.blog-header__nav');
-    // let blogHeaderNavOffset = blogHeaderNav.offsetTop;
-    // window.addEventListener('scroll', function () {
-
-    //     if (window.pageYOffset >= blogHeaderNavOffset) {
-    //         blogHeaderNav.classList.add('blog-header__nav--fixed');
-    //     } else {
-    //         blogHeaderNav.classList.remove('blog-header__nav--fixed');
-    //     }
-    // });
 
     // type writting effect for header subtitle
     typeWrite(
@@ -63,13 +53,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //scrolling into every section with interval on click button
     let blogActionButton = document.querySelector('.js-blog-action');
-    blogActionButton.addEventListener('click', function () {
+    blogActionButton.addEventListener('click', function (evt) {
+        evt.preventDefault();
         let sections = document.querySelectorAll('section');
         let sectionScrollSettings = {
             behavior: "smooth"
         };
         let scrollSpeed = 2000;
         let sectionCounter = 0;
+
 
         sections[sectionCounter].scrollIntoView(sectionScrollSettings);
         sectionCounter++;
@@ -78,11 +70,23 @@ document.addEventListener('DOMContentLoaded', function () {
             sectionCounter++;
             if (sectionCounter >= sections.length) {
                 clearInterval(scrollInterval);
+                console.log('stop');
             }
         }, scrollSpeed);
 
+        window.addEventListener('mousedown', userActionHandler);
+        window.addEventListener('touchstart', userActionHandler);
+        window.addEventListener('mousewheel', userActionHandler);
+        window.addEventListener('keydown', userActionHandler);
 
-        
+        function userActionHandler() {
+            clearInterval(scrollInterval);
+            window.removeEventListener('mousedown', userActionHandler);
+            window.removeEventListener('touchstart', userActionHandler);
+            window.removeEventListener('mousewheel', userActionHandler);
+            window.removeEventListener('keydown', userActionHandler);
+            
+        }
 
 
     });
