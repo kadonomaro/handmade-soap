@@ -1,6 +1,7 @@
 .gallery {
     position: relative;
     &__background {
+        background-color: $color-background-light;
         background-image: url('../images/background/water.png');
         background-repeat: no-repeat;
         background-position: left -10% center;
