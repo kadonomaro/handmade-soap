@@ -101,9 +101,9 @@ $(document).ready(function () {
         arrows: false,
         speed: 500,
         cssEase: 'linear',
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 5000,
-        draggable: true
+        draggable: false
 
     });
 

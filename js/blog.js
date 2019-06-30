@@ -60,5 +60,25 @@ document.addEventListener('DOMContentLoaded', function () {
         100,
         document.querySelector('.blog-header__subtitle')
     );
+
+    let blogActionButton = document.querySelector('.js-blog-action');
+
+    blogActionButton.addEventListener('click', function () {
+        let sections = document.querySelectorAll('section');
+        let sectionScrollSettings = {
+            behavior: "smooth"
+        };
+        let scrollSpeed = 2000;
+
+        sections[0].scrollIntoView(sectionScrollSettings);
+        setInterval(() => {
+            for (let i = 1; i < sections.length; i++) {
+                sections[i].scrollIntoView(sectionScrollSettings);
+                
+            }
+        }, scrollSpeed);
+
+
+    });
     
 });

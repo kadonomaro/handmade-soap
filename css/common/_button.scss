@@ -1,0 +1,20 @@
+.button {
+    padding: 10px 20px;
+    color: $color-text-light;
+    font-family: inherit;
+    font-size: inherit;
+    text-align: center;
+    background-color: transparent;
+    border: 2px solid $color-border-light;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    &:hover,
+    &:focus {
+        color: #ffffff;
+        background-color: $color-sea-blue;
+        border-color: $color-sea-blue;
+        box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.3);
+    }
+
+}

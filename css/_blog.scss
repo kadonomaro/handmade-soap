@@ -7,7 +7,7 @@
 
     &__background {
         background-color: $color-background-light;
-        background-image: url('../text/Draw_Spring_091.png');
+        background-image: url('../images/background/header-background.png');
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
@@ -31,6 +31,13 @@
         letter-spacing: 2px;
         text-shadow: 0 0 3px #000000;
         user-select: none;
+    }
+    &__slogan {
+        display: block;
+        margin-bottom: 20px;
+        color: $color-text-light;
+        font-size: 24px;
+        text-transform: uppercase;
     }
     &__nav {
         max-width: 50%;

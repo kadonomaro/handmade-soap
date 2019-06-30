@@ -305,6 +305,28 @@ img {
   }
 }
 
+.button {
+  padding: 10px 20px;
+  color: #505050;
+  font-family: inherit;
+  font-size: inherit;
+  text-align: center;
+  background-color: transparent;
+  border: 2px solid #cccccc;
+  border-radius: 25px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.button:hover, .button:focus {
+  color: #ffffff;
+  background-color: #51bee6;
+  border-color: #51bee6;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
 .header {
   position: relative;
   display: -webkit-box;
@@ -911,7 +933,7 @@ img {
 
 .blog-header__background {
   background-color: #f3f9ff;
-  background-image: url("../text/Draw_Spring_091.png");
+  background-image: url("../images/background/header-background.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -944,6 +966,14 @@ img {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+
+.blog-header__slogan {
+  display: block;
+  margin-bottom: 20px;
+  color: #505050;
+  font-size: 24px;
+  text-transform: uppercase;
 }
 
 .blog-header__nav {
@@ -1252,7 +1282,7 @@ img {
 .gallery__background {
   background-image: url("../images/background/water.png");
   background-repeat: no-repeat;
-  background-position: left -20% center;
+  background-position: left -10% center;
 }
 
 .gallery__inner {
@@ -1262,8 +1292,8 @@ img {
 .gallery-photos {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
   grid-gap: 15px;
   grid-auto-rows: auto;
   grid-auto-flow: dense;
@@ -1298,6 +1328,15 @@ img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  transition: -webkit-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+  transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
+}
+
+.gallery-photos__image:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 @media screen and (max-width: 767px) {
