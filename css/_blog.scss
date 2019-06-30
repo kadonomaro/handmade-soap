@@ -2,10 +2,14 @@
     position: relative;
     min-height: 100vh;
     padding: 10px;
-    background-color: $color-sea-green;
+    // background-color: $color-sea-green;
     text-align: center;
     box-sizing: border-box;
 
+    &__background {
+        background-image: url('../images/background/soap-background.jpg');
+        background-size: cover;
+    }
     &__title {
         padding-top: 20px;
         color: $color-sea-green;
@@ -27,22 +31,16 @@
     }
     &__nav {
         max-width: 50%;
-        margin-left: auto;   
+        margin-left: auto;
+        margin-bottom: 200px;
     }
-    // &__nav--fixed {
-    //     position: fixed;
-    //     z-index: 999;
-    //     top: 0;
-    //     width: 100%;
-
-    // }
 }
 
 
 
 .blog-nav {
     position: relative;
-    background-color: $color-sea-green;
+    background-color: rgba($color: $color-sea-green, $alpha: 0.5);
     border: 1px solid darken($color: $color-sea-green, $amount: 10%);
     border-radius: 25px;
     &__toggle {
@@ -125,6 +123,34 @@
         }
     }
 }
+
+
+
+.blog-slider {
+    padding: 20px 0;
+    &__image {
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        max-width: 300px;
+        &::before {
+            content: '';
+            z-index: -1;
+            position: absolute;
+            bottom: -30px;
+            left: -20%;
+            right: -20%;
+            height: 200px;
+            background-image: url('../images/slider/shadow.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+    .slick-slide {
+        outline: none;
+    }
+}
+
 
 
 .blog {
@@ -248,6 +274,10 @@
         &__item {
             background-color: $color-sea-green;
             transform: translateX(-100%);
+            &:first-child,
+            &:last-child {
+                border-radius: 0;
+            }
             
             &:not(:last-child) {
                 border-bottom: 1px solid darken($color: $color-sea-green, $amount: 10%);
@@ -271,11 +301,25 @@
             max-width: 100%;
             margin: 0;
         }
+        &__title {
+            font-size: 2em;
+        }
+        &__subtitle {
+            font-size: 1.5em;
+        }
     }
 
     .blog-nav {
         &__list {
-            width: 100vw;
+            width: 100%;
+        }
+    }
+
+    .blog-slider {
+        &__image {
+            &::before {
+                display: none;
+            }
         }
     }
 

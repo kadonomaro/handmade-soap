@@ -43,16 +43,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-    let blogHeaderNav = document.querySelector('.blog-header__nav');
-    let blogHeaderNavOffset = blogHeaderNav.offsetTop;
-    window.addEventListener('scroll', function () {
+    // let blogHeaderNav = document.querySelector('.blog-header__nav');
+    // let blogHeaderNavOffset = blogHeaderNav.offsetTop;
+    // window.addEventListener('scroll', function () {
 
-        if (window.pageYOffset >= blogHeaderNavOffset) {
-            blogHeaderNav.classList.add('blog-header__nav--fixed');
-        } else {
-            blogHeaderNav.classList.remove('blog-header__nav--fixed');
-        }
-    });
+    //     if (window.pageYOffset >= blogHeaderNavOffset) {
+    //         blogHeaderNav.classList.add('blog-header__nav--fixed');
+    //     } else {
+    //         blogHeaderNav.classList.remove('blog-header__nav--fixed');
+    //     }
+    // });
 
     // type writting effect for header subtitle
     typeWrite(

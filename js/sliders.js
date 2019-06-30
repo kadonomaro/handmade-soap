@@ -96,5 +96,16 @@ $(document).ready(function () {
         $(".gallery-slider-thumb__inner").slick('slickPrev');
     });
 
+    $('.blog-slider').slick({
+        infinite: true,
+        arrows: false,
+        speed: 500,
+        cssEase: 'linear',
+        autoplay: false,
+        autoplaySpeed: 5000,
+        draggable: true
+
+    });
+
 
 });
