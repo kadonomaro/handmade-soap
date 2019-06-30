@@ -61,22 +61,28 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector('.blog-header__subtitle')
     );
 
+    //scrolling into every section with interval on click button
     let blogActionButton = document.querySelector('.js-blog-action');
-
     blogActionButton.addEventListener('click', function () {
         let sections = document.querySelectorAll('section');
         let sectionScrollSettings = {
             behavior: "smooth"
         };
         let scrollSpeed = 2000;
+        let sectionCounter = 0;
 
-        sections[0].scrollIntoView(sectionScrollSettings);
-        setInterval(() => {
-            for (let i = 1; i < sections.length; i++) {
-                sections[i].scrollIntoView(sectionScrollSettings);
-                
+        sections[sectionCounter].scrollIntoView(sectionScrollSettings);
+        sectionCounter++;
+        let scrollInterval = setInterval(() => {
+            sections[sectionCounter].scrollIntoView(sectionScrollSettings);
+            sectionCounter++;
+            if (sectionCounter >= sections.length) {
+                clearInterval(scrollInterval);
             }
         }, scrollSpeed);
+
+
+        
 
 
     });
