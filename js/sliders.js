@@ -70,32 +70,8 @@ $(document).ready(function () {
         });
     }
 
-    //gallery slider
-    $('.gallery-slider').slick({
-        infinite: true,
-        arrows: false,
-        speed: 500,
-        cssEase: 'linear',
-        asNavFor: '.gallery-slider-thumb__inner'
-    });
-    $('.gallery-slider-thumb__inner').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        infinite: true,
-        arrows: false,
-        speed: 500,
-        cssEase: 'linear',
-        asNavFor: '.gallery-slider',
-        centerMode: true
-    });
 
-    $(".gallery-slider-thumb__next").click(function() { 
-        $(".gallery-slider-thumb__inner").slick('slickNext');
-    });
-    $(".gallery-slider-thumb__prev").click(function() { 
-        $(".gallery-slider-thumb__inner").slick('slickPrev');
-    });
-
+    //blog header slider
     $('.blog-slider').slick({
         infinite: true,
         arrows: false,

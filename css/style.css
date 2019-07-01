@@ -329,10 +329,16 @@ img {
 }
 
 .subscribe {
+  position: relative;
   padding: 60px 10px;
-  background-image: url("../../images/bubbles/bubble-3.png"), -webkit-gradient(linear, left top, right top, from(#51bee6), color-stop(20%, #51bee6), to(#4ecead));
-  background-image: url("../../images/bubbles/bubble-3.png"), linear-gradient(90deg, #51bee6 0%, #51bee6 20%, #4ecead 100%);
   background-repeat: no-repeat;
+  background-position: -100px 20px, right -100px;
+  background-image: url("../../images/bubbles/bubble-3.png"), url("../../images/bubbles/bubble-3.png");
+}
+
+.subscribe__background {
+  background-image: -webkit-gradient(linear, left top, right top, from(#51bee6), color-stop(20%, #51bee6), to(#4ecead));
+  background-image: linear-gradient(90deg, #51bee6 0%, #51bee6 20%, #4ecead 100%);
 }
 
 .subscribe__inner {
@@ -355,6 +361,7 @@ img {
 
 .subscribe__title {
   margin-bottom: 10px;
+  color: #ffffff;
   text-align: right;
 }
 
@@ -372,7 +379,7 @@ img {
   color: #505050;
   font-family: inherit;
   font-size: inherit;
-  border: 2px solid #303030;
+  border: 2px solid #505050;
   border-radius: 25px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
@@ -410,11 +417,11 @@ img {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   border-left-width: 1px;
-  border-color: #303030;
+  border-color: #505050;
 }
 
 .subscribe__button:hover {
-  border-color: #303030;
+  border-color: #505050;
 }
 
 @media screen and (max-width: 1023px) {

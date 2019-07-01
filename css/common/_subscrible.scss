@@ -1,9 +1,13 @@
 .subscribe {
+    position: relative;
     padding: 60px 10px;
-    background-image: 
-                        url('../../images/bubbles/bubble-3.png'), 
-                        linear-gradient(90deg, rgba(81,190,230,1) 0%, rgba(81,190,230,1) 20%, rgba(78,206,173,1) 100%);
     background-repeat: no-repeat;
+    background-position: -100px 20px, right -100px;
+    background-image: url('../../images/bubbles/bubble-3.png'), url('../../images/bubbles/bubble-3.png');
+
+    &__background {
+        background-image: linear-gradient(90deg, $color-sea-blue 0%, $color-sea-blue 20%, $color-sea-green 100%);
+    }
     &__inner {
         display: flex;
         align-items: center;
@@ -15,6 +19,7 @@
     }
     &__title {
         margin-bottom: 10px;
+        color: #ffffff;
         text-align: right;
     }
     &__subtitle {
@@ -30,7 +35,7 @@
         color: $color-text-light;
         font-family: inherit;
         font-size: inherit;
-        border: 2px solid $color-text;
+        border: 2px solid $color-text-light;
         border-radius: 25px;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
@@ -49,9 +54,9 @@
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
         border-left-width: 1px;
-        border-color: $color-text;
+        border-color: $color-text-light;
         &:hover {
-            border-color: $color-text;
+            border-color: $color-text-light;
         }
     }
 }
