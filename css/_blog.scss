@@ -329,6 +329,10 @@
         &__subtitle {
             padding-bottom: 0;
             font-size: 1.5em;
+            text-shadow: none;
+        }
+        &__slogan {
+            font-size: 1.5em;
         }
     }
 
@@ -345,6 +349,12 @@
             &::before {
                 display: none;
             }
+        }
+    }
+
+    .blog-article {
+        &__text {
+            padding: 10px;
         }
     }
 

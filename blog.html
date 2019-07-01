@@ -112,7 +112,7 @@
                         <article class="blog-article" id="article-1">
 
                             <header class="blog-article__header">
-                                <h2 class="blog-article__title title-decor">Как создаются шедевры</h2>
+                                <h2 class="blog-article__title">Как создаются шедевры</h2>
                                 <span class="blog-article__subtitle">Вводный инструктаж</span>
                             </header>
 
@@ -250,13 +250,19 @@
         <div class="subscribe">
             <div class="subscribe__inner">
 
-                <h2 class="subscribe__title">Подписаться на рассылку</h2>
-                <form action="" method="POST" class="subscribe__form">
-                    <label class="subscribe__label">
-                        <input class="subscribe__input" type="email" name="subscribe-email" placeholder="адрес электронной почты">
-                    </label>
-                    <button class="subscribe__button button" type="submit">Подписаться</button>
-                </form>
+                <div class="subscribe__col">
+                    <h2 class="subscribe__title">Подписаться на рассылку</h2>
+                    <span class="subscribe__subtitle">Для получения новостей о мыле ручной работы</span>
+                </div>
+
+                <div class="subscribe__col">
+                    <form action="" method="POST" class="subscribe__form">
+                        <label class="subscribe__label">
+                            <input class="subscribe__input" type="email" name="subscribe-email" placeholder="адрес электронной почты">
+                        </label>
+                        <button class="subscribe__button button" type="submit">Подписаться</button>
+                    </form>
+                </div>
 
             </div>
         </div>

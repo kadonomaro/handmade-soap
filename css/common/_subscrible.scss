@@ -1,14 +1,26 @@
 .subscribe {
-    padding: 30px 10px;
-
+    padding: 60px 10px;
+    background-image: 
+                        url('../../images/bubbles/bubble-3.png'), 
+                        linear-gradient(90deg, rgba(81,190,230,1) 0%, rgba(81,190,230,1) 20%, rgba(78,206,173,1) 100%);
+    background-repeat: no-repeat;
+    &__inner {
+        display: flex;
+        align-items: center;
+    }
+    &__col {
+        padding: 0 20px;
+        flex: 1 0 50%;
+        box-sizing: border-box;
+    }
     &__title {
-        
+        margin-bottom: 10px;
+        text-align: right;
     }
-    &__form {
-
-    }
-    &__label {
-
+    &__subtitle {
+        display: block;
+        color: $color-text-light;
+        text-align: right;
     }
     &__input {
         min-width: 200px;
@@ -18,15 +30,16 @@
         color: $color-text-light;
         font-family: inherit;
         font-size: inherit;
-        border: 2px solid $color-border-light;
+        border: 2px solid $color-text;
         border-radius: 25px;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
-        border-right-width: 1px;
+        border-right-width: 2px;
         outline: none;
-        transition: border-color 0.2s ease-in;
+        transition: border-color 0.2s ease-in, box-shadow 0.2s ease-in;
         &:focus {
             border-color: $color-sea-blue;
+            box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.3);
         }
         &::placeholder {
             color: inherit;
@@ -36,5 +49,55 @@
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
         border-left-width: 1px;
+        border-color: $color-text;
+        &:hover {
+            border-color: $color-text;
+        }
+    }
+}
+
+
+@include media (1023) {
+
+    .subscribe {
+        padding: 30px 10px;
+        &__inner {
+            display: block;
+        }
+        &__col {
+            text-align: center;
+            &:first-child {
+                margin-bottom: 20px;
+            }
+        }
+        &__title,
+        &__subtitle {
+            text-align: center;
+        }
+
+    }
+}
+
+
+@include media(600) {
+    .subscribe {
+        &__input,
+        &__button {
+            width: 100%;
+            display: block;
+            border-radius: 0;
+            border-width: 2px;
+            box-sizing: border-box;
+        }
+        &__input {
+            border-bottom-width: 1px;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px; 
+        }
+        &__button {
+            border-top-width: 1px;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px; 
+        }
     }
 }
