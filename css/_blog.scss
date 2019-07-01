@@ -35,17 +35,21 @@
     &__slogan {
         display: block;
         margin-bottom: 20px;
+        font-family: $font-cursive;
         color: $color-text-light;
-        font-size: 24px;
-        text-transform: uppercase;
+        font-size: 2em;
+
     }
     &__nav {
         max-width: 50%;
         margin-left: auto;
-        margin-bottom: 200px;
+        margin-bottom: 150px;
     }
     &__button {
         margin-bottom: 20px;
+    }
+    &__button--hidden {
+        opacity: 0;
     }
 }
 
@@ -140,6 +144,7 @@
 
 
 .blog-slider {
+    margin-bottom: 20px;
     padding: 20px 0;
     &__image {
         position: relative;
@@ -318,9 +323,11 @@
             margin: 0;
         }
         &__title {
-            font-size: 2em;
+            font-size: 2.2em;
+            text-shadow: 0 0 2px #000000;
         }
         &__subtitle {
+            padding-bottom: 0;
             font-size: 1.5em;
         }
     }
@@ -332,7 +339,9 @@
     }
 
     .blog-slider {
+        padding: 0;
         &__image {
+            max-width: 200px;
             &::before {
                 display: none;
             }

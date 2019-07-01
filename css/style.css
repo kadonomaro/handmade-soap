@@ -1020,19 +1020,23 @@ img {
 .blog-header__slogan {
   display: block;
   margin-bottom: 20px;
+  font-family: "Lobster", cursive;
   color: #505050;
-  font-size: 24px;
-  text-transform: uppercase;
+  font-size: 2em;
 }
 
 .blog-header__nav {
   max-width: 50%;
   margin-left: auto;
-  margin-bottom: 200px;
+  margin-bottom: 150px;
 }
 
 .blog-header__button {
   margin-bottom: 20px;
+}
+
+.blog-header__button--hidden {
+  opacity: 0;
 }
 
 .blog-nav {
@@ -1141,6 +1145,7 @@ img {
 }
 
 .blog-slider {
+  margin-bottom: 20px;
   padding: 20px 0;
 }
 
@@ -1319,13 +1324,21 @@ img {
     margin: 0;
   }
   .blog-header__title {
-    font-size: 2em;
+    font-size: 2.2em;
+    text-shadow: 0 0 2px #000000;
   }
   .blog-header__subtitle {
+    padding-bottom: 0;
     font-size: 1.5em;
   }
   .blog-nav__list {
     width: 100%;
+  }
+  .blog-slider {
+    padding: 0;
+  }
+  .blog-slider__image {
+    max-width: 200px;
   }
   .blog-slider__image::before {
     display: none;

@@ -69,8 +69,18 @@ document.addEventListener('DOMContentLoaded', function () {
             sections[sectionCounter].scrollIntoView(sectionScrollSettings);
             sectionCounter++;
             if (sectionCounter >= sections.length) {
+                setTimeout(() => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                    this.classList.add('blog-header__button--hidden');
+                    this.addEventListener('transitionend', () => {
+                        this.style.display = 'none';
+                    });
+                }, scrollSpeed);
+
                 clearInterval(scrollInterval);
-                console.log('stop');
             }
         }, scrollSpeed);
 
