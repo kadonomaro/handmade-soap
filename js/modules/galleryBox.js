@@ -9,7 +9,7 @@ let galleryBox = {
             images.forEach(image => {
                 if (evt.target === image) {
                     console.log(evt.target.src);
-                    activateGallery(image)
+                    activateGallery(image);
                 }
             });
             
@@ -19,7 +19,6 @@ let galleryBox = {
         createGallery();
 
         function createGallery() {
-
             galleryOverlay.classList.add('gallery-box');
             galleryImage.classList.add('gallery-box__image');
             document.body.appendChild(galleryOverlay);
@@ -29,6 +28,8 @@ let galleryBox = {
         function activateGallery(image) {
             galleryOverlay.classList.add('gallery-box--active');
             galleryImage.src = image.src;
+            galleryImage.setAttribute('alt', image.getAttribute('alt'));
+
         }
     }
 
