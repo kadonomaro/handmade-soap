@@ -147,8 +147,6 @@ img {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   opacity: 0;
-  -webkit-transition: opacity 0.3s ease-in;
-  transition: opacity 0.3s ease-in;
 }
 
 .gallery-box__image {

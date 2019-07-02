@@ -3,11 +3,13 @@ let galleryBox = {
     /**
      * 
      * @param {HTMLElement} images List of image elements
-     * @param {Object} settings imageIndex - boolean 
+     * @param {Object} settings imageIndex - boolean, openingSpeed - 0-1000, easing - CSS easing
      */
     init: function (images, settings) {
         settings = settings || {
-            imageIndex: false
+            imageIndex: false,
+            openingSpeed: 300,
+            easing: 'ease-in'
         };
         const galleryOverlay = document.createElement('div');
         const galleryImage = document.createElement('img');
@@ -36,6 +38,7 @@ let galleryBox = {
 
         (function createGallery() {
             galleryOverlay.classList.add('gallery-box');
+            galleryOverlay.style.transition = `opacity ${settings.openingSpeed}ms ${settings.easing}`;
             galleryImage.classList.add('gallery-box__image');
             galleryCloseButton.classList.add('gallery-box__button');
 
@@ -71,7 +74,7 @@ let galleryBox = {
                 galleryOverlay.style.opacity = 0;
                 setTimeout(() => {
                     galleryOverlay.classList.remove('gallery-box--active');
-                }, 300);
+                }, settings.openingSpeed);
                 document.removeEventListener('keyup', deactivateGallery);
                 focusedElement.focus();
             }

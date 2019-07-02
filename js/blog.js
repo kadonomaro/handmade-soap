@@ -9,11 +9,12 @@ document.addEventListener('DOMContentLoaded', function () {
     galleryBox.init(
         document.querySelectorAll('.gallery-photos__image'),
         {
-            imageIndex: true
+            imageIndex: true,
+            openingSpeed: 300,
+            easing: 'ease-in'
         }
     );
 
-    
 
     let blogNavToggle = document.querySelector('.blog-nav__toggle');
     let blogNavList = document.querySelector('.blog-nav__list');
