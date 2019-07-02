@@ -265,12 +265,6 @@
 
 @include media(767) {
 
-    .blog-header {
-
-        &__nav {
-            // border: none;
-        }
-    }
     .blog-nav {
 
         &__toggle {
