@@ -38,6 +38,7 @@
         height: 100%;
         object-fit: cover;
         transition: transform 0.2s ease-in;
+        cursor: pointer;
         &:hover {
             transform: scale(1.05);
         }

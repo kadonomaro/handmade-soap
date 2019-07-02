@@ -126,6 +126,23 @@ img {
           transform: scale(1);
 }
 
+.gallery-box {
+  position: fixed;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  display: none;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.gallery-box--active {
+  display: block;
+}
+
 .social__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1497,6 +1514,7 @@ img {
   transition: -webkit-transform 0.2s ease-in;
   transition: transform 0.2s ease-in;
   transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
+  cursor: pointer;
 }
 
 .gallery-photos__image:hover {

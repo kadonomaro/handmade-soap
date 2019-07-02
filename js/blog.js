@@ -1,9 +1,11 @@
 import scrollTop from "./modules/scrollTop.js";
 import typeWrite from "./modules/typeWrite.js";
+import galleryBox from "./modules/galleryBox.js";
 
 document.addEventListener('DOMContentLoaded', function () {
 
     scrollTop(document.querySelector('.scroll-top'), 'scroll-top--active');
+    galleryBox.init(document.querySelectorAll('.gallery-photos__image'));
 
     let blogNavToggle = document.querySelector('.blog-nav__toggle');
     let blogNavList = document.querySelector('.blog-nav__list');
