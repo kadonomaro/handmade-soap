@@ -252,6 +252,11 @@
 }
 
 @include media(1024) {
+    .blog-header {
+        &__nav {
+            max-width: 100%;
+        }
+    }
     .blog {
         &__background {
             &::after {
@@ -273,7 +278,7 @@
         &__list {
             position: absolute;
             z-index: 999;
-            top: 51px;
+            top: 50px;
             left: 0;
             flex-direction: column;
             width: 200px;
@@ -331,6 +336,7 @@
     }
 
     .blog-nav {
+        border-radius: 0;
         &__list {
             width: 100%;
         }
@@ -346,7 +352,21 @@
         }
     }
 
+    .blog {
+        &__inner {
+            padding: 40px 0 10px;
+        }
+    }
+
     .blog-article {
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+        &__header {
+            top: -30px;
+            right: 10px;
+            font-size: 0.8em;
+        }
         &__text {
             padding: 10px;
         }
