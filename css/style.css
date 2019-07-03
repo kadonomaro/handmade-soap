@@ -534,6 +534,69 @@ img {
   }
 }
 
+.features {
+  padding: 30px 10px;
+  text-align: center;
+}
+
+.features__title {
+  margin-bottom: 20px;
+}
+
+.features__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style-type: none;
+}
+
+.features__item {
+  margin: 20px 70px;
+}
+
+.features__item:first-child, .features__item:last-child {
+  margin-top: 70px;
+}
+
+.feature {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.feature__title {
+  position: absolute;
+  left: 50%;
+  bottom: -15%;
+  display: block;
+  padding: 3px 6px;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgba(80, 80, 80, 0.7);
+  border-radius: 15px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.feature--one {
+  background-image: url("../../images/icons/features/natural.svg");
+}
+
+.feature--two {
+  background-image: url("../../images/icons/features/preserve.svg");
+}
+
+.feature--four {
+  background-image: url("../../images/icons/features/aroma.svg");
+}
+
 .header {
   position: relative;
   display: -webkit-box;

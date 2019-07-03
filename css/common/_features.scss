@@ -1,0 +1,64 @@
+.features {
+    padding: 30px 10px;
+    text-align: center;
+    &__background {
+
+    }
+    &__title {
+        margin-bottom: 20px;
+    }
+    &__list {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+    }
+    &__item {
+        margin: 20px 70px;
+        &:first-child,
+        &:last-child {
+            margin-top: 70px;
+        }
+    }
+    &__title {
+
+    }
+    &__subtitle {
+
+    }
+}
+
+
+.feature {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    background-size: cover;
+    border-radius: 50%;
+    &__title {
+        position: absolute;
+        left: 50%;
+        bottom: -15%;
+        display: block;
+        padding: 3px 6px;
+        color: #ffffff;
+        font-weight: bold;
+        text-align: center;
+        background-color: rgba($color: $color-text-light, $alpha: 0.7);
+        border-radius: 15px;
+        transform: translateX(-50%);
+        white-space: nowrap;
+
+    }
+}
+.feature--one {
+    background-image: url('../../images/icons/features/natural.svg');
+}
+.feature--two {
+    background-image: url('../../images/icons/features/preserve.svg');
+}
+.feature--three {
+
+}
+.feature--four {
+    background-image: url('../../images/icons/features/aroma.svg');
+}
