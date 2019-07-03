@@ -570,7 +570,7 @@ img {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 90px;
+  height: 110px;
   background: url("../images/background/bg-bottom-new.png") no-repeat;
   background-size: contain;
   background-position: bottom;
@@ -737,6 +737,9 @@ img {
   .header__background-bubble {
     background-image: url("../images/bubbles/min/bubble-1-min.png"), url("../images/bubbles/min/bubble-2-min.png"), url("../images/bubbles/min/bubble-3-min.png"), url("../images/bubbles/min/bubble-4-min.png"), url("../images/bubbles/min/bubble-1-min.png"), url("../images/bubbles/min/bubble-2-min.png"), url("../images/bubbles/min/bubble-3-min.png"), url("../images/bubbles/min/bubble-4-min.png"), url("../images/bubbles/min/bubble-1-min.png"), url("../images/bubbles/min/bubble-2-min.png"), url("../images/bubbles/min/bubble-3-min.png"), url("../images/bubbles/min/bubble-1-min.png"), url("../images/bubbles/min/bubble-3-min.png"), url("../images/bubbles/min/bubble-1-min.png");
   }
+  .header__background-bubble::before {
+    background-size: 150%;
+  }
 }
 
 .main {
@@ -752,7 +755,7 @@ img {
 }
 
 .main__background {
-  background: url("../images/background/main-background.jpg");
+  background-color: #f3f9ff;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

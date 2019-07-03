@@ -50,7 +50,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            height: 90px;
+            height: 110px;
             background: url('../images/background/bg-bottom-new.png') no-repeat;
             background-size: contain;
             background-position: bottom;
@@ -192,6 +192,9 @@
             url('../images/bubbles/min/bubble-1-min.png'),
             url('../images/bubbles/min/bubble-3-min.png'),
             url('../images/bubbles/min/bubble-1-min.png');
+            &::before {
+                background-size: 150%;
+            }
         }
     }
 }
