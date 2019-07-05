@@ -2,6 +2,7 @@
     position: relative;
     padding: 30px 10px 100px;
     text-align: center;
+    background-color: $color-background-light;
     &__background {
         z-index: 10;
         background-image: url('../images/soap/features-soap.png');
@@ -52,6 +53,9 @@
     height: 70px;
     background-size: cover;
     border-radius: 50%;
+    box-shadow: 0 0 8px rgba($color: #000000, $alpha: 0.7);
+    transition: transform 0.5s ease-in, opacity 0.7s ease-in;
+    opacity: 0;
     &__title {
         position: absolute;
         left: 50%;
@@ -70,16 +74,24 @@
 }
 .feature--one {
     background-image: url('../images/icons/features/features.svg');
+    transform: translateX(-100%);
 }
 .feature--two {
     background-image: url('../images/icons/features/features.svg');
     background-position-x: -70px;
+    transform: translateY(-100%);
 }
 .feature--three {
     background-image: url('../images/icons/features/features.svg');
     background-position-x: -140px;
+    transform: translateY(100%);
 }
 .feature--four {
     background-image: url('../images/icons/features/features.svg');
     background-position-x: -210px;
+    transform: translateX(100%)
+}
+.feature--visible {
+    opacity: 1;
+    transform: translate(0,0);
 }

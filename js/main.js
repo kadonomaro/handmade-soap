@@ -1,5 +1,6 @@
 import detectSwipeDirection from "./detectSwipeDirection.js";
 import scrollTop from "./modules/scrollTop.js";
+import fadeInAnimation from "./modules/fadeInAnimation.js";
 
 
 
@@ -68,7 +69,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    
+    fadeInAnimation(
+        document.querySelector('.features'),
+        document.querySelectorAll('.feature'),
+        0.5,
+        0.3,
+        'feature--visible'
+    );
 
 
     // show/hide ingredients in soap section
