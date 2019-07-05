@@ -70,6 +70,7 @@ img {
 }
 
 .fade-white {
+  display: block;
   background-image: url("../images/slider/soap-base/soap-base-1.png");
 }
 
@@ -91,6 +92,7 @@ img {
 }
 
 .fade-orange {
+  display: block;
   top: 40%;
   left: initial;
   right: -5%;
@@ -104,6 +106,7 @@ img {
 }
 
 .fade-argan {
+  display: block;
   top: 63%;
   background-image: url("../images/slider/oil/fade/argan-fade.png");
 }
@@ -535,12 +538,33 @@ img {
 }
 
 .features {
-  padding: 30px 10px 80px;
+  position: relative;
+  padding: 30px 10px 100px;
   text-align: center;
 }
 
+.features__background {
+  z-index: 10;
+  background-image: url("../images/soap/features-soap.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  pointer-events: none;
+}
+
 .features__title {
+  margin-bottom: 10px;
+  color: #505050;
+  font-family: "Lobster", cursive;
+  font-size: 2em;
+}
+
+.features__subtitle {
+  display: block;
   margin-bottom: 20px;
+  font-size: 1em;
 }
 
 .features__list {
@@ -1690,6 +1714,7 @@ img {
 
 .footer__background {
   background-color: #303030;
+  background-color: #ccc;
 }
 
 .footer__inner {

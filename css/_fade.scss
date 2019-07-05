@@ -17,6 +17,7 @@
 
 //first slider fade images
 .fade-white {
+    display: block;
     background-image: url('../images/slider/soap-base/soap-base-1.png');
 }
 .fade-active {
@@ -36,6 +37,7 @@
     background-image: url('../images/slider/aroma/fade/coffee-fade.png');
 }
 .fade-orange {
+    display: block;
     top: 40%;
     left: initial;
     right: -5%;
@@ -49,6 +51,7 @@
 
 //third slider fade images
 .fade-argan {
+    display: block;
     top: 63%;
     background-image: url('../images/slider/oil/fade/argan-fade.png');
 }
