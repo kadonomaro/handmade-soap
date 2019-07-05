@@ -164,7 +164,7 @@ img {
   width: 40px;
   height: 40px;
   background-color: transparent;
-  background-image: url("../../images/icons/cancel.svg");
+  background-image: url("../images/icons/cancel.svg");
   background-repeat: no-repeat;
   background-size: cover;
   border: none;
@@ -401,7 +401,7 @@ img {
   padding: 60px 10px;
   background-repeat: no-repeat;
   background-position: -100px 20px, right -100px;
-  background-image: url("../../images/bubbles/bubble-3.png"), url("../../images/bubbles/bubble-3.png");
+  background-image: url("../images/bubbles/bubble-3.png"), url("../images/bubbles/bubble-3.png");
 }
 
 .subscribe__background {
@@ -535,7 +535,7 @@ img {
 }
 
 .features {
-  padding: 30px 10px;
+  padding: 30px 10px 80px;
   text-align: center;
 }
 
@@ -574,7 +574,7 @@ img {
   left: 50%;
   bottom: -15%;
   display: block;
-  padding: 3px 6px;
+  padding: 4px 8px;
   color: #ffffff;
   font-weight: bold;
   text-align: center;
@@ -586,15 +586,22 @@ img {
 }
 
 .feature--one {
-  background-image: url("../../images/icons/features/natural.svg");
+  background-image: url("../images/icons/features/features.svg");
 }
 
 .feature--two {
-  background-image: url("../../images/icons/features/preserve.svg");
+  background-image: url("../images/icons/features/features.svg");
+  background-position-x: -70px;
+}
+
+.feature--three {
+  background-image: url("../images/icons/features/features.svg");
+  background-position-x: -140px;
 }
 
 .feature--four {
-  background-image: url("../../images/icons/features/aroma.svg");
+  background-image: url("../images/icons/features/features.svg");
+  background-position-x: -210px;
 }
 
 .header {
@@ -981,6 +988,7 @@ img {
 .section-divider::before {
   content: '';
   position: absolute;
+  z-index: 99;
   top: -40px;
   width: 100%;
   height: 80px;

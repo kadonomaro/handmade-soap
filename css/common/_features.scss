@@ -1,11 +1,14 @@
 .features {
-    padding: 30px 10px;
+    padding: 30px 10px 80px;
     text-align: center;
     &__background {
 
     }
     &__title {
         margin-bottom: 20px;
+    }
+    &__desc {
+
     }
     &__list {
         display: flex;
@@ -39,7 +42,7 @@
         left: 50%;
         bottom: -15%;
         display: block;
-        padding: 3px 6px;
+        padding: 4px 8px;
         color: #ffffff;
         font-weight: bold;
         text-align: center;
@@ -51,14 +54,17 @@
     }
 }
 .feature--one {
-    background-image: url('../../images/icons/features/natural.svg');
+    background-image: url('../images/icons/features/features.svg');
 }
 .feature--two {
-    background-image: url('../../images/icons/features/preserve.svg');
+    background-image: url('../images/icons/features/features.svg');
+    background-position-x: -70px;
 }
 .feature--three {
-
+    background-image: url('../images/icons/features/features.svg');
+    background-position-x: -140px;
 }
 .feature--four {
-    background-image: url('../../images/icons/features/aroma.svg');
+    background-image: url('../images/icons/features/features.svg');
+    background-position-x: -210px;
 }
