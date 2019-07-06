@@ -4,8 +4,8 @@
     text-align: center;
     background-color: $color-background-light;
     &__background {
-        z-index: 10;
-        background-image: url('../images/soap/features-soap.png');
+        z-index: 0;
+        background-image: url('../images/soap/features-soap-min.png');
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center bottom;
@@ -20,11 +20,13 @@
     }
     &__subtitle {
         display: block;
-        margin-bottom: 20px;
-        font-size: 1em;
+        margin-bottom: 10px;
+        font-size: 0.8em;
+        text-transform: uppercase;
     }
     &__desc {
-
+        max-width: 900px;
+        margin: 0 auto 20px;
     }
     &__list {
         display: flex;
@@ -37,12 +39,6 @@
         &:last-child {
             margin-top: 70px;
         }
-    }
-    &__title {
-
-    }
-    &__subtitle {
-
     }
 }
 
@@ -95,3 +91,6 @@
     opacity: 1;
     transform: translate(0,0);
 }
+
+
+

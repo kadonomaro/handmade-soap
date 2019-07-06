@@ -545,8 +545,8 @@ img {
 }
 
 .features__background {
-  z-index: 10;
-  background-image: url("../images/soap/features-soap.png");
+  z-index: 0;
+  background-image: url("../images/soap/features-soap-min.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center bottom;
@@ -564,8 +564,14 @@ img {
 
 .features__subtitle {
   display: block;
-  margin-bottom: 20px;
-  font-size: 1em;
+  margin-bottom: 10px;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+
+.features__desc {
+  max-width: 900px;
+  margin: 0 auto 20px;
 }
 
 .features__list {
@@ -929,7 +935,10 @@ img {
   bottom: -10%;
   left: -10%;
   right: -10%;
-  background-color: rgba(255, 153, 0, 0.3);
+  background-image: url("../images/background/slider-min.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .main-slider__slide-wrapper {
