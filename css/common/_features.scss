@@ -94,3 +94,36 @@
 
 
 
+@include media(1024) {
+    .features {
+        &__background {
+            background-size: 50%;
+            transform: translateY(30%);
+        }
+        &__item {
+            margin: 20px 50px;
+        }
+    }
+}
+
+
+@include media(600) {
+    .features {
+        padding-bottom: 30px;
+        &__background {
+            background-size: 100%;
+            transform: translate(0);
+            opacity: 0.5;
+        }
+        &__list {
+            display: block;
+        }
+        &__item {
+            margin: 0 auto 30px;
+            &:first-child,
+            &:last-child {
+                margin-top: 0px;
+            }
+        }
+    }
+}

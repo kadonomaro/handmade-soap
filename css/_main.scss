@@ -147,6 +147,9 @@
 
 @include media(1024) {
     .main-slider {
+        &::before {
+            background-size: 150%;
+        }
         &__next, &__prev {
             display: none;
         }

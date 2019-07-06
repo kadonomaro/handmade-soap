@@ -41,7 +41,7 @@ $(document).ready(function () {
 
 
     //change slider background image
-    if (window.matchMedia("(min-width: 425px)").matches) {
+    if (window.matchMedia("(min-width: 1024px)").matches) {
 
         $('.main-slider-base').on('beforeChange', function (evt, slick, currentSlide, nextSlide) {
             $('.fade-base').removeClass('fade-scale').fadeOut(1000);

@@ -71,3 +71,11 @@
 .fade-scale {
     transform: scale(1);
 }
+
+
+
+@include media(1023) {
+    .fade {
+        display: none;
+    }
+}
