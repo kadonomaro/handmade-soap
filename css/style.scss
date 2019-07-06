@@ -1,12 +1,12 @@
-@import 'mixins';
-@import 'variables';
+@import 'common/mixins';
+@import 'common/variables';
 @import 'common';
 @import 'fade';
 @import 'plugins/gallery-box';
 
 
 @import 'common/social';
-@import 'scroll-top';
+@import 'common/scroll-top';
 @import 'common/button';
 @import 'common/section-title';
 @import 'common/subscribe';
