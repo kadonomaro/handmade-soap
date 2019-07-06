@@ -8,7 +8,8 @@ $(document).ready(function () {
         centerMode: true,
         slidesToShow: 2,
         slidesToScroll: 1,
-        variableWidth: true
+        variableWidth: true,
+        accessibility: false
     };
     //init sliders on main section
     $('.main-slider-base').slick(sliderSettings);

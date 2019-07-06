@@ -95,12 +95,10 @@
             bottom: -5px;
             left: -5px;
             right: -5px;
-            background: linear-gradient(135deg, rgba($color-sea-blue, 0.7) 0%, 
-                                                rgba(darken($color: $color-sea-blue, $amount: 10%), 0.7) 10%, 
-                                                rgba(darken($color: $color-sea-blue, $amount: 50%), 0.7) 50%, 
-                                                rgba($color-sea-blue, 0.7) 100%);
-            filter: blur(5px);
-            
+            background: linear-gradient(135deg, rgba($color-sea-blue, 0.8) 0%, 
+                                                rgba(darken($color: $color-sea-blue, $amount: 10%), 0.8) 10%, 
+                                                rgba(darken($color: $color-sea-blue, $amount: 50%), 0.8) 50%, 
+                                                rgba($color-sea-blue, 0.8) 100%);
         }
     }
     &__item {
