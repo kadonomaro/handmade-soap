@@ -633,8 +633,8 @@ img {
 .feature--three {
   background-image: url("../images/icons/features/features.svg");
   background-position-x: -140px;
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
 }
 
 .feature--four {
@@ -1686,10 +1686,11 @@ img {
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   overflow: hidden;
-  -webkit-transition: -webkit-box-shadow 0.2s ease-in;
-  transition: -webkit-box-shadow 0.2s ease-in;
-  transition: box-shadow 0.2s ease-in;
-  transition: box-shadow 0.2s ease-in, -webkit-box-shadow 0.2s ease-in;
+  -webkit-transition: opacity 0.5s ease-in, -webkit-box-shadow 0.2s ease-in;
+  transition: opacity 0.5s ease-in, -webkit-box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in, opacity 0.5s ease-in;
+  transition: box-shadow 0.2s ease-in, opacity 0.5s ease-in, -webkit-box-shadow 0.2s ease-in;
+  opacity: 0;
 }
 
 .gallery-photos__item:first-child {
@@ -1704,6 +1705,10 @@ img {
       grid-column-end: span 2;
   -ms-grid-row-span: 3;
       grid-row-end: span 3;
+}
+
+.gallery-photos__item--active {
+  opacity: 1;
 }
 
 .gallery-photos__image {
