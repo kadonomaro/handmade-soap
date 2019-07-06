@@ -24,6 +24,7 @@
     &__desc {
         max-width: 900px;
         margin: 0 auto 20px;
+        color: $color-text-light;
     }
     &__list {
         display: flex;
@@ -58,7 +59,7 @@
         color: #ffffff;
         font-weight: bold;
         text-align: center;
-        background-color: rgba($color: $color-text-light, $alpha: 0.7);
+        background-color: rgba($color: $color-text-light, $alpha: 0.8);
         border-radius: 15px;
         transform: translateX(-50%);
         white-space: nowrap;

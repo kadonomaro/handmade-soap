@@ -7,14 +7,24 @@
     }
     &__item {
         list-style: none;
+        margin: 0 10px;
     }
     &__link {
         display: block;
-        margin: 0 10px;
+        width: 50px;
+        height: 50px;
         text-decoration: none;
+        background-image: url('../images/icons/social.svg');
+        background-repeat: no-repeat;
         transition: transform 0.2s ease-in;
         &:hover, &:focus {
             transform: translateY(-3px);
         }
+    }
+    &__link--two {
+        background-position-x: -60px;
+    }
+    &__link--three {
+        background-position-x: -120px;
     }
 }

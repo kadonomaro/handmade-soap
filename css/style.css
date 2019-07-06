@@ -215,12 +215,16 @@ img {
 
 .social__item {
   list-style: none;
+  margin: 0 10px;
 }
 
 .social__link {
   display: block;
-  margin: 0 10px;
+  width: 50px;
+  height: 50px;
   text-decoration: none;
+  background-image: url("../images/icons/social.svg");
+  background-repeat: no-repeat;
   -webkit-transition: -webkit-transform 0.2s ease-in;
   transition: -webkit-transform 0.2s ease-in;
   transition: transform 0.2s ease-in;
@@ -230,6 +234,14 @@ img {
 .social__link:hover, .social__link:focus {
   -webkit-transform: translateY(-3px);
           transform: translateY(-3px);
+}
+
+.social__link--two {
+  background-position-x: -60px;
+}
+
+.social__link--three {
+  background-position-x: -120px;
 }
 
 .scroll-top {
@@ -607,6 +619,7 @@ img {
 .features__desc {
   max-width: 900px;
   margin: 0 auto 20px;
+  color: #505050;
 }
 
 .features__list {
@@ -651,7 +664,7 @@ img {
   color: #ffffff;
   font-weight: bold;
   text-align: center;
-  background-color: rgba(80, 80, 80, 0.7);
+  background-color: rgba(80, 80, 80, 0.8);
   border-radius: 15px;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -1145,7 +1158,7 @@ img {
 
 .blog-header__background {
   background-color: #f3f9ff;
-  background-image: url("../images/background/header-background.png");
+  background-image: url("../images/background/header-background-min.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
