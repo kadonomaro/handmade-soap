@@ -3,7 +3,13 @@
     padding: 20px 10px;
     text-align: center;
     &__background {
-        background-color: #f5f5f5;
+        background-color: $color-background-light2;
+        background-image: 
+                    linear-gradient(to bottom,  $color-background-light 0%, 
+                                                $color-background-light2 5%, 
+                                                $color-background-light2 95%, 
+                                                $color-background-light 100%);
+
     }
     &__inner {
 
@@ -31,20 +37,65 @@
     &__item {
         &:not(:last-child) {
             margin-right: 25px;
-            margin-bottom: 25px;
         }
     }
 }
 
 
 .ingredients-types-item {
-    padding: 20px;
+    height: 100%;
+    padding: 0 20px 10px;
     text-align: center;
     border: 1px solid $color-border-light;
     border-radius: 10px;
-    transition: box-shadow 0.3s ease-in, border-color 0.3s ease-in;
+    transition: box-shadow 0.2s ease-in, border-color 0.3s ease-in;
+    box-sizing: border-box;
     cursor: pointer;
     &:hover {
-        box-shadow: 0 10px 15px rgba($color: #000000, $alpha: 0.2);
+        border-color: $color-sea-blue;
+        box-shadow: 0 10px 15px rgba($color: #000000, $alpha: 0.15);
+
+    }
+}
+
+
+@include media(1024) {
+    .ingredients-types {
+        &__col {
+            width: 100%;
+        }
+        &__col--order {
+            order: initial;
+        }
+        &__item {
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+
+@include media(450) {
+    .ingredients-types {
+        &__list {
+            display: block;
+        }
+        &__item {
+            
+            &:not(:last-child) {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .ingredients-types-item {
+        display: flex;
+        align-items: center;
+        padding: 0px 5px 5px;
+        &__image,
+        &__title {
+            width: 50%;
+        }
     }
 }
