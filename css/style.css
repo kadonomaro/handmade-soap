@@ -1198,7 +1198,7 @@ img {
 
 .ingredients-types {
   position: relative;
-  padding: 20px 10px;
+  padding: 20px 0;
   text-align: center;
 }
 
@@ -1250,25 +1250,45 @@ img {
   margin-right: 25px;
 }
 
+.ingredients-types__desc {
+  display: none;
+}
+
+.ingredients-types__desc--active {
+  display: block;
+}
+
 .ingredients-types-item {
   height: 100%;
-  padding: 0 20px 10px;
+  padding: 20px 10px 20px;
   text-align: center;
   border: 1px solid #cccccc;
   border-radius: 10px;
-  -webkit-transition: border-color 0.3s ease-in, -webkit-box-shadow 0.2s ease-in;
-  transition: border-color 0.3s ease-in, -webkit-box-shadow 0.2s ease-in;
-  transition: box-shadow 0.2s ease-in, border-color 0.3s ease-in;
-  transition: box-shadow 0.2s ease-in, border-color 0.3s ease-in, -webkit-box-shadow 0.2s ease-in;
+  -webkit-transition: border-color 0.1s ease-in, background-color 0.1s ease-in, -webkit-box-shadow 0.2s ease-in;
+  transition: border-color 0.1s ease-in, background-color 0.1s ease-in, -webkit-box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in, border-color 0.1s ease-in, background-color 0.1s ease-in;
+  transition: box-shadow 0.2s ease-in, border-color 0.1s ease-in, background-color 0.1s ease-in, -webkit-box-shadow 0.2s ease-in;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   cursor: pointer;
 }
 
 .ingredients-types-item:hover {
-  border-color: #51bee6;
   -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
           box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+.ingredients-types-item__image {
+  pointer-events: none;
+}
+
+.ingredients-types-item__title {
+  color: #505050;
+  font-size: 1em;
+}
+
+.ingredients-types-item--active {
+  background-color: rgba(81, 190, 230, 0.1);
 }
 
 @media screen and (max-width: 1024px) {

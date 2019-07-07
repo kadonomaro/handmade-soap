@@ -1,6 +1,6 @@
 .ingredients-types {
     position: relative;
-    padding: 20px 10px;
+    padding: 20px 0;
     text-align: center;
     &__background {
         background-color: $color-background-light2;
@@ -39,23 +39,38 @@
             margin-right: 25px;
         }
     }
+    &__desc {
+        display: none;
+    }
+    &__desc--active {
+        display: block;
+    }
 }
 
 
 .ingredients-types-item {
     height: 100%;
-    padding: 0 20px 10px;
+    padding: 20px 10px 20px;
     text-align: center;
     border: 1px solid $color-border-light;
     border-radius: 10px;
-    transition: box-shadow 0.2s ease-in, border-color 0.3s ease-in;
+    transition: box-shadow 0.2s ease-in, border-color 0.1s ease-in, background-color 0.1s ease-in;
     box-sizing: border-box;
     cursor: pointer;
     &:hover {
-        border-color: $color-sea-blue;
         box-shadow: 0 10px 15px rgba($color: #000000, $alpha: 0.15);
-
     }
+    &__image {
+        pointer-events: none;
+    }
+    &__title {
+        color: $color-text-light;
+        font-size: 1em;
+    }
+}
+.ingredients-types-item--active {
+    background-color: rgba($color: $color-sea-blue, $alpha: 0.1);
+    // border-color: rgba($color: $color-sea-blue, $alpha: 0.5);
 }
 
 

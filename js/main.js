@@ -1,6 +1,7 @@
 import detectSwipeDirection from "./detectSwipeDirection.js";
 import scrollTop from "./modules/scrollTop.js";
 import fadeInAnimation from "./modules/fadeInAnimation.js";
+import tabs from "./modules/tabs.js";
 
 
 
@@ -76,6 +77,29 @@ document.addEventListener('DOMContentLoaded', function () {
         0.5,
         0.3,
         'feature--visible'
+    );
+
+    let soapBaseTabsContainer = document.querySelector('#soap-base');
+    let soapAromaTabsContainer = document.querySelector('#soap-aroma');
+    let soapOilTabsContainer = document.querySelector('#soap-oil');
+
+    tabs(
+        soapBaseTabsContainer.querySelectorAll('.ingredients-types-item'),
+        soapBaseTabsContainer.querySelectorAll('.ingredients-types__desc'),
+        'ingredients-types-item--active',
+        'ingredients-types__desc--active'
+    );
+    tabs(
+        soapAromaTabsContainer.querySelectorAll('.ingredients-types-item'),
+        soapAromaTabsContainer.querySelectorAll('.ingredients-types__desc'),
+        'ingredients-types-item--active',
+        'ingredients-types__desc--active'
+    );
+    tabs(
+        soapOilTabsContainer.querySelectorAll('.ingredients-types-item'),
+        soapOilTabsContainer.querySelectorAll('.ingredients-types__desc'),
+        'ingredients-types-item--active',
+        'ingredients-types__desc--active'
     );
 
 
