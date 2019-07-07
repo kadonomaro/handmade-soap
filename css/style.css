@@ -423,6 +423,7 @@ img {
   color: #505050;
   font-family: "Lobster", cursive;
   font-size: 2em;
+  letter-spacing: 0.04em;
 }
 
 .section-title::before, .section-title::after {
@@ -1424,6 +1425,11 @@ img {
 
 .blog__inner {
   padding: 20px 0;
+  text-align: center;
+}
+
+.blog__title {
+  margin-bottom: 20px;
 }
 
 .blog__articles {
@@ -1443,6 +1449,7 @@ img {
   position: relative;
   margin-bottom: 30px;
   color: #303030;
+  text-align: initial;
 }
 
 .blog-article__header {
@@ -1725,7 +1732,7 @@ img {
 }
 
 .footer__background {
-  background-color: #cccccc;
+  background-color: #f0ead9;
 }
 
 .footer__inner {

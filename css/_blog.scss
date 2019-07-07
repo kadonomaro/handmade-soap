@@ -189,6 +189,10 @@
     }
     &__inner {
         padding: 20px 0;
+        text-align: center;
+    }
+    &__title {
+        margin-bottom: 20px;
     }
     &__articles {
         max-width: 1200px;
@@ -205,7 +209,7 @@
     position: relative;
     margin-bottom: 30px;
     color: $color-text;
-
+    text-align: initial;
     &__header {
         position: absolute;
         z-index: 10;
