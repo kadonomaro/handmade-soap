@@ -34,7 +34,6 @@
     }
     &__slogan {
         display: block;
-        margin-bottom: 20px;
         font-family: $font-cursive;
         color: $color-text-light;
         font-size: 2em;
@@ -46,7 +45,7 @@
         margin-bottom: 150px;
     }
     &__button {
-        margin-bottom: 20px;
+        margin: 20px 0 20px;
     }
     &__button--hidden {
         opacity: 0;
@@ -383,6 +382,9 @@
         &__inner {
             padding: 40px 0 10px;
         }
+        &__title {
+            margin-bottom: 40px;
+        }
     }
 
     .blog-article {
@@ -397,6 +399,11 @@
         &__text {
             padding: 10px;
         }
+    }
+    .blog-article--small {
+        display: block;
+        min-width: auto;
+        flex: auto;
     }
 
 
