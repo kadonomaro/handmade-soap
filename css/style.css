@@ -740,10 +740,13 @@ img {
   list-style-type: none;
 }
 
+.contacts__item {
+  margin-bottom: 10px;
+}
+
 .contacts__link {
   position: relative;
-  display: block;
-  margin-bottom: 10px;
+  display: inline-block;
   padding-left: 30px;
   color: #303030;
   line-height: 25px;
@@ -763,6 +766,12 @@ img {
 
 .contacts__link--mail::before {
   background-position-x: -30px;
+}
+
+@media screen and (max-width: 600px) {
+  .contacts {
+    text-align: center;
+  }
 }
 
 .header {
@@ -1681,6 +1690,12 @@ img {
 
 .footer__col {
   padding: 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-preferred-size: 33.3333%;
       flex-basis: 33.3333%;
   -webkit-box-sizing: border-box;

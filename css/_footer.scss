@@ -12,6 +12,8 @@
     }
     &__col {
         padding: 10px 20px;
+        display: flex;
+        justify-content: center;
         flex-basis: 33.3333%;
         box-sizing: border-box;
     }

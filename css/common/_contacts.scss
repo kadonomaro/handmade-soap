@@ -3,12 +3,11 @@
         list-style-type: none;
     }
     &__item {
-
+        margin-bottom: 10px;
     }
     &__link {
         position: relative;
-        display: block;
-        margin-bottom: 10px;
+        display: inline-block;
         padding-left: 30px;
         color: $color-text;
         line-height: 25px;
@@ -28,5 +27,12 @@
         &::before {
             background-position-x: -30px;
         }
+    }
+}
+
+
+@include media(600) {
+    .contacts {
+        text-align: center;
     }
 }
