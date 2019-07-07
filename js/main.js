@@ -69,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+
     fadeInAnimation(
         document.querySelector('.features'),
         document.querySelectorAll('.feature'),

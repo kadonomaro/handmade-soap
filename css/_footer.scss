@@ -1,9 +1,9 @@
 .footer {
     position: relative;
     min-height: 300px;
+    
     &__background {
-        background-color: #303030;
-        background-color: #ccc;
+        background-color: $color-border-light;
     }
     &__inner {
         display: flex;
@@ -68,6 +68,9 @@
         &__col {
             flex-basis: 50%;
         }
+    }
+    .footer-links {
+        text-align: center;
     }
 }
 

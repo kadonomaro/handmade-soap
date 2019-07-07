@@ -736,6 +736,35 @@ img {
   }
 }
 
+.contacts__list {
+  list-style-type: none;
+}
+
+.contacts__link {
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+  padding-left: 30px;
+  color: #303030;
+  line-height: 25px;
+  text-decoration: none;
+}
+
+.contacts__link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  background-image: url("../images/icons/contacts.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.contacts__link--mail::before {
+  background-position-x: -30px;
+}
+
 .header {
   position: relative;
   display: -webkit-box;
@@ -852,7 +881,7 @@ img {
 .header-nav__toggle {
   position: absolute;
   top: 10px;
-  right: -10px;
+  right: -20px;
   background: transparent;
   border: 0;
   -webkit-transform: translateX(100%);
@@ -1638,8 +1667,7 @@ img {
 }
 
 .footer__background {
-  background-color: #303030;
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 
 .footer__inner {
@@ -1715,6 +1743,9 @@ img {
   .footer__col {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
+  }
+  .footer-links {
+    text-align: center;
   }
 }
 
