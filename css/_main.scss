@@ -104,21 +104,24 @@
         height: 50px;
         border: 0;
         border-radius: 50%;
-        background: url('../images/bubbles/min/bubble-2-min.png');
-        transform: translateY(-50%);
-        transition: box-shadow 0.2s ease-in;
+        // transform: translateY(-50%);
+        transition: opacity 0.2s ease-in;
         cursor: pointer;
         outline: none;
+        opacity: 0.5;
         &:hover,
         &:focus {
-            box-shadow: 0 0 5px 1px rgba($color: #000000, $alpha: 0.3);
+            opacity: 1;
         }
     }
     &__next {
         right: 27%;
+        background-image: url('../images/icons/arrow.svg');
+        background-position-x: -60px;
     }
     &__prev {
         left: 27%;
+        background-image: url('../images/icons/arrow.svg');
     }
     &__img {
         margin: 0 auto;

@@ -1111,28 +1111,26 @@ img {
   height: 50px;
   border: 0;
   border-radius: 50%;
-  background: url("../images/bubbles/min/bubble-2-min.png");
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  -webkit-transition: -webkit-box-shadow 0.2s ease-in;
-  transition: -webkit-box-shadow 0.2s ease-in;
-  transition: box-shadow 0.2s ease-in;
-  transition: box-shadow 0.2s ease-in, -webkit-box-shadow 0.2s ease-in;
+  -webkit-transition: opacity 0.2s ease-in;
+  transition: opacity 0.2s ease-in;
   cursor: pointer;
   outline: none;
+  opacity: 0.5;
 }
 
 .main-slider__next:hover, .main-slider__next:focus, .main-slider__prev:hover, .main-slider__prev:focus {
-  -webkit-box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
+  opacity: 1;
 }
 
 .main-slider__next {
   right: 27%;
+  background-image: url("../images/icons/arrow.svg");
+  background-position-x: -60px;
 }
 
 .main-slider__prev {
   left: 27%;
+  background-image: url("../images/icons/arrow.svg");
 }
 
 .main-slider__img {
