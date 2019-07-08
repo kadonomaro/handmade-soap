@@ -1258,19 +1258,16 @@ img {
 
 .ingredients-types__desc {
   position: absolute;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
   opacity: 0;
-  -webkit-transition: opacity 0.3s ease-in, -webkit-transform 0.5s ease-in;
-  transition: opacity 0.3s ease-in, -webkit-transform 0.5s ease-in;
-  transition: transform 0.5s ease-in, opacity 0.3s ease-in;
-  transition: transform 0.5s ease-in, opacity 0.3s ease-in, -webkit-transform 0.5s ease-in;
+  -webkit-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
+}
+
+.ingredients-types__desc p:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 .ingredients-types__desc--active {
-  display: block;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
   opacity: 1;
 }
 
@@ -1291,8 +1288,8 @@ img {
 }
 
 .ingredients-types-item:hover, .ingredients-types-item:focus {
-  -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
 .ingredients-types-item__image {
@@ -1305,15 +1302,18 @@ img {
 }
 
 .ingredients-types-item--active {
-  background-color: rgba(81, 190, 230, 0.1);
+  background-color: rgba(204, 204, 204, 0.2);
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .ingredients-types__col:first-child {
     width: 65%;
   }
   .ingredients-types__col:last-child {
     width: 35%;
+  }
+  .ingredients-types__item:not(:last-child) {
+    margin-right: 10px;
   }
 }
 
@@ -1328,9 +1328,6 @@ img {
     -webkit-box-ordinal-group: initial;
         -ms-flex-order: initial;
             order: initial;
-  }
-  .ingredients-types__item:not(:last-child) {
-    margin-right: 10px;
   }
 }
 
@@ -1351,8 +1348,11 @@ img {
             align-items: center;
     padding: 0px 5px 5px;
   }
-  .ingredients-types-item__image, .ingredients-types-item__title {
-    width: 50%;
+  .ingredients-types-item__image {
+    width: 30%;
+  }
+  .ingredients-types-item__title {
+    width: 70%;
   }
 }
 

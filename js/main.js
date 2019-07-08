@@ -79,6 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
         'feature--visible'
     );
 
+    
     let soapBaseTabsContainer = document.querySelector('#soap-base');
     let soapAromaTabsContainer = document.querySelector('#soap-aroma');
     let soapOilTabsContainer = document.querySelector('#soap-oil');
