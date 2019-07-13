@@ -62,10 +62,11 @@ let galleryBox = {
             }, 50);
             galleryImage.src = image.src;
             galleryImage.setAttribute('alt', image.getAttribute('alt'));
+            galleryImageIndex.textContent = `${index + 1} / ${images.length}`;
+
             galleryCloseButton.focus();
             galleryCloseButton.addEventListener('click', deactivateGallery);
             document.addEventListener('keyup', deactivateGallery);
-            galleryImageIndex.textContent = `${index + 1} / ${images.length}`;
         }
 
 
@@ -78,7 +79,11 @@ let galleryBox = {
                 document.removeEventListener('keyup', deactivateGallery);
                 focusedElement.focus();
             }
+        }
 
+
+        function nextImage() {
+            
         }
     }
 
