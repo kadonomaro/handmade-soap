@@ -82,7 +82,6 @@ $(document).ready(function () {
         autoplaySpeed: 5000,
         draggable: false,
         accessibility: false
-
     });
 
 

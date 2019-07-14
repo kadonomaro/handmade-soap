@@ -203,56 +203,13 @@ img {
   display: flex;
 }
 
-.social__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.social__item {
-  list-style: none;
-  margin: 0 5px;
-}
-
-.social__link {
-  display: block;
-  width: 50px;
-  height: 50px;
-  text-decoration: none;
-  background-image: url("../images/icons/social.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  -webkit-transition: -webkit-transform 0.2s ease-in;
-  transition: -webkit-transform 0.2s ease-in;
-  transition: transform 0.2s ease-in;
-  transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
-}
-
-.social__link:hover, .social__link:focus {
-  -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
-}
-
-.social__link--two {
-  background-position-x: -60px;
-}
-
-.social__link--three {
-  background-position-x: -120px;
-}
-
 .scroll-top {
   position: fixed;
-  z-index: 99;
-  right: 50%;
+  z-index: 999;
+  right: 20px;
   bottom: 30px;
   width: 50px;
   height: 50px;
-  -webkit-transform: translateX(50%);
-          transform: translateX(50%);
   -webkit-transition: opacity 1s;
   transition: opacity 1s;
   visibility: hidden;
@@ -392,6 +349,54 @@ img {
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
   }
+}
+
+@media screen and (max-width: 600px) {
+  .scroll-top {
+    right: 10px;
+    bottom: 10px;
+  }
+}
+
+.social__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.social__item {
+  list-style: none;
+  margin: 0 5px;
+}
+
+.social__link {
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+  background-image: url("../images/icons/social.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  transition: -webkit-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+  transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
+}
+
+.social__link:hover, .social__link:focus {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+.social__link--two {
+  background-position-x: -60px;
+}
+
+.social__link--three {
+  background-position-x: -120px;
 }
 
 .button {
