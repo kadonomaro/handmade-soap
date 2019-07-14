@@ -1227,6 +1227,9 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .ingredients-types__row:not(:last-child) {
@@ -1262,9 +1265,8 @@ img {
 }
 
 .ingredients-types__desc {
-  position: absolute;
+  display: none;
   font-size: 1.2em;
-  opacity: 0;
   -webkit-transition: opacity 0.3s ease-in;
   transition: opacity 0.3s ease-in;
 }
@@ -1274,7 +1276,7 @@ img {
 }
 
 .ingredients-types__desc--active {
-  opacity: 1;
+  display: block;
 }
 
 .ingredients-types-item {
@@ -1329,7 +1331,6 @@ img {
   }
   .ingredients-types__col:last-child {
     width: 100%;
-    padding-bottom: 55%;
   }
   .ingredients-types__col--order {
     -webkit-box-ordinal-group: initial;
