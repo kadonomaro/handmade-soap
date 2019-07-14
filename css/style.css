@@ -413,8 +413,8 @@ img {
   color: #ffffff;
   background-color: #51bee6;
   border-color: #51bee6;
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .section-title {
@@ -673,27 +673,27 @@ img {
 }
 
 .feature--one {
-  background-image: url("../images/icons/features/features.svg");
+  background-image: url("../images/icons/features.svg");
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
 }
 
 .feature--two {
-  background-image: url("../images/icons/features/features.svg");
+  background-image: url("../images/icons/features.svg");
   background-position-x: -70px;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
 }
 
 .feature--three {
-  background-image: url("../images/icons/features/features.svg");
+  background-image: url("../images/icons/features.svg");
   background-position-x: -140px;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
 }
 
 .feature--four {
-  background-image: url("../images/icons/features/features.svg");
+  background-image: url("../images/icons/features.svg");
   background-position-x: -210px;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
@@ -1111,6 +1111,7 @@ img {
   height: 50px;
   border: 0;
   border-radius: 50%;
+  background-color: transparent;
   -webkit-transition: opacity 0.2s ease-in;
   transition: opacity 0.2s ease-in;
   cursor: pointer;
@@ -1125,12 +1126,13 @@ img {
 .main-slider__next {
   right: 27%;
   background-image: url("../images/icons/arrow.svg");
-  background-position-x: -60px;
 }
 
 .main-slider__prev {
   left: 27%;
   background-image: url("../images/icons/arrow.svg");
+  -webkit-transform: scale(-1);
+          transform: scale(-1);
 }
 
 .main-slider__img {
@@ -1256,6 +1258,7 @@ img {
 
 .ingredients-types__desc {
   position: absolute;
+  font-size: 1.2em;
   opacity: 0;
   -webkit-transition: opacity 0.3s ease-in;
   transition: opacity 0.3s ease-in;
@@ -1321,6 +1324,7 @@ img {
   }
   .ingredients-types__col:last-child {
     width: 100%;
+    padding-bottom: 55%;
   }
   .ingredients-types__col--order {
     -webkit-box-ordinal-group: initial;
@@ -1901,6 +1905,9 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 50px 0 20px;

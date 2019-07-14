@@ -80,7 +80,8 @@ $(document).ready(function () {
         cssEase: 'linear',
         autoplay: true,
         autoplaySpeed: 5000,
-        draggable: false
+        draggable: false,
+        accessibility: false
 
     });
 
