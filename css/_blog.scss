@@ -301,6 +301,7 @@
 
     .blog-nav {
         border-radius: 0;
+        background-color: $color-sea-blue;
         &__toggle {
             display: block;
         }
@@ -324,7 +325,9 @@
             &:last-child {
                 border-radius: 0;
             }
-            
+            &:first-child {
+                border-top: 1px solid darken($color: $color-sea-blue, $amount: 10%);
+            }
             &:not(:last-child) {
                 border-bottom: 1px solid darken($color: $color-sea-blue, $amount: 10%);
             }

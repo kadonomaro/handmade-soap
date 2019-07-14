@@ -84,9 +84,6 @@
         background-color: rgba($color: $color-sea-blue, $alpha: 0.2);
         overflow: hidden;
         transition: all 1s;
-
-
-
         &:hover .main-slider__desc, 
         &:focus .main-slider__desc {
             opacity: 1;
@@ -102,6 +99,7 @@
         top: 50%;
         width: 50px;
         height: 50px;
+        padding: 0;
         border: 0;
         border-radius: 50%;
         background-color: transparent;
@@ -116,13 +114,12 @@
     }
     &__next {
         right: 27%;
-        background-image: url('../images/icons/arrow.svg');
     }
     &__prev {
         left: 27%;
-        background-image: url('../images/icons/arrow.svg');
         transform: scale(-1);
     }
+
     &__img {
         margin: 0 auto;
         transition: all 0.3s ease-in;
