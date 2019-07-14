@@ -1,32 +1,37 @@
 .section-title {
     position: relative;
     display: inline-block;
+    padding: 5px 10px;
     color: $color-text-light;
     font-family: $font-cursive;
     font-size: 2em;
     letter-spacing: 0.04em;
+    border-left: 3px solid $color-border-light;
+    border-right: 3px solid $color-border-light;
+    border-radius: 25px;
     &::before,
     &::after {
         content: '';
         position: absolute;
         top: 50%;
-        width: 50px;
+        width: 30px;
         height: 3px;
         background-color: $color-border-light;
         border-radius: 3px;
 
     }
     &::before {
-        left: -60px;
+        left: -30px;
     }
     &::after {
-        right: -60px;
+        right: -30px;
     }
 }
 
 
 @include media(600) {
     .section-title {
+        border: none;
         &::before,
         &::after {
             display: none;

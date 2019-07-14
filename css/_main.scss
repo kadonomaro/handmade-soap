@@ -87,11 +87,21 @@
         &:hover .main-slider__desc, 
         &:focus .main-slider__desc {
             opacity: 1;
-            text-shadow: 0 0 3px black;
         }
-        &:hover .main-slider__img, 
-        &:focus .main-slider__img {
-            filter: blur(8px);
+        &:hover::before, 
+        &:focus::before {
+            opacity: 1;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: #000000, $alpha: 0.5);
+            opacity: 0;
+            transition: opacity 0.3s ease-in;
         }
     }
     &__next, &__prev {
