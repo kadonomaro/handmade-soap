@@ -295,8 +295,12 @@
 
 @include media(767) {
 
-    .blog-nav {
+    .blog-header {
+        padding: 0;
+    }
 
+    .blog-nav {
+        border-radius: 0;
         &__toggle {
             display: block;
         }
@@ -306,7 +310,7 @@
             top: 50px;
             left: 0;
             flex-direction: column;
-            width: 200px;
+            width: 100%;
             transition: transform 0.5s ease-in;
             transform: translateX(-100%);
         }
@@ -328,6 +332,9 @@
         &__item--active {
             transform: translateX(0);
         }
+        &__link {
+            padding: 12px 4px;
+        }
         &__dropdown {
             position: relative;
         }
@@ -342,7 +349,6 @@
 @include media(600) {
 
     .blog-header {
-        padding: 0;
         &__nav {
             max-width: 100%;
             margin: 0;
@@ -361,12 +367,6 @@
         }
     }
 
-    .blog-nav {
-        border-radius: 0;
-        &__list {
-            width: 100%;
-        }
-    }
 
     .blog-slider {
         padding: 0;
