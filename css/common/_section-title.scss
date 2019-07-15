@@ -15,10 +15,10 @@
         position: absolute;
         top: 50%;
         width: 30px;
-        height: 3px;
+        height: 2px;
         background-color: $color-border-light;
         border-radius: 3px;
-
+        transform: translateY(-50%);
     }
     &::before {
         left: -30px;

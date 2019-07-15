@@ -81,10 +81,6 @@ let galleryBox = {
             }
         }
 
-
-        function nextImage() {
-            
-        }
     }
 
 

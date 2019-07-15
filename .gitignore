@@ -1,4 +1,9 @@
-template.png
-doc.txt
+#files
 .jshintrc
+package.json
+package-lock.json
+
+#directories
+dist
 text
+node_modules/
