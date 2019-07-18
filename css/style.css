@@ -813,6 +813,14 @@ img {
   overflow: hidden;
 }
 
+.header__canvas {
+  position: absolute;
+  z-index: 9;
+  display: block;
+  top: 0;
+  left: 0;
+}
+
 .header__background {
   background: linear-gradient(235deg, #4ecead, #51bee6);
   background-size: 300%;

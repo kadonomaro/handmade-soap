@@ -7,6 +7,13 @@
     font-family: $font-cursive;
     text-align: center;
     overflow: hidden;
+    &__canvas {
+        position: absolute;
+        z-index: 9;
+        display: block;
+        top: 0;
+        left: 0;
+    }
     &__background {
         background: linear-gradient(235deg, $color-sea-green, $color-sea-blue);
         background-size: 300%;

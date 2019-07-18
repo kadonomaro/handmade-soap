@@ -2,14 +2,17 @@ import detectSwipeDirection from "./detectSwipeDirection.js";
 import scrollTop from "./modules/scrollTop.js";
 import fadeInAnimation from "./modules/fadeInAnimation.js";
 import tabs from "./modules/tabs.js";
+import floatingBubbles from "./modules/floatingBubbles.js";
 
 
 
 document.addEventListener('DOMContentLoaded', function () {
     
     scrollTop(document.querySelector('.scroll-top'), 'scroll-top--active');
-    
 
+    floatingBubbles();
+    
+    /*
     //get css styles for background position
     let headerBackground = document.querySelector('.header__background-bubble');
     let headerBackgroundCurrentStyle = window.getComputedStyle(headerBackground, null)
@@ -37,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         
         headerBackground.style.backgroundPositionY = newBackgroundPosition;
-    }
+    }*/
 
 
     // open/close navigation
