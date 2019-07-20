@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelectorAll('.gallery-photos__item'),
         0.3,
         0.3,
-        'gallery-photos__item--active'
+        'gallery-photos__item--active',
+        100
     );
 });

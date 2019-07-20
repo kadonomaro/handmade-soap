@@ -1,4 +1,4 @@
-export default function fadeInAnimation(section, elements, delay, delayStep, className) {
+export default function fadeInAnimation(section, elements, delay, delayStep, className, offset) {
     let scrollOffset;
 
     if (elements.length) {
@@ -13,7 +13,7 @@ export default function fadeInAnimation(section, elements, delay, delayStep, cla
 
     function animate() {
         scrollOffset = window.pageYOffset + window.innerHeight;
-        if (scrollOffset >= (section.offsetTop + 300)) {
+        if (scrollOffset >= (section.offsetTop + offset)) {
             elements.forEach(element => {
                 element.classList.add(className);
                 setTimeout(() => {
