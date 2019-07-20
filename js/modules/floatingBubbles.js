@@ -14,7 +14,8 @@ export default function floatingBubbles() {
 
         ctx.drawImage(bubble, 1400,45, 100,100);
         ctx.drawImage(bubble, 1700,220, 100,100);
-        ctx.drawImage(bubble, 1300,570, 100,100);
+        ctx.drawImage(bubble, 1300, 570, 100, 100);
+        ctx.drawImage(bubble, 900, 570,  100,100);
 
         ctx.drawImage(bubble, 130,90, 150,150);
         ctx.drawImage(bubble, 700,80, 150,150);
@@ -41,7 +42,8 @@ export default function floatingBubbles() {
 
         ctx.drawImage(bubble, 1400 + evt.clientX/7, 45 + evt.clientY/4,  100,100);
         ctx.drawImage(bubble, 1700 + evt.clientX/10, 220 + evt.clientY/6,  100,100);
-        ctx.drawImage(bubble, 1300 + evt.clientX/6, 570 + evt.clientY/10,  100,100);
+        ctx.drawImage(bubble, 1300 + evt.clientX / 6, 570 + evt.clientY / 10, 100, 100);
+        ctx.drawImage(bubble, 900 + evt.clientX/6, 570 + evt.clientY/10,  100,100);
 
         ctx.drawImage(bubble, 130 + evt.clientX/8, 90 + evt.clientY/10,  150,150);
         ctx.drawImage(bubble, 700 + evt.clientX/9, 80 + evt.clientY/7, 150,150);
