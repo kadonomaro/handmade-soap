@@ -65,6 +65,8 @@
 
     }
     &__title {
+        position: relative;
+        z-index: 10;
         margin: 10px;
         color: $color-sea-green;
         font-size: 64px;
@@ -72,6 +74,7 @@
         animation: title-color 20s ease infinite;
         transition: all 0.5s;
         user-select: none;
+        pointer-events: none;
     }
 
 }

@@ -841,6 +841,8 @@ img {
 }
 
 .header__title {
+  position: relative;
+  z-index: 10;
   margin: 10px;
   color: #4ecead;
   font-size: 64px;
@@ -853,6 +855,7 @@ img {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  pointer-events: none;
 }
 
 .header-nav {

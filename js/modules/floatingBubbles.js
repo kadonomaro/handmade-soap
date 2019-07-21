@@ -28,33 +28,36 @@ export default function floatingBubbles() {
         ctx.drawImage(bubble, 1400,400, 225,225);
     });
 
-    canvas.addEventListener('mousemove', function (evt) {
-        drawImages(evt);
+
+    window.addEventListener('scroll', function (evt) {
+        console.log(this.window.pageYOffset);
+        drawImages();
+        
     });
 
-    function drawImages(evt) {
-        console.log('X: ', evt.clientX);
-        console.log('Y: ', evt.clientY);
+    function drawImages () {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        ctx.drawImage(bubble, 220 + evt.clientX/10, 680 + evt.clientY/8,  60,60);
-        ctx.drawImage(bubble, 740 + evt.clientX/7, 600 + evt.clientY/9,  60,60);
+        ctx.drawImage(bubble, 220,680 + window.pageYOffset/2, 60,60);
+        ctx.drawImage(bubble, 740,600 + window.pageYOffset/2, 60,60);
 
-        ctx.drawImage(bubble, 1400 + evt.clientX/7, 45 + evt.clientY/4,  100,100);
-        ctx.drawImage(bubble, 1700 + evt.clientX/10, 220 + evt.clientY/6,  100,100);
-        ctx.drawImage(bubble, 1300 + evt.clientX / 6, 570 + evt.clientY / 10, 100, 100);
-        ctx.drawImage(bubble, 900 + evt.clientX/6, 570 + evt.clientY/10,  100,100);
+        ctx.drawImage(bubble, 1400,45 + window.pageYOffset/3, 100,100);
+        ctx.drawImage(bubble, 1700,220 + window.pageYOffset/3, 100,100);
+        ctx.drawImage(bubble, 1300, 570 + window.pageYOffset/3, 100, 100);
+        ctx.drawImage(bubble, 900, 570 + window.pageYOffset/3,  100,100);
 
-        ctx.drawImage(bubble, 130 + evt.clientX/8, 90 + evt.clientY/10,  150,150);
-        ctx.drawImage(bubble, 700 + evt.clientX/9, 80 + evt.clientY/7, 150,150);
-        ctx.drawImage(bubble, 600 + evt.clientX/6, 730 + evt.clientY/4,  150,150);
-        ctx.drawImage(bubble, 1300 + evt.clientX/10, 800 + evt.clientY/7,  150,150);
-        ctx.drawImage(bubble, 300 + evt.clientX/7, 280 + evt.clientY/8,  150,150);
+        ctx.drawImage(bubble, 130,90 + window.pageYOffset/4, 150,150);
+        ctx.drawImage(bubble, 700,80 + window.pageYOffset/4, 150,150);
+        ctx.drawImage(bubble, 600,730 + window.pageYOffset/4, 150,150);
+        ctx.drawImage(bubble, 1300, 800 + window.pageYOffset/4, 150,150);
+        ctx.drawImage(bubble, 300,280 + window.pageYOffset/4, 150,150);
         
-        ctx.drawImage(bubble, 500 + evt.clientX/6, 400 + evt.clientY/9,  225,225);
-        ctx.drawImage(bubble, 1175 + evt.clientX/8, 180 + evt.clientY/6,  225,225);
-        ctx.drawImage(bubble, 1400 + evt.clientX/10, 400 + evt.clientY/7,  225,225);
+        ctx.drawImage(bubble, 500,400 + window.pageYOffset/6, 225,225);
+        ctx.drawImage(bubble, 1175,180 + window.pageYOffset/6, 225,225);
+        ctx.drawImage(bubble, 1400, 400 + window.pageYOffset/6, 225, 225);
+        
     }
+
 
     
 
