@@ -50,16 +50,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // type writting effect for header subtitle
     typeWrite(
-        document.querySelector('.blog-header__subtitle').textContent,
+        document.querySelector('.blog-header__title').textContent,
         100,
-        document.querySelector('.blog-header__subtitle')
+        document.querySelector('.blog-header__title')
     );
 
     //scrolling into every section with interval on click button
     let blogActionButton = document.querySelector('.js-blog-action');
     blogActionButton.addEventListener('click', function (evt) {
         evt.preventDefault();
-        let sections = document.querySelectorAll('section');
+        let sections = document.querySelectorAll('.blog-article');
         let sectionScrollSettings = {
             behavior: "smooth"
         };
