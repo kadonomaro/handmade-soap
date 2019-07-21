@@ -998,9 +998,14 @@ img {
 @media screen and (max-width: 1024px) {
   .header__background-bubble {
     background-image: url("../images/bubbles/min/bubble-1-min.png"), url("../images/bubbles/min/bubble-2-min.png"), url("../images/bubbles/min/bubble-3-min.png"), url("../images/bubbles/min/bubble-4-min.png"), url("../images/bubbles/min/bubble-1-min.png"), url("../images/bubbles/min/bubble-2-min.png"), url("../images/bubbles/min/bubble-3-min.png"), url("../images/bubbles/min/bubble-4-min.png"), url("../images/bubbles/min/bubble-1-min.png"), url("../images/bubbles/min/bubble-2-min.png"), url("../images/bubbles/min/bubble-3-min.png"), url("../images/bubbles/min/bubble-1-min.png"), url("../images/bubbles/min/bubble-3-min.png"), url("../images/bubbles/min/bubble-1-min.png");
+    background-position: top 10% left 7%, top 65% right 27%, top 55% left 30%, top 65% left 40%, top 90% left 35%, top 5% right 22%, top 55% right 16%, top 75% left 12%, top 35% left 17%, top 25% right 5%, top 25% right 30%, top 10% left 40%, top 55% left -7%, top 100% right 25%;
+    background-repeat: no-repeat;
   }
   .header__background-bubble::before {
     background-size: 150%;
+  }
+  .header__canvas {
+    display: none;
   }
 }
 

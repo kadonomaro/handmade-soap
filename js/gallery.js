@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', function () {
     fadeInAnimation(
         document.querySelector('.gallery'),
         document.querySelectorAll('.gallery-photos__item'),
-        0.3,
-        0.3,
+        0.2,
+        0.2,
         'gallery-photos__item--active',
         100
     );
