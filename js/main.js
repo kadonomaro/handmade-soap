@@ -79,7 +79,8 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelectorAll('.feature'),
         0.5,
         0.3,
-        'feature--visible'
+        'feature--visible',
+        300
     );
 
     
