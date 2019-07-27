@@ -14,10 +14,15 @@
     vertical-align: middle;
     box-sizing: border-box;
     opacity: 0;
-    &__track {
-        position: relative;
-        display: flex;
+    &__wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         overflow: hidden;
+    }
+    &__track {
+        transition: transform 0.3s;
     }
     &__slide {
         position: absolute;
@@ -58,5 +63,5 @@
     }
 }
 .gallery-box--active {
-    display: flex;
+    display: block;
 }

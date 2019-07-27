@@ -12,12 +12,12 @@ let galleryBox = {
             easing: 'ease-in'
         };
         const galleryOverlay = document.createElement('div');
-        const galleryTrack = document.createElement('div');
-        const gallerySlide = document.createElement('div');
-        const galleryImage = document.createElement('img');
-        const galleryCloseButton = document.createElement('button');
-        const galleryImageIndex = document.createElement('span');
         let focusedElement;
+
+        let imagesArr = [];
+        images.forEach(image => {
+            imagesArr.push(image);
+        });
 
 
         document.addEventListener('click', function (evt) {
@@ -41,44 +41,56 @@ let galleryBox = {
         (function createGallery() {
             galleryOverlay.classList.add('gallery-box');
             galleryOverlay.style.transition = `opacity ${settings.openingSpeed}ms ${settings.easing}`;
-            galleryTrack.classList.add('gallery-box__track');
-            gallerySlide.classList.add('gallery-box__slide');
-            galleryImage.classList.add('gallery-box__image');
-            galleryCloseButton.classList.add('gallery-box__button');
 
-            if (settings.imageIndex) {
-                galleryImageIndex.classList.add('gallery-box__index');
-                galleryOverlay.appendChild(galleryImageIndex);
-            }
+
+            // if (settings.imageIndex) {
+            //     galleryImageIndex.classList.add('gallery-box__index');
+            //     galleryOverlay.appendChild(galleryImageIndex);
+            // }
+
+            
+            galleryOverlay.innerHTML += `
+                <button class="gallery-box__button"></button>
+                
+                <div class="gallery-box__nav">
+                    <button class="gallery-box__prev">Prev</button>    
+                    <button class="gallery-box__next">Next</button>
+                </div>
+
+                <div class="gallery-box__wrapper" style="width:${images[0].naturalWidth}px; height:${images[0].naturalHeight}px">
+                    <div class="gallery-box__track" style="width:${images[0].naturalWidth * 10}px; height:${images[0].naturalHeight}px">
+                        
+                        ${imagesArr.map((image,index) => {
+                            return `
+                                <div class="gallery-box__slide" style="transform: translateX(${index * image.naturalWidth}px)">
+                                    <img class="gallery-box__image" src="${image.src}" alt="${image.getAttribute('alt')}">
+                                </div>
+                            `;
+                        })}
+                    </div>    
+                </div>
+            `;
 
             document.body.appendChild(galleryOverlay);
-            galleryOverlay.appendChild(galleryTrack);
-            galleryTrack.appendChild(gallerySlide);
-            gallerySlide.appendChild(galleryImage);
 
-            galleryOverlay.appendChild(galleryCloseButton);
             
         })();
 
 
         function activateGallery(image, index) {
+            const galleryTrack = galleryOverlay.querySelector('.gallery-box__track');
+            const galleryCloseButton = galleryOverlay.querySelector('.gallery-box__button');
+            const galleryPrev = galleryOverlay.querySelector('.gallery-box__prev');
+            const galleryNext = galleryOverlay.querySelector('.gallery-box__next');
             focusedElement = image;
             galleryOverlay.classList.add('gallery-box--active');
             setTimeout(() => {
                 galleryOverlay.style.opacity = 1;
             }, 50);
-            galleryImage.src = image.src;
-            galleryImage.setAttribute('alt', image.getAttribute('alt'));
-            galleryImageIndex.textContent = `${index + 1} / ${images.length}`;
 
-            console.dir(image);
-            
-            galleryImage.addEventListener('load', function () {
-                galleryTrack.style.width = image.naturalWidth + 'px';
-                galleryTrack.style.height = image.naturalHeight + 'px';
-            });
+            // galleryImageIndex.textContent = `${index + 1} / ${images.length}`;
 
-            
+            galleryNavigation(galleryPrev, galleryNext, galleryTrack);
 
             galleryCloseButton.focus();
             galleryCloseButton.addEventListener('click', deactivateGallery);
@@ -95,6 +107,20 @@ let galleryBox = {
                 document.removeEventListener('keyup', deactivateGallery);
                 focusedElement.focus();
             }
+        }
+
+        function galleryNavigation(prev, next, track) {
+            let counterPrev = 1;
+            let counterNext = 1;
+            let counter = 1;
+            prev.addEventListener('click', function () {
+                track.style.transform = `translateX(${images[0].naturalWidth * counter}px)`;
+                counter--;
+            });
+            next.addEventListener('click', function () {
+                track.style.transform = `translateX(-${images[0].naturalWidth * counter}px)`;
+                counter++;
+            });
         }
 
     }
