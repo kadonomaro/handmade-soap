@@ -67,8 +67,9 @@ let galleryBox = {
                                 </div>
                             `;
                         })}
-                    </div>    
+                    </div>
                 </div>
+                <span class="gallery-box__index"></span>
             `;
 
             document.body.appendChild(galleryOverlay);
@@ -82,15 +83,23 @@ let galleryBox = {
             const galleryCloseButton = galleryOverlay.querySelector('.gallery-box__button');
             const galleryPrev = galleryOverlay.querySelector('.gallery-box__prev');
             const galleryNext = galleryOverlay.querySelector('.gallery-box__next');
+            const galleryImageIndex = galleryOverlay.querySelector('.gallery-box__index');
             focusedElement = image;
+            console.log(index);
+
+            galleryTrack.style.transform = `translateX(-${image.naturalWidth * index}px)`;
+
             galleryOverlay.classList.add('gallery-box--active');
             setTimeout(() => {
                 galleryOverlay.style.opacity = 1;
             }, 50);
 
-            // galleryImageIndex.textContent = `${index + 1} / ${images.length}`;
+            if (settings.imageIndex) {
+                galleryImageIndex.textContent = `${index + 1} / ${images.length}`;
+            }
+            
 
-            galleryNavigation(galleryPrev, galleryNext, galleryTrack);
+            galleryNavigation(galleryPrev, galleryNext, galleryTrack, index, galleryImageIndex);
 
             galleryCloseButton.focus();
             galleryCloseButton.addEventListener('click', deactivateGallery);
@@ -109,17 +118,23 @@ let galleryBox = {
             }
         }
 
-        function galleryNavigation(prev, next, track) {
-            let counterPrev = 1;
-            let counterNext = 1;
-            let counter = 1;
+        function galleryNavigation(prev, next, track, imageIndex, imageIndexElement) {
+            let counter = imageIndex || 0;
+
             prev.addEventListener('click', function () {
-                track.style.transform = `translateX(${images[0].naturalWidth * counter}px)`;
-                counter--;
+                if (counter >= 1) {
+                    counter--;
+                    track.style.transform = `translateX(-${images[0].naturalWidth * counter}px)`;
+                    imageIndexElement.textContent = `${counter + 1} / ${images.length}`;
+                }
             });
+
             next.addEventListener('click', function () {
-                track.style.transform = `translateX(-${images[0].naturalWidth * counter}px)`;
-                counter++;
+                if (counter < images.length-1) {
+                    counter++;
+                    track.style.transform = `translateX(-${images[0].naturalWidth * counter}px)`;
+                    imageIndexElement.textContent = `${counter + 1} / ${images.length}`;
+                }
             });
         }
 
