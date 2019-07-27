@@ -12,6 +12,8 @@ let galleryBox = {
             easing: 'ease-in'
         };
         const galleryOverlay = document.createElement('div');
+        const galleryTrack = document.createElement('div');
+        const gallerySlide = document.createElement('div');
         const galleryImage = document.createElement('img');
         const galleryCloseButton = document.createElement('button');
         const galleryImageIndex = document.createElement('span');
@@ -39,6 +41,8 @@ let galleryBox = {
         (function createGallery() {
             galleryOverlay.classList.add('gallery-box');
             galleryOverlay.style.transition = `opacity ${settings.openingSpeed}ms ${settings.easing}`;
+            galleryTrack.classList.add('gallery-box__track');
+            gallerySlide.classList.add('gallery-box__slide');
             galleryImage.classList.add('gallery-box__image');
             galleryCloseButton.classList.add('gallery-box__button');
 
@@ -48,7 +52,10 @@ let galleryBox = {
             }
 
             document.body.appendChild(galleryOverlay);
-            galleryOverlay.appendChild(galleryImage);
+            galleryOverlay.appendChild(galleryTrack);
+            galleryTrack.appendChild(gallerySlide);
+            gallerySlide.appendChild(galleryImage);
+
             galleryOverlay.appendChild(galleryCloseButton);
             
         })();
@@ -63,6 +70,15 @@ let galleryBox = {
             galleryImage.src = image.src;
             galleryImage.setAttribute('alt', image.getAttribute('alt'));
             galleryImageIndex.textContent = `${index + 1} / ${images.length}`;
+
+            console.dir(image);
+            
+            galleryImage.addEventListener('load', function () {
+                galleryTrack.style.width = image.naturalWidth + 'px';
+                galleryTrack.style.height = image.naturalHeight + 'px';
+            });
+
+            
 
             galleryCloseButton.focus();
             galleryCloseButton.addEventListener('click', deactivateGallery);

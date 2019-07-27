@@ -14,10 +14,18 @@
     vertical-align: middle;
     box-sizing: border-box;
     opacity: 0;
+    &__track {
+        position: relative;
+        display: flex;
+        overflow: hidden;
+    }
+    &__slide {
+        position: absolute;
+    }
     &__image {
         display: block;
-        width: auto;
-        height: auto;
+        // width: auto;
+        // height: auto;
         max-width: 100%;
         max-height: 100%;
     }
