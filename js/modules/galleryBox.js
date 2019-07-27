@@ -9,11 +9,13 @@ let galleryBox = {
         settings = settings || {
             imageIndex: false,
             openingSpeed: 300,
+            slideSpeed: 300,
             easing: 'ease-in'
         };
         const galleryOverlay = document.createElement('div');
         let focusedElement;
 
+        //duplicate HTMLCollection for array map function
         let imagesArr = [];
         images.forEach(image => {
             imagesArr.push(image);
@@ -28,7 +30,7 @@ let galleryBox = {
             });
         });
 
-        //need to remove duplicate code
+
         document.addEventListener('keyup', function (evt) {
            images.forEach((image, index) => {
                if (evt.which === 13 && evt.target === image) {
@@ -42,19 +44,13 @@ let galleryBox = {
             galleryOverlay.classList.add('gallery-box');
             galleryOverlay.style.transition = `opacity ${settings.openingSpeed}ms ${settings.easing}`;
 
-
-            // if (settings.imageIndex) {
-            //     galleryImageIndex.classList.add('gallery-box__index');
-            //     galleryOverlay.appendChild(galleryImageIndex);
-            // }
-
             
             galleryOverlay.innerHTML += `
                 <button class="gallery-box__button"></button>
                 
                 <div class="gallery-box__nav">
-                    <button class="gallery-box__prev">Prev</button>    
-                    <button class="gallery-box__next">Next</button>
+                    <button class="gallery-box__prev" aria-label="gallery prev"></button>    
+                    <button class="gallery-box__next" aria-label="gallery next"></button>
                 </div>
 
                 <div class="gallery-box__wrapper" style="width:${images[0].naturalWidth}px; height:${images[0].naturalHeight}px">
@@ -73,8 +69,6 @@ let galleryBox = {
             `;
 
             document.body.appendChild(galleryOverlay);
-
-            
         })();
 
 
@@ -85,9 +79,10 @@ let galleryBox = {
             const galleryNext = galleryOverlay.querySelector('.gallery-box__next');
             const galleryImageIndex = galleryOverlay.querySelector('.gallery-box__index');
             focusedElement = image;
-            console.log(index);
 
+            galleryTrack.style.transition = `transform ${settings.slideSpeed}ms`;
             galleryTrack.style.transform = `translateX(-${image.naturalWidth * index}px)`;
+
 
             galleryOverlay.classList.add('gallery-box--active');
             setTimeout(() => {
@@ -120,12 +115,14 @@ let galleryBox = {
 
         function galleryNavigation(prev, next, track, imageIndex, imageIndexElement) {
             let counter = imageIndex || 0;
+            console.log('start: ', counter+1);
 
             prev.addEventListener('click', function () {
                 if (counter >= 1) {
                     counter--;
                     track.style.transform = `translateX(-${images[0].naturalWidth * counter}px)`;
                     imageIndexElement.textContent = `${counter + 1} / ${images.length}`;
+                    console.log('prev: ', counter+1);
                 }
             });
 
@@ -134,6 +131,7 @@ let galleryBox = {
                     counter++;
                     track.style.transform = `translateX(-${images[0].naturalWidth * counter}px)`;
                     imageIndexElement.textContent = `${counter + 1} / ${images.length}`;
+                    console.log('next: ', counter+1);
                 }
             });
         }

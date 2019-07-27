@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
         {
             imageIndex: true,
             openingSpeed: 300,
-            easing: 'ease-in'
+            slideSpeed: 500,
+            easing: 'ease-in',
         }
     );
 
