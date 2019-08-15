@@ -21,7 +21,8 @@ let galleryBox = {
             imagesArr.push(image);
         });
 
-
+        console.dir(imagesArr);
+        
         document.addEventListener('click', function (evt) {
             images.forEach((image, index) => {
                 if (evt.target === image) {
@@ -54,15 +55,17 @@ let galleryBox = {
                 </div>
 
                 <div class="gallery-box__wrapper" style="width:${images[0].naturalWidth}px; height:${images[0].naturalHeight}px">
-                    <div class="gallery-box__track" style="width:${images[0].naturalWidth * 10}px; height:${images[0].naturalHeight}px">
+                    <div class="gallery-box__track" style="width:${images[0].naturalWidth * images.length}px; height:${images[0].naturalHeight}px">
                         
-                        ${imagesArr.map((image,index) => {
+
+
+                        ${imagesArr.map((image, index) => {
                             return `
-                                <div class="gallery-box__slide" style="transform: translateX(${index * image.naturalWidth}px)">
-                                    <img class="gallery-box__image" src="${image.src}" alt="${image.getAttribute('alt')}">
-                                </div>
-                            `;
-                        })}
+                            <div class="gallery-box__slide" style="transform: translateX(${index * image.naturalWidth}px)">
+                                <img class="gallery-box__image" src="${image.src}" alt="${image.getAttribute('alt')}">
+                            </div>
+                        `;
+                        }).join('')}
                     </div>
                 </div>
                 <span class="gallery-box__index"></span>
@@ -80,7 +83,7 @@ let galleryBox = {
             const galleryImageIndex = galleryOverlay.querySelector('.gallery-box__index');
             focusedElement = image;
 
-            galleryTrack.style.transition = `transform ${settings.slideSpeed}ms`;
+            // galleryTrack.style.transition = `transform ${settings.slideSpeed}ms`;
             galleryTrack.style.transform = `translateX(-${image.naturalWidth * index}px)`;
 
 
@@ -110,12 +113,15 @@ let galleryBox = {
                 }, settings.openingSpeed);
                 document.removeEventListener('keyup', deactivateGallery);
                 focusedElement.focus();
+                
             }
         }
 
         function galleryNavigation(prev, next, track, imageIndex, imageIndexElement) {
             let counter = imageIndex || 0;
-            console.log('start: ', counter+1);
+            console.log('start: ', counter + 1);
+            
+            track.style.transition = `transform ${settings.slideSpeed}ms`;
 
             prev.addEventListener('click', function () {
                 if (counter >= 1) {

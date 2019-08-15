@@ -48,8 +48,15 @@ document.addEventListener('DOMContentLoaded', function () {
     let headerNavToggle = document.querySelector('.header-nav__toggle');
 
     headerNavToggle.addEventListener('click', function () {
-        // toggleClass(headerNav, 'header-nav_hidden');
         headerNav.classList.toggle('header-nav--hidden');
+    });
+    window.addEventListener('scroll', function () {
+        if (!headerNav.classList.contains('header-nav--hidden')) {
+            setTimeout(() => {
+                
+            }, 1000);
+            headerNav.classList.add('header-nav--hidden'); 
+        }
     });
 
 
@@ -57,10 +64,6 @@ document.addEventListener('DOMContentLoaded', function () {
     detectSwipeDirection(headerNav, 'header-nav--hidden','left');
 
     
-    function toggleClass(target, className) {
-        target.classList.toggle(className);
-    }
-
 
     //active or hidden button for scroll page to top
     let scrollTopButton = document.querySelector('.scroll-top');

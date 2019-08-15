@@ -911,6 +911,11 @@ img {
           box-sizing: border-box;
 }
 
+.header-nav__wrapper {
+  height: 100%;
+  border-radius: inherit;
+}
+
 .header-nav__list {
   position: relative;
   height: 100%;
