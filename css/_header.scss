@@ -20,15 +20,20 @@
         animation: background 12s ease infinite;
         &::before {
             content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 110px;
-            background: url('../images/background/bg-bottom-new.png') no-repeat;
-            background-size: contain;
-            background-position: bottom;
+
         }
+
+    }
+    &__background-bottom {
+        position: absolute;
+        z-index: 15;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 110px;
+        background: url('../images/background/bg-bottom-new.png') no-repeat;
+        background-size: contain;
+        background-position: bottom;
     }
     &__title {
         position: relative;

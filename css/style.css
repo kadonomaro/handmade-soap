@@ -177,7 +177,7 @@ img {
   max-height: 100%;
 }
 
-.gallery-box__button {
+.gallery-box__close {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -194,7 +194,7 @@ img {
   cursor: pointer;
 }
 
-.gallery-box__button:hover {
+.gallery-box__close:hover {
   opacity: 1;
 }
 
@@ -863,7 +863,11 @@ img {
 
 .header__background::before {
   content: '';
+}
+
+.header__background-bottom {
   position: absolute;
+  z-index: 15;
   bottom: 0;
   left: 0;
   right: 0;
@@ -1340,10 +1344,6 @@ img {
 .ingredients-types__desc {
   display: none;
   font-size: 1.2em;
-  -webkit-transition: -webkit-transform 0.5s ease-in;
-  transition: -webkit-transform 0.5s ease-in;
-  transition: transform 0.5s ease-in;
-  transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
 }
 
 .ingredients-types__desc p:not(:last-child) {

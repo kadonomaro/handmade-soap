@@ -30,12 +30,14 @@ export default function floatingBubbles() {
 
 
     window.addEventListener('scroll', function (evt) {
-        console.log(this.window.pageYOffset);
-        drawImages();
+        if (this.window.pageYOffset <= this.window.innerHeight) {
+            drawImages();
+        }
+        
         
     });
 
-    function drawImages () {
+    function drawImages() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         ctx.drawImage(bubble, 220,680 + window.pageYOffset/6, 60,60);
@@ -55,7 +57,6 @@ export default function floatingBubbles() {
         ctx.drawImage(bubble, 500,400 + window.pageYOffset/2, 225,225);
         ctx.drawImage(bubble, 1175,180 + window.pageYOffset/2, 225,225);
         ctx.drawImage(bubble, 1400, 400 + window.pageYOffset/2, 225, 225);
-        
         
     }
 

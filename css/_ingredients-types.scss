@@ -47,7 +47,6 @@
     &__desc {
         display: none;
         font-size: 1.2em;
-        transition: transform 0.5s ease-in;
         p {
             &:not(:last-child) {
                 margin-bottom: 10px;

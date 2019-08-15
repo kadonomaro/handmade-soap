@@ -43,7 +43,7 @@ let galleryBox = {
 
             
             galleryOverlay.innerHTML += `
-                <button class="gallery-box__button"></button>
+                <button class="gallery-box__close"></button>
                 
                 <div class="gallery-box__nav">
                     <button class="gallery-box__prev" aria-label="gallery prev"></button>    
@@ -73,13 +73,13 @@ let galleryBox = {
 
         function activateGallery(image, index) {
             const galleryTrack = galleryOverlay.querySelector('.gallery-box__track');
-            const galleryCloseButton = galleryOverlay.querySelector('.gallery-box__button');
+            const galleryCloseButton = galleryOverlay.querySelector('.gallery-box__close');
             const galleryPrev = galleryOverlay.querySelector('.gallery-box__prev');
             const galleryNext = galleryOverlay.querySelector('.gallery-box__next');
             const galleryImageIndex = galleryOverlay.querySelector('.gallery-box__index');
             focusedElement = image;
 
-            // galleryTrack.style.transition = `transform ${settings.slideSpeed}ms`;
+            galleryTrack.style.transition = `transform ${settings.slideSpeed}ms`;
             galleryTrack.style.transform = `translateX(-${image.naturalWidth * index}px)`;
 
 
@@ -117,7 +117,6 @@ let galleryBox = {
             let counter = imageIndex || 0;
             console.log('start: ', counter + 1);
             
-            track.style.transition = `transform ${settings.slideSpeed}ms`;
 
             prev.addEventListener('click', function () {
                 if (counter >= 1) {
