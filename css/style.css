@@ -903,10 +903,10 @@ img {
   border-radius: 5px;
   -webkit-box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.3);
           box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.3);
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transition: -webkit-transform 0.5s ease-in;
+  transition: -webkit-transform 0.5s ease-in;
+  transition: transform 0.5s ease-in;
+  transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -914,6 +914,8 @@ img {
 .header-nav__wrapper {
   height: 100%;
   border-radius: inherit;
+  -webkit-transition: visibility 0s;
+  transition: visibility 0s;
 }
 
 .header-nav__list {
@@ -963,11 +965,13 @@ img {
   cursor: pointer;
 }
 
-.header-nav__toggle:hover .header-nav__toggle-right, .header-nav__toggle:focus .header-nav__toggle-right {
+.header-nav__toggle:hover .header-nav__toggle-right,
+.header-nav__toggle:focus .header-nav__toggle-right {
   fill: #427FF5;
 }
 
-.header-nav__toggle:hover .header-nav__toggle-left, .header-nav__toggle:focus .header-nav__toggle-left {
+.header-nav__toggle:hover .header-nav__toggle-left,
+.header-nav__toggle:focus .header-nav__toggle-left {
   fill: #429EF2;
 }
 
@@ -986,6 +990,12 @@ img {
 .header-nav--hidden {
   -webkit-transform: translateX(-108%);
           transform: translateX(-108%);
+}
+
+.header-nav--hidden .header-nav__wrapper {
+  visibility: hidden;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
 }
 
 @-webkit-keyframes background {
@@ -2032,8 +2042,8 @@ img {
 }
 
 .footer-links__link:hover::before, .footer-links__link:focus::before {
-  -webkit-transform: translate(0);
-          transform: translate(0);
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
   opacity: 1;
 }
 
@@ -2042,12 +2052,12 @@ img {
   position: absolute;
   top: 50%;
   left: -10px;
-  width: 8px;
-  height: 2px;
-  background-color: #505050;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid #505050;
   opacity: 0;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  -webkit-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
   -webkit-transition: opacity 0.3s ease-in, -webkit-transform 0.3s ease-in;
   transition: opacity 0.3s ease-in, -webkit-transform 0.3s ease-in;
   transition: opacity 0.3s ease-in, transform 0.3s ease-in;

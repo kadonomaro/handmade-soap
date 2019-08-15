@@ -16,12 +16,8 @@ let galleryBox = {
         let focusedElement;
 
         //duplicate HTMLCollection for array map function
-        let imagesArr = [];
-        images.forEach(image => {
-            imagesArr.push(image);
-        });
+        let imagesArr = [...images];
 
-        console.dir(imagesArr);
         
         document.addEventListener('click', function (evt) {
             images.forEach((image, index) => {

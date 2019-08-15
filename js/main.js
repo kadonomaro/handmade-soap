@@ -12,50 +12,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     floatingBubbles();
     
-    /*
-    //get css styles for background position
-    let headerBackground = document.querySelector('.header__background-bubble');
-    let headerBackgroundCurrentStyle = window.getComputedStyle(headerBackground, null)
-        .getPropertyValue('background-position-y')
-        .replace(/%/g, '')
-        .split(', ');
-
-
-    //animation for header background on first screen and device more than 600px screen
-    window.addEventListener('scroll', function () {
-        if (window.pageYOffset <= headerBackground.clientHeight && window.matchMedia('(min-width: 600px)').matches) {
-            window.addEventListener('scroll', animateBackground);
-        } else {
-            window.removeEventListener('scroll', animateBackground);
-        }
-    });
-
-
-    // floating bubbles animation
-    function animateBackground() {
-
-        let shiftDivider = [7, 11, 7, 10, 14, 8, 11, 22, 9, 8, 5, 8, 9, 18];
-        let newBackgroundPosition = headerBackgroundCurrentStyle.map(function (item, index) {
-            return (+item + window.pageYOffset / shiftDivider[index]).toFixed(2) + '%';
-        });
-        
-        headerBackground.style.backgroundPositionY = newBackgroundPosition;
-    }*/
-
 
     // open/close navigation
-    let headerNav = document.querySelector('.header-nav');
-    let headerNavToggle = document.querySelector('.header-nav__toggle');
+    const headerNav = document.querySelector('.header-nav');
+    const headerNavToggle = headerNav.querySelector('.header-nav__toggle');
 
     headerNavToggle.addEventListener('click', function () {
         headerNav.classList.toggle('header-nav--hidden');
     });
     window.addEventListener('scroll', function () {
         if (!headerNav.classList.contains('header-nav--hidden')) {
-            setTimeout(() => {
-                
-            }, 1000);
-            headerNav.classList.add('header-nav--hidden'); 
+            headerNav.classList.add('header-nav--hidden');
         }
     });
 

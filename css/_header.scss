@@ -57,11 +57,12 @@
     font-size: 18px;
     border-radius: 5px;
     box-shadow: 0 0 5px 3px rgba($color: #000000, $alpha: 0.3);
-    transition: transform 0.5s;
+    transition: transform 0.5s ease-in;
     box-sizing: border-box;
     &__wrapper {
         height: 100%;
         border-radius: inherit;
+        transition: visibility 0s;
     }
     &__list {
         position: relative;
@@ -91,8 +92,10 @@
         color: #ffffff;
         text-decoration: none;
         transition: all 0.3s;
-        &:hover, &:focus {
-            box-shadow: 0 10px 3px -5px rgba($color: #ffffff, $alpha: 0.3) inset, 0 -10px 3px -5px rgba($color: #ffffff, $alpha: 0.3) inset;            
+        &:hover, 
+        &:focus {
+            box-shadow: 0 10px 3px -5px rgba($color: #ffffff, $alpha: 0.3) inset, 
+                        0 -10px 3px -5px rgba($color: #ffffff, $alpha: 0.3) inset;            
         }
     }
     &__toggle {
@@ -104,10 +107,12 @@
         transform: translateX(100%);
         cursor: pointer;
         
-        &:hover .header-nav__toggle-right, &:focus .header-nav__toggle-right {
+        &:hover .header-nav__toggle-right, 
+        &:focus .header-nav__toggle-right {
             fill: #427FF5;
         }
-        &:hover .header-nav__toggle-left, &:focus .header-nav__toggle-left {
+        &:hover .header-nav__toggle-left, 
+        &:focus .header-nav__toggle-left {
             fill: #429EF2;
         }
     }
@@ -124,6 +129,10 @@
 }
 .header-nav--hidden {
     transform: translateX(-108%);
+}
+.header-nav--hidden .header-nav__wrapper {
+    visibility: hidden;
+    transition-delay: 0.5s;
 }
 
 

@@ -44,7 +44,7 @@
         }
         &:hover::before,
         &:focus::before {
-            transform: translate(0);
+            transform: translate(0, -50%);
             opacity: 1;
         }
         &::before {
@@ -52,11 +52,11 @@
             position: absolute;
             top: 50%;
             left: -10px;
-            width: 8px;
-            height: 2px;
-            background-color: $color-text-light;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-left: 5px solid $color-text-light;
             opacity: 0;
-            transform: translateX(-100%);
+            transform: translate(-100%,-50%);
             transition: opacity 0.3s ease-in, transform 0.3s ease-in;
         }
     }
