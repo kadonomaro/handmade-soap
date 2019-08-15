@@ -5,7 +5,6 @@
     align-items: center;
     min-height: 100vh;
     font-family: $font-cursive;
-    text-align: center;
     overflow: hidden;
     &__canvas {
         position: absolute;
@@ -18,11 +17,6 @@
         background: linear-gradient(235deg, $color-sea-green, $color-sea-blue);
         background-size: 300%;
         animation: background 12s ease infinite;
-        &::before {
-            content: '';
-
-        }
-
     }
     &__background-bottom {
         position: absolute;
@@ -96,11 +90,10 @@
         padding: 12px 16px;
         color: #ffffff;
         text-decoration: none;
-        transition: all 0.3s;
+        transition: background-color 0.3s ease-in;
         &:hover, 
         &:focus {
-            box-shadow: 0 10px 3px -5px rgba($color: #ffffff, $alpha: 0.3) inset, 
-                        0 -10px 3px -5px rgba($color: #ffffff, $alpha: 0.3) inset;            
+            background-color: rgba($color: #ffffff, $alpha: 0.2);       
         }
     }
     &__toggle {
