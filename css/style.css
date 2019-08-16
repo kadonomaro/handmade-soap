@@ -470,25 +470,6 @@ img {
           box-shadow: 5px 0 7px -4px rgba(0, 0, 0, 0.3), -5px 0 7px -4px rgba(0, 0, 0, 0.3);
 }
 
-.section-title::before, .section-title::after {
-  position: absolute;
-  top: 50%;
-  width: 15px;
-  height: 2px;
-  background-color: #cccccc;
-  border-radius: 3px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-.section-title::before {
-  left: -15px;
-}
-
-.section-title::after {
-  right: -15px;
-}
-
 @media screen and (max-width: 600px) {
   .section-title {
     border: none;
@@ -733,6 +714,7 @@ img {
   margin: 10px;
   color: #4ecead;
   font-size: 64px;
+  text-align: center;
   text-shadow: 0 0 3px #000000;
   -webkit-animation: title-color 20s ease infinite;
           animation: title-color 20s ease infinite;
@@ -1006,8 +988,7 @@ img {
   min-width: 280px;
   min-height: 280px;
   margin: 0 10px;
-  -webkit-clip-path: url(#slide-clip);
-          clip-path: url(#slide-clip);
+  border-radius: 50% 50% 50% 50% / 70% 70% 30% 30%;
   background-color: rgba(81, 190, 230, 0.2);
   overflow: hidden;
   -webkit-transition: all 1s;
@@ -1089,6 +1070,13 @@ img {
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
   opacity: 0;
+}
+
+@supports ((-webkit-clip-path: url()) or (clip-path: url())) {
+  .main-slider__slide {
+    -webkit-clip-path: url(#slide-clip);
+            clip-path: url(#slide-clip);
+  }
 }
 
 @media screen and (max-width: 1024px) {

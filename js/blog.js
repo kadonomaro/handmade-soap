@@ -1,7 +1,6 @@
 import scrollTop from "./modules/scrollTop.js";
 import typeWrite from "./modules/typeWrite.js";
-import galleryBox from "./modules/galleryBox.js";
-import fadeInAnimation from "./modules/fadeInAnimation.js";
+
 
 document.addEventListener('DOMContentLoaded', function () {
 

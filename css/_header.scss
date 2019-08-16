@@ -35,13 +35,13 @@
         margin: 10px;
         color: $color-sea-green;
         font-size: 64px;
+        text-align: center;
         text-shadow: 0 0 3px #000000;
         animation: title-color 20s ease infinite;
         transition: all 0.5s;
         user-select: none;
         pointer-events: none;
     }
-
 }
 
 

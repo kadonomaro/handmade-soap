@@ -80,7 +80,8 @@
         min-width: 280px;
         min-height: 280px;
         margin: 0 10px;
-        clip-path: url(#slide-clip);
+        border-radius: 50% 50% 50% 50% / 70% 70% 30% 30%;
+        
         background-color: rgba($color: $color-sea-blue, $alpha: 0.2);
         overflow: hidden;
         transition: all 1s;
@@ -149,9 +150,15 @@
         transition: all 0.3s ease-in;
         opacity: 0;
     }
-
 }
 
+@supports (clip-path: url()){
+    .main-slider {
+        &__slide {
+            clip-path: url(#slide-clip);
+        }
+    }
+}
 
 @include media(1024) {
     .main-slider {
