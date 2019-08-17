@@ -4,6 +4,7 @@ package.json
 package-lock.json
 sftp.json
 
+
 #directories
 dist
 text

@@ -167,8 +167,14 @@ img {
   overflow: hidden;
 }
 
+.gallery-box__track::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
 .gallery-box__slide {
-  position: absolute;
+  float: left;
 }
 
 .gallery-box__image {

@@ -50,14 +50,14 @@ let galleryBox = {
                     <button class="gallery-box__next" aria-label="gallery next"></button>
                 </div>
 
-                <div class="gallery-box__wrapper" style="width:${images[0].naturalWidth}px; height:${images[0].naturalHeight}px">
-                    <div class="gallery-box__track" style="width:${images[0].naturalWidth * images.length}px; height:${images[0].naturalHeight}px">
+                <div class="gallery-box__wrapper" style="max-width:${images[0].naturalWidth}px;">
+                    <div class="gallery-box__track" style="width:${images[0].naturalWidth * images.length}px;">
                         
 
 
                         ${imagesArr.map((image, index) => {
                             return `
-                            <div class="gallery-box__slide" style="transform: translateX(${index * image.naturalWidth}px)">
+                            <div class="gallery-box__slide">
                                 <img class="gallery-box__image" src="${image.src}" alt="${image.getAttribute('alt')}">
                             </div>
                         `;
@@ -68,6 +68,7 @@ let galleryBox = {
             `;
 
             document.body.appendChild(galleryOverlay);
+
         })();
 
 
@@ -94,6 +95,7 @@ let galleryBox = {
             
 
             galleryNavigation(galleryPrev, galleryNext, galleryTrack, index, galleryImageIndex);
+            
 
             galleryCloseButton.focus();
             galleryCloseButton.addEventListener('click', deactivateGallery);
@@ -102,6 +104,7 @@ let galleryBox = {
 
 
         function deactivateGallery(evt) {
+            
             if (evt.which === 27 || evt.type === 'click') {
                 galleryOverlay.style.opacity = 0;
                 setTimeout(() => {
@@ -109,12 +112,12 @@ let galleryBox = {
                 }, settings.openingSpeed);
                 document.removeEventListener('keyup', deactivateGallery);
                 focusedElement.focus();
-                
             }
         }
 
         function galleryNavigation(prev, next, track, imageIndex, imageIndexElement) {
-            let counter = imageIndex || 0;
+            let counter = imageIndex;
+
             console.log('start: ', counter + 1);
             
 

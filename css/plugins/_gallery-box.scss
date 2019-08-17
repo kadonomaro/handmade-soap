@@ -24,10 +24,14 @@
     }
     &__track {
         // transition: transform 0.3s;
+        &::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
     }
     &__slide {
-        position: absolute;
-
+        float: left;
     }
     &__image {
         display: block;
