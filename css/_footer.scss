@@ -64,6 +64,15 @@
 
 
 
+@include media(1023) {
+    .footer {
+        &__col {
+            padding: 10px 5px;
+        }
+    }
+}
+
+
 @include media(767) {
     .footer {
         &__col {

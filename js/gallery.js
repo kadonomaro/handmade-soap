@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     );
 
-    //on sroll fadeIn gallery photos animation
+    //fadeIn gallery photos scroll animation
     fadeInAnimation(
         document.querySelector('.gallery'),
         document.querySelectorAll('.gallery-photos__item'),

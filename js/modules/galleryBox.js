@@ -81,7 +81,6 @@ let galleryBox = {
             const galleryNext = galleryOverlay.querySelector('.gallery-box__next');
             const galleryImageIndex = galleryOverlay.querySelector('.gallery-box__index');
             focusedElement = image;
-            console.dir(image);
 
             galleryBoxWrapper.style.maxWidth = `${image.naturalWidth}px`;
             galleryTrack.style.transition = `transform ${settings.slideSpeed}ms`;
@@ -90,7 +89,6 @@ let galleryBox = {
             gallerySlides.forEach(slide => {
                 slide.style.width = `${100 / gallerySlides.length}%`;
             });
-
 
             galleryOverlay.classList.add('gallery-box--active');
             setTimeout(() => {
@@ -101,10 +99,8 @@ let galleryBox = {
                 galleryImageIndex.textContent = `${index + 1} / ${images.length}`;
             }
             
-
             galleryNavigation(galleryPrev, galleryNext, galleryTrack, index, galleryImageIndex);
             
-
             galleryCloseButton.focus();
             galleryCloseButton.addEventListener('click', deactivateGallery);
             document.addEventListener('keyup', deactivateGallery);
