@@ -1,10 +1,12 @@
 import galleryBox from "./modules/galleryBox.js";
 import scrollTop from "./modules/scrollTop.js";
 import fadeInAnimation from "./modules/fadeInAnimation.js";
+import navigation from "./modules/navigation.js";
 
 document.addEventListener('DOMContentLoaded', function () {
 
     scrollTop(document.querySelector('.scroll-top'), 'scroll-top--active');
+    navigation();
 
     //initialization gallery viewer
     galleryBox.init(
@@ -19,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     //photo-cards block animation
-
     const photoCards = document.querySelectorAll('.photo-cards__item');
     photoCardsAnimation(photoCards, 1000);
 

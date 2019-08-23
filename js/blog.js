@@ -1,50 +1,12 @@
 import scrollTop from "./modules/scrollTop.js";
 import typeWrite from "./modules/typeWrite.js";
+import navigation from "./modules/navigation.js";
 
 
 document.addEventListener('DOMContentLoaded', function () {
 
     scrollTop(document.querySelector('.scroll-top'), 'scroll-top--active');
-
-
-
-    let blogNavToggle = document.querySelector('.blog-nav__toggle');
-    let blogNavList = document.querySelector('.blog-nav__list');
-    let blogNavItems = blogNavList.querySelectorAll('.blog-nav__item');
-
-
-    blogNavToggle.addEventListener('click', function (evt) {
-        evt.preventDefault();
-
-        //fade-in animation of nav items
-        blogNavItems.forEach((item, index) => {
-            item.style.transitionDelay = (index / 5).toFixed(2) + 's';
-            
-        });
-        setTimeout(function () {
-            blogNavItems.forEach((item, index) => {
-                item.classList.toggle('blog-nav__item--active');
-                
-                setTimeout(function () {
-                    item.style.transitionDelay = '0s';
-                },300);
-            });
-        }, 10);
-
-        if (blogNavList.classList.contains('blog-nav__list--active')) {
-            blogNavList.classList.remove('blog-nav__list--active');
-            setTimeout(function () {
-                blogNavList.style.display = 'none';
-            },500);
-        } else {
-            blogNavList.style.display = 'flex';
-            setTimeout(function () {
-                blogNavList.classList.add('blog-nav__list--active');
-            }, 100);
-        }
-        
-    });
-
+    navigation();
 
 
     // type writting effect for header subtitle

@@ -1,0 +1,136 @@
+.navigation {
+    position: relative;
+    background-color: rgba($color: $color-sea-blue, $alpha: 0.7);
+    border-radius: 25px;
+    &__toggle {
+        display: none;
+        width: 50px;
+        height: 50px;
+        margin-left: 10px;
+        background-color: transparent;
+        background-image: url('../images/icons/soap-burger.svg');
+        background-size: cover;
+        border: none;
+    }
+    &__list {
+        display: flex;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+        list-style: none;
+    }
+
+    &__item {
+        position: relative;
+        flex: 1;
+        transition: background-color 0.2s ease-in, transform 0.3s linear;
+        &:first-child {
+            border-top-left-radius: 25px;
+            border-bottom-left-radius: 25px;
+        }
+        &:last-child {
+            border-top-right-radius: 25px;
+            border-bottom-right-radius: 25px;
+        }
+        &:hover,
+        &:focus {
+            background-color: darken($color: $color-sea-blue, $amount: 10%);
+        }
+        &:hover > .blog-nav__dropdown {
+            display: block;
+        }
+        &:focus-within > .blog-nav__dropdown {
+            display: block;
+        }
+        
+
+    }
+    &__link {
+        display: block;
+        padding: 8px 4px;
+        color: #ffffff;
+        text-decoration: none;
+    }
+    &__dropdown {
+        position: absolute;
+        display: none;
+        z-index: 99;
+        width: 100%;
+    }
+}
+
+
+.navigation-dropdown {
+    text-align: left;
+    background-color: $color-sea-blue;
+    background-color: rgba($color: $color-sea-blue, $alpha: 0.7);
+    box-sizing: border-box;
+    box-shadow: 0 5px 5px rgba($color: #000000, $alpha: 0.3);
+    &__list {
+        list-style: none;
+    }
+    &__item {
+        border-top: 1px solid darken($color: $color-sea-blue, $amount: 10%);
+    }
+    &__link {
+        display: block;
+        padding: 10px 8px;
+        color: #ffffff;
+        text-decoration: none;
+        transition: background-color 0.2s ease-in;
+        &:hover {
+            background-color: darken($color: $color-sea-blue, $amount: 10%);
+        }
+    }
+}
+
+
+
+@include media(767) {
+    .navigation {
+        border-radius: 0;
+        background-color: $color-sea-blue;
+        &__toggle {
+            display: block;
+        }
+        &__list {
+            position: absolute;
+            z-index: 999;
+            top: 50px;
+            left: 0;
+            flex-direction: column;
+            width: 100%;
+            transition: transform 0.5s ease-in;
+            transform: translateX(-100%);
+        }
+        &__list--active {
+            transform: translateX(0);
+        }
+        &__item {
+            background-color: $color-sea-blue;
+            transform: translateX(-100%);
+            &:first-child,
+            &:last-child {
+                border-radius: 0;
+            }
+            &:first-child {
+                border-top: 1px solid darken($color: $color-sea-blue, $amount: 10%);
+            }
+            &:not(:last-child) {
+                border-bottom: 1px solid darken($color: $color-sea-blue, $amount: 10%);
+            }
+        }
+        &__item--active {
+            transform: translateX(0);
+        }
+        &__link {
+            padding: 12px 4px;
+        }
+        &__dropdown {
+            position: relative;
+        }
+    }
+    .navigation-dropdown {
+        box-shadow: none;
+    }
+}
