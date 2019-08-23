@@ -17,6 +17,32 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     );
 
+
+    //photo-cards block animation
+
+    const photoCards = document.querySelectorAll('.photo-cards__item');
+    photoCardsAnimation(photoCards, 1000);
+
+    function photoCardsAnimation(cards, timeout) {
+        
+        setTimeout(() => {
+            cards.forEach((card, index) => {
+                let cardComputedStyle = window.getComputedStyle(card, null).getPropertyValue('transform');
+                let rotateAngle = getDegrees(cardComputedStyle);
+                card.style.transitionDelay = `${index/3}s`;
+                card.style.opacity = 1;
+                card.style.transform = `rotate(${rotateAngle}deg) translateX(0)`;
+            });
+        }, timeout);
+    }
+
+    function getDegrees(matrix) {
+        matrix = matrix.split('(')[1].split(')')[0].split(',');
+        let angle = Math.round(Math.atan2(matrix[1], matrix[0]) * (180 / Math.PI));
+        return angle;
+    }
+
+
     //fadeIn gallery photos scroll animation
     fadeInAnimation(
         document.querySelector('.gallery'),

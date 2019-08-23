@@ -1818,7 +1818,7 @@ img {
 }
 
 .photo-cards__item {
-  padding: 10px 10px 40px;
+  padding: 10px 10px 30px;
   background-color: #d8d8d8;
   background-image: url("../images/background/photo-card.png");
   border-radius: 5px;
@@ -1826,6 +1826,12 @@ img {
           box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.5);
   -webkit-transform-origin: top;
           transform-origin: top;
+  -webkit-transition: opacity 0.5s ease-in, -webkit-transform 0.5s ease-in;
+  transition: opacity 0.5s ease-in, -webkit-transform 0.5s ease-in;
+  transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+  transition: opacity 0.5s ease-in, transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+  pointer-events: none;
+  opacity: 0;
 }
 
 .photo-cards__item:not(:last-child) {
@@ -1833,33 +1839,52 @@ img {
 }
 
 .photo-cards__item:first-child {
-  -webkit-transform: rotate(-15deg);
-          transform: rotate(-15deg);
+  -webkit-transform: rotate(-15deg) translateX(200%);
+          transform: rotate(-15deg) translateX(200%);
 }
 
 .photo-cards__item:nth-child(2) {
-  -webkit-transform: rotate(15deg);
-          transform: rotate(15deg);
+  -webkit-transform: rotate(15deg) translateX(200%);
+          transform: rotate(15deg) translateX(200%);
 }
 
 .photo-cards__item:nth-child(3) {
-  -webkit-transform: rotate(-20deg);
-          transform: rotate(-20deg);
+  -webkit-transform: rotate(-10deg) translateX(200%);
+          transform: rotate(-10deg) translateX(200%);
 }
 
 .photo-cards__item:nth-child(4) {
-  -webkit-transform: rotate(15deg);
-          transform: rotate(15deg);
+  -webkit-transform: rotate(15deg) translateX(200%);
+          transform: rotate(15deg) translateX(200%);
 }
 
 .photo-cards__item:last-child {
-  -webkit-transform: rotate(-10deg);
-          transform: rotate(-10deg);
+  -webkit-transform: rotate(-10deg) translateX(200%);
+          transform: rotate(-10deg) translateX(200%);
 }
 
 .photo-cards__image {
   -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
           box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.photo-cards__caption {
+  display: block;
+  margin-top: 10px;
+  color: #303030;
+  font-family: "Lobster", cursive;
+  font-size: 24px;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+
+@media screen and (max-width: 767px) {
+  .photo-cards {
+    max-width: 60%;
+  }
+  .photo-cards__list {
+    display: block;
+  }
 }
 
 .features {
