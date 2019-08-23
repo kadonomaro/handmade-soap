@@ -159,11 +159,6 @@ img {
 }
 
 .gallery-box__wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   overflow: hidden;
 }
 
@@ -230,7 +225,14 @@ img {
   background-color: transparent;
   background-image: url("../images/icons/arrow.svg");
   border: none;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.2s ease-in;
+  transition: opacity 0.2s ease-in;
   cursor: pointer;
+}
+
+.gallery-box__next:hover, .gallery-box__prev:hover {
+  opacity: 1;
 }
 
 .gallery-box__prev {
@@ -239,7 +241,9 @@ img {
 }
 
 .gallery-box--active {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .scroll-top {

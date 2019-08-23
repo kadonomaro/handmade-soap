@@ -50,12 +50,12 @@ let galleryBox = {
                     <button class="gallery-box__next" aria-label="gallery next"></button>
                 </div>
 
-                <div class="gallery-box__wrapper" style="max-width:${images[0].naturalWidth}px;">
-                    <div class="gallery-box__track" style="width:${images[0].naturalWidth * images.length}px;">
+                <div class="gallery-box__wrapper">
+                    <div class="gallery-box__track" style="width:${images.length * 100}%;">
                         
 
 
-                        ${imagesArr.map((image, index) => {
+                        ${imagesArr.map(image => {
                             return `
                             <div class="gallery-box__slide">
                                 <img class="gallery-box__image" src="${image.src}" alt="${image.getAttribute('alt')}">
@@ -73,15 +73,23 @@ let galleryBox = {
 
 
         function activateGallery(image, index) {
+            const galleryBoxWrapper = galleryOverlay.querySelector('.gallery-box__wrapper');
             const galleryTrack = galleryOverlay.querySelector('.gallery-box__track');
+            const gallerySlides = galleryOverlay.querySelectorAll('.gallery-box__slide');
             const galleryCloseButton = galleryOverlay.querySelector('.gallery-box__close');
             const galleryPrev = galleryOverlay.querySelector('.gallery-box__prev');
             const galleryNext = galleryOverlay.querySelector('.gallery-box__next');
             const galleryImageIndex = galleryOverlay.querySelector('.gallery-box__index');
             focusedElement = image;
+            console.dir(image);
 
+            galleryBoxWrapper.style.maxWidth = `${image.naturalWidth}px`;
             galleryTrack.style.transition = `transform ${settings.slideSpeed}ms`;
-            galleryTrack.style.transform = `translateX(-${image.naturalWidth * index}px)`;
+            galleryTrack.style.transform = `translateX(-${100 / images.length * index}%)`;
+
+            gallerySlides.forEach(slide => {
+                slide.style.width = `${100 / gallerySlides.length}%`;
+            });
 
 
             galleryOverlay.classList.add('gallery-box--active');
@@ -124,7 +132,7 @@ let galleryBox = {
             prev.addEventListener('click', function () {
                 if (counter >= 1) {
                     counter--;
-                    track.style.transform = `translateX(-${images[0].naturalWidth * counter}px)`;
+                    track.style.transform = `translateX(-${100 / images.length * counter}%)`;
                     imageIndexElement.textContent = `${counter + 1} / ${images.length}`;
                     console.log('prev: ', counter+1);
                 }
@@ -133,7 +141,7 @@ let galleryBox = {
             next.addEventListener('click', function () {
                 if (counter < images.length-1) {
                     counter++;
-                    track.style.transform = `translateX(-${images[0].naturalWidth * counter}px)`;
+                    track.style.transform = `translateX(-${100 / images.length * counter}%)`;
                     imageIndexElement.textContent = `${counter + 1} / ${images.length}`;
                     console.log('next: ', counter+1);
                 }
