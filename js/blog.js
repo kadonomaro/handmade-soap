@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // type writting effect for header subtitle
     typeWrite(
-        document.querySelector('.blog-header__title').textContent,
+        'Творческая мастерская',
         100,
         document.querySelector('.blog-header__title')
     );

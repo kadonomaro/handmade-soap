@@ -727,12 +727,16 @@ img {
   background-color: #24ade0;
 }
 
-.navigation__item:hover > .blog-nav__dropdown {
+.navigation__item:hover > .navigation__dropdown {
   display: block;
 }
 
-.navigation__item:focus-within > .blog-nav__dropdown {
+.navigation__item:focus-within > .navigation__dropdown {
   display: block;
+}
+
+.navigation__item--current {
+  background-color: #4dbce5;
 }
 
 .navigation__link {

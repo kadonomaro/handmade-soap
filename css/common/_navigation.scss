@@ -34,16 +34,17 @@
         }
         &:hover,
         &:focus {
-            background-color: darken($color: $color-sea-blue, $amount: 10%);
+            background-color: darken($color: $color-sea-blue, $amount: 10);
         }
-        &:hover > .blog-nav__dropdown {
+        &:hover > .navigation__dropdown {
             display: block;
         }
-        &:focus-within > .blog-nav__dropdown {
+        &:focus-within > .navigation__dropdown {
             display: block;
         }
-        
-
+    }
+    &__item--current {
+        background-color: darken($color: $color-sea-blue, $amount: 1);
     }
     &__link {
         display: block;
