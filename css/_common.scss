@@ -46,3 +46,12 @@ img {
     left: 0;
     right: 0;
 }
+
+
+
+@include media(767) {
+    button,
+    a {
+        outline: none;
+    }
+}

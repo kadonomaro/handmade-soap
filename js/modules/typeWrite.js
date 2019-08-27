@@ -1,6 +1,5 @@
-export default function typeWrite(text, speed, htmlElement) {
+export default function typeWrite(text, speed, htmlElement, callback) {
     let counter = 0;
-    htmlElement.textContent = '';
 
     function writeText() {
         if (counter < text.length) {
@@ -13,4 +12,7 @@ export default function typeWrite(text, speed, htmlElement) {
     }
 
     writeText();
+    setTimeout(() => {
+        callback();
+    }, text.length * speed);
 }

@@ -13,7 +13,10 @@ document.addEventListener('DOMContentLoaded', function () {
     typeWrite(
         'Творческая мастерская',
         100,
-        document.querySelector('.blog-header__title')
+        document.querySelector('.blog-header__title'),
+        function () {
+            document.querySelector('.blog-header__subtitle').classList.remove('blog-header__subtitle--hidden');
+        }
     );
 
     //scrolling into every section with interval on click button
