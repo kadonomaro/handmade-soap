@@ -1,5 +1,6 @@
 .footer {
     position: relative;
+    flex-flow: 0;
     &__background {
         background-color: $color-footer-background;
     }

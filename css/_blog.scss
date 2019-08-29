@@ -1,5 +1,6 @@
 .blog-header {
     position: relative;
+    flex-grow: 1;
     min-height: 100vh;
     padding: 10px;
     text-align: center;
@@ -11,6 +12,11 @@
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
+    }
+    &__background--404 {
+        background-image: url('../images/background/404.png');
+        background-size: auto;
+        background-position: center bottom;
     }
     &__title {
         padding-top: 20px;
@@ -55,6 +61,9 @@
     &__button--hidden {
         opacity: 0;
     }
+}
+.blog-header--404 {
+    min-height: auto;
 }
 
 
@@ -212,8 +221,10 @@
 
     .blog-header {
         padding: 0;
+        &__background--404 {
+            background-size: contain;
+        }
     }
-
 }
 
 
