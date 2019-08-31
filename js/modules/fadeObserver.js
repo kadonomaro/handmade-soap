@@ -1,4 +1,4 @@
-export default function fadeObserver(elements, className) {
+export default function fadeObserver(elements, className, targetSelector) {
     let options = {
         root: null,
         rootMargin: '0px',
@@ -7,9 +7,15 @@ export default function fadeObserver(elements, className) {
 
     function callback(items) {
         items.forEach(item => {
-            if (item.intersectionRatio > 0) {
-                item.target.classList.add(className);
+            if (item.intersectionRatio > 0 && targetSelector) {
+                item.target.querySelectorAll(targetSelector)
+                    .forEach(selector => {
+                        selector.classList.add(className);
+                    });
             }
+            else if (item.intersectionRatio > 0) {
+                item.target.classList.add(className);
+            }  
         });
     }
 

@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     //fade observer
-    const fadeItems = document.querySelectorAll('.how-item__caption, .how-item__image');
-    fadeObserver(fadeItems, 'fade-in');
+    const fadeItemsParent = document.querySelectorAll('.how-item');
+    fadeObserver(fadeItemsParent, 'fade-in', '.how-item__caption, .how-item__image');
 
 });
