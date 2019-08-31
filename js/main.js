@@ -3,6 +3,7 @@ import scrollTop from "./modules/scrollTop.js";
 import fadeInAnimation from "./modules/fadeInAnimation.js";
 import tabs from "./modules/tabs.js";
 import floatingBubbles from "./modules/floatingBubbles.js";
+import fadeObserver from "./modules/fadeObserver.js";
 
 
 
@@ -89,5 +90,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-    
+    //fade observer
+    const fadeItems = document.querySelectorAll('.how-item__caption, .how-item__image');
+    fadeObserver(fadeItems, 'fade-in');
+
 });
