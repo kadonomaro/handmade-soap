@@ -76,6 +76,9 @@
     &__image {
         pointer-events: none;
     }
+    &__image-img {
+        user-select: none;
+    }
     &__title {
         color: $color-text-light;
         font-size: 1em;

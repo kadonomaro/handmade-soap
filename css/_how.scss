@@ -1,16 +1,32 @@
 .how {
     background-color: $color-background-light;
+    counter-reset: number;
     &__inner {
-        padding: 30px 0;
+        padding: 20px 0;
         text-align: center;
     }
     &__title {
         margin-bottom: 50px;
     }
     &__row {
+        position: relative;
         display: flex;
         justify-content: center;
-        margin-bottom: 100px;
+        &:not(:last-child) {
+            margin-bottom: 100px;
+        }
+        &::before {
+            content: counter(number);
+            counter-increment: number;
+            position: absolute;
+            z-index: 99;
+            top: 50%;
+            left: 50%;
+            color: $color-sea-blue;
+            font-size: 10em;
+            transform: translate(-50%, -50%);
+            opacity: 0.15;
+        }
     }
 }
 
@@ -18,10 +34,13 @@
 .how-item {
     display: flex;
     align-items: center;
+    width: 100%;
+    max-width: 600px;
     &__caption,
     &__image {
-        padding: 0 10px;
-        // transition: transform 1.5s ease-in 0.5s, opacity 1s ease-in 0s;
+        width: 50%;
+        padding: 0 20px;
+        box-sizing: border-box;
         &:first-child {
             transform: translateX(-200%);
             opacity: 0;
@@ -34,11 +53,10 @@
     &__caption {
         display: block;
         font-size: 1.5em;
-        transition: transform 0.7s ease-in 0s, opacity 0.7s ease-in 0s;
+        transition: transform 0.7s ease-in 0s, opacity 1.4s ease-in 0s;
     }
     &__image {
-
-        transition: transform 0.7s ease-in 0.5s, opacity 0.7s ease-in 0.3s;
+        transition: transform 0.7s ease-in 0.5s, opacity 1.4s ease-in 0.3s;
     }
 }
 
@@ -51,6 +69,24 @@
         transform: translateX(0);
         opacity: 1;
     }
-    transform: translateX(0);
-    opacity: 1;
+}
+
+
+@include media(767) {
+    .how {
+        &__row {
+            &::before {
+                font-size: 6em;
+            }
+        }
+    }
+    .how-item {
+        &__caption,
+        &__image {
+            padding: 0 5px;
+        }
+        &__caption {
+            font-size: 1em;
+        }
+    }
 }
