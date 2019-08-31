@@ -31,7 +31,7 @@ export default function floatingBubbles() {
     });
 
 
-    window.addEventListener('scroll', function (evt) {
+    window.addEventListener('scroll', function () {
         if (this.window.pageYOffset <= this.window.innerHeight) {
             drawImages();
         }
