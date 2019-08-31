@@ -17,6 +17,7 @@
 
 @include media(600) {
     .section-title {
+        font-size: 1.5em;
         border: none;
         &::before,
         &::after {

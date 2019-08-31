@@ -15,6 +15,7 @@ export default function fadeObserver(elements, className) {
 
     let observer = new IntersectionObserver(callback, options);
 
+
     elements.forEach(element => {
         observer.observe(element);
     });
