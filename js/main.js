@@ -10,7 +10,6 @@ import fadeObserver from "./modules/fadeObserver.js";
 document.addEventListener('DOMContentLoaded', function () {
     
     scrollTop(document.querySelector('.scroll-top'), 'scroll-top--active');
-
     floatingBubbles();
     
 
@@ -32,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function () {
     detectSwipeDirection(headerNav, 'header-nav--hidden','left');
 
     
-
     //active or hidden button for scroll page to top
     let scrollTopButton = document.querySelector('.scroll-top');
     window.addEventListener('scroll', function () {
@@ -45,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
+    //features block animation
     fadeInAnimation(
         document.querySelector('.features'),
         document.querySelectorAll('.feature'),
@@ -79,19 +78,9 @@ document.addEventListener('DOMContentLoaded', function () {
     );
 
 
-    // show/hide ingredients in soap section
-    let soapCardButton = document.querySelectorAll('.soap-card__button');
-
-    soapCardButton.forEach(button => {
-        button.addEventListener('click', function (evt) {
-            evt.preventDefault();
-            button.nextElementSibling.classList.toggle('soap-card__ingredients_active');
-        });
-    });
-
 
     //fade observer
-    const fadeItemsParent = document.querySelectorAll('.how-item');
-    fadeObserver(fadeItemsParent, 'fade-in', '.how-item__caption, .how-item__image');
+    const fadeItemsParent = document.querySelectorAll('.stages-item');
+    fadeObserver(fadeItemsParent, 'fade-in', '.stages-item__caption, .stages-item__image');
 
 });

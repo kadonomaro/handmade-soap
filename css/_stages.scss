@@ -1,8 +1,8 @@
-.how {
+.stages {
     background-color: $color-background-light;
     counter-reset: number;
     &__inner {
-        padding: 20px 0;
+        padding: 30px 0;
         text-align: center;
     }
     &__title {
@@ -23,6 +23,7 @@
             top: 50%;
             left: 50%;
             color: $color-sea-blue;
+            font-family: $font-cursive;
             font-size: 10em;
             transform: translate(-50%, -50%);
             opacity: 0.15;
@@ -31,11 +32,11 @@
 }
 
 
-.how-item {
+.stages-item {
     display: flex;
     align-items: center;
     width: 100%;
-    max-width: 600px;
+    max-width: 900px;
     &__caption,
     &__image {
         width: 50%;
@@ -53,12 +54,47 @@
     &__caption {
         display: block;
         font-size: 1.5em;
-        transition: transform 0.7s ease-in 0s, opacity 1.4s ease-in 0s;
+        transition: transform 1s ease-in 0s, opacity 1.5s ease-in 0s;
     }
     &__image {
-        transition: transform 0.7s ease-in 0.5s, opacity 1.4s ease-in 0.3s;
+        transition: transform 1s ease-in 0.5s, opacity 1.5s ease-in 0.5s;
     }
 }
+
+
+
+@include media(767) {
+    .stages {
+        &__row {
+            &::before {
+                font-size: 6em;
+            }
+        }
+    }
+    .stages-item {
+        &__caption,
+        &__image {
+            padding: 0 5px;
+            &:first-child {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            &:last-child {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+        }
+        &__caption {
+            font-size: 1em;
+            transition-duration: 0.7s, 1s;
+        }
+        &__image {
+            transition-duration: 0.7s, 1s;
+
+        }
+    }
+}
+
 
 .fade-in {
     &:first-child {
@@ -68,25 +104,5 @@
     &:last-child {
         transform: translateX(0);
         opacity: 1;
-    }
-}
-
-
-@include media(767) {
-    .how {
-        &__row {
-            &::before {
-                font-size: 6em;
-            }
-        }
-    }
-    .how-item {
-        &__caption,
-        &__image {
-            padding: 0 5px;
-        }
-        &__caption {
-            font-size: 1em;
-        }
     }
 }
