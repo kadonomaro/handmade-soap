@@ -63,7 +63,6 @@
     height: 100%;
     padding: 20px 10px 20px;
     text-align: center;
-    border: 1px solid $color-border-light;
     border-radius: 10px;
     transition: box-shadow 0.2s ease-in, border-color 0.1s ease-in, background-color 0.1s ease-in;
     box-sizing: border-box;
@@ -71,7 +70,7 @@
     outline: none;
     &:hover,
     &:focus {
-        box-shadow: 0 10px 15px rgba($color: #000000, $alpha: 0.1);
+        box-shadow: 0 5px 15px rgba($color: #000000, $alpha: 0.1);
     }
     &__image {
         pointer-events: none;
@@ -85,7 +84,7 @@
     }
 }
 .ingredients-types-item--active {
-    background-color: rgba($color: $color-border-light, $alpha: 0.3);
+    background-color: rgba($color: $color-border-light, $alpha: 0.2);
 }
 
 
