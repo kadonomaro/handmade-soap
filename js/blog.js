@@ -13,9 +13,9 @@ document.addEventListener('DOMContentLoaded', function () {
     typeWrite(
         'Творческая мастерская',
         100,
-        document.querySelector('.blog-header__title'),
+        document.querySelector('.page-header__title'),
         function () {
-            document.querySelector('.blog-header__subtitle').classList.remove('blog-header__subtitle--hidden');
+            document.querySelector('.page-header__subtitle').classList.remove('page-header__subtitle--hidden');
         }
     );
 
