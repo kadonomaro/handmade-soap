@@ -43,5 +43,9 @@
     &__text {
         margin: 10px;
     }
+    &__link {
+        color: $color-sea-blue;
+        text-decoration: none;
+    }
 
 }
