@@ -8,7 +8,6 @@
 
     &__background {
         background-color: $color-background-light;
-        background-image: url('../images/background/header-background-min.png');
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
@@ -62,6 +61,18 @@
         opacity: 0;
     }
 }
+.page-header--blog .page-header__background {
+    background-image: url('../images/background/header-background-min.png');
+}
+
+.page-header--gallery .page-header__background {
+    background-image: url('../images/background/header-background-min.png');
+}
+
+.page-header--faq .page-header__background {
+    
+}
+
 .page-header--404 {
     min-height: auto;
 }
