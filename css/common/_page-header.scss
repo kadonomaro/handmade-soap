@@ -47,7 +47,6 @@
         font-family: $font-cursive;
         color: $color-text-light;
         font-size: 2em;
-
     }
     &__nav {
         max-width: 50%;
@@ -71,9 +70,6 @@
 
 .page-header--faq {
     min-height: 30vh;
-}
-.page-header--faq .page-header__background {
-    // background-image: url('../images/background/clouds.png');
 }
 
 .page-header--404 {

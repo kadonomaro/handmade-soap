@@ -3,7 +3,29 @@
     min-height: 70vh;
     background-image: url('../images/background/clouds.png');
     background-size: contain;
+    background-position: center;
     background-repeat: no-repeat;
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: transform 0.7s ease-in;
+        pointer-events: none;
+    }
+    &::before {
+        left: 0;
+        background-image: url('../images/background/cloud-left.png');
+    }
+    &::after {
+        right: 0;
+        background-image: url('../images/background/cloud-right.png');
+    }
     &__background {
         background-color: $color-background-light;
         background-image: linear-gradient(to bottom, 
@@ -15,10 +37,25 @@
         padding: 30px 0;
         text-align: center;
     }
+    &__button {
+        position: relative;
+        z-index: 2;
+        margin-bottom: 30px;
+    }
     &__accordion {
+        position: relative;
+        z-index: 2;
         max-width: 900px;
         margin: 0 auto;
         text-align: center;
         perspective: 1000px;
+    }
+}
+.faq--animated {
+    &::before {
+        transform: translateX(-50%);
+    }
+    &::after {
+        transform: translateX(50%);
     }
 }
