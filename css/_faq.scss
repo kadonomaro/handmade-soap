@@ -1,5 +1,6 @@
 .faq {
     position: relative;
+    min-height: 50vh;
     &__background {
         background-color: $color-background-light;
     }
