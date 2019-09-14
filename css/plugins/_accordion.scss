@@ -1,5 +1,6 @@
 .accordion {
     counter-reset: number;
+    transition: transform 0.7s cubic-bezier(.25,.1,.37,1.65);
     &__item {
         margin-bottom: 10px;
     }
@@ -10,7 +11,7 @@
         margin-bottom: -2px;
         padding: 15px 25px;
         font-family: inherit;
-        font-size: inherit;
+        font-size: 1.2em;
         background-color: #ffffff;
         border: none;
         border-radius: 10px;
@@ -37,7 +38,7 @@
             left: 10px;
             color: lighten($color: $color-text-light, $amount: 20);
             font-family: $font-cursive;
-            font-size: 2em;
+            font-size: 1.5em;
             transform: translate(0, -50%);
             transition: color 0.2s ease-in;
         }
@@ -67,6 +68,7 @@
     &__content {
         height: 0;
         margin: 0 10px;
+        background-color: rgba($color: #ffffff, $alpha: 0.7);
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
         border-top: none;
@@ -83,7 +85,15 @@
     &__link {
         color: $color-sea-blue;
         text-decoration: none;
+        transition: color 0.2s ease-in;
+        &:hover,
+        &:focus {
+            color: darken($color: $color-sea-blue, $amount: 20);
+        }
     }
+}
+.accordion--hidden {
+    transform: rotateX(90deg) translateY(-100px) scale(0.2);
 }
 
 

@@ -1,15 +1,24 @@
 .faq {
     position: relative;
-    min-height: 50vh;
+    min-height: 70vh;
+    background-image: url('../images/background/clouds.png');
+    background-size: contain;
+    background-repeat: no-repeat;
     &__background {
         background-color: $color-background-light;
+        background-image: linear-gradient(to bottom, 
+                                        $color-background-light 0%, 
+                                        darken($color: $color-background-light, $amount: 3) 20%, 
+                                        darken($color: $color-background-light, $amount: 3) 100%);
     }
     &__inner {
         padding: 30px 0;
+        text-align: center;
     }
     &__accordion {
         max-width: 900px;
         margin: 0 auto;
         text-align: center;
+        perspective: 1000px;
     }
 }
