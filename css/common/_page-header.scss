@@ -65,7 +65,7 @@
 }
 
 .page-header--gallery .page-header__background {
-    background-image: url('../images/background/header-background-min.png');
+    background-image: url('../images/background/photoframes.png');
 }
 
 .page-header--faq {
@@ -114,6 +114,9 @@
         &__slogan {
             font-size: 1.5em;
         }
+    }
+    .page-header--gallery .page-header__background {
+        background-image: url('../images/background/mobile/photoframes-mobile.png');
     }
     .page-header--404 {
         min-height: 70vh;

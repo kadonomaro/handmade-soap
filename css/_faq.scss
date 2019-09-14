@@ -59,3 +59,32 @@
         transform: translateX(50%);
     }
 }
+
+
+
+@include media(1024){
+    .faq {
+        &::before,
+        &::after {
+            background-size: contain;
+            background-position: center;
+        }
+    }
+}
+
+
+@include media(600) {
+    .faq {
+        background-image: url('../images/background/mobile/clouds-mobile.png');
+        background-size: cover;
+        background-position-y: initial;
+        &::before,
+        &::after {
+            background-image: none;
+            display: none;
+        }
+        &__button {
+            display: none;
+        }
+    }
+}

@@ -106,6 +106,15 @@
                 left: 7px;
                 font-size: 1.2em;
             }
+            &::after {
+                right: 7px;
+                border-left-width: 7px;
+                border-right-width: 7px;
+                border-top-width: 7px;
+            }
         }
+    }
+    .accordion--hidden {
+        transform: none;
     }
 }
