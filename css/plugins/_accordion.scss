@@ -25,25 +25,43 @@
             box-shadow: 0 2px 7px rgba($color: #000000, $alpha: 0.2);
             transform: translateY(-2px);
         }
+        &::before,
+        &::after {
+            position: absolute;
+            z-index: 9;
+        }
         &::before {
             content: counter(number);
             counter-increment: number;
-            position: absolute;
-            z-index: 9;
             top: 50%;
             left: 10px;
-            color: $color-text-light;
+            color: lighten($color: $color-text-light, $amount: 20);
             font-family: $font-cursive;
             font-size: 2em;
             transform: translate(0, -50%);
-            opacity: 0.75;
             transition: color 0.2s ease-in;
+        }
+        &::after {
+            content: '';
+            top: 50%;
+            right: 10px;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid lighten($color: $color-text-light, $amount: 20);
+            opacity: 0.75;
+            transition: transform 0.2s ease-in, border-color 0.2s ease-in;
+            transform: translate(0, -50%);
         }
     }
     &__toggle--active {
-        box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.2);
+        box-shadow: 0 2px 7px rgba($color: #000000, $alpha: 0.2);
+        transform: translateY(-2px);
         &::before {
             color: $color-sea-blue;
+        }
+        &::after {
+            border-top-color: $color-sea-blue;
+            transform: translate(0, -50%) rotate(180deg);
         }
     }
     &__content {
