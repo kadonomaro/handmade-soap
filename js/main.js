@@ -28,7 +28,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     // swipe detection and close navigation by swipe
-    detectSwipeDirection(headerNav, 'header-nav--hidden','left');
+    detectSwipeDirection(headerNav, 'left', function () {
+        headerNav.classList.add('header-nav--hidden');
+    });
 
     
     //active or hidden button for scroll page to top
