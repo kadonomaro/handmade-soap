@@ -1,4 +1,4 @@
-import detectSwipeDirection from "./detectSwipeDirection.js";
+import detectSwipeDirection from "./modules/detectSwipeDirection.js";
 import scrollTop from "./modules/scrollTop.js";
 import fadeInAnimation from "./modules/fadeInAnimation.js";
 import tabs from "./modules/tabs.js";

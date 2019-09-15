@@ -75,9 +75,7 @@
 
 @include media(600) {
     .faq {
-        background-image: url('../images/background/mobile/clouds-mobile.png');
-        background-size: cover;
-        background-position-y: initial;
+        background-image: none;
         &::before,
         &::after {
             background-image: none;
