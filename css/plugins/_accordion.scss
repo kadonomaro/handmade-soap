@@ -102,12 +102,13 @@
     .accordion {
         &__toggle {
             padding: 10px 20px;
+            font-size: 1.1em;
             &::before {
                 left: 7px;
                 font-size: 1.2em;
             }
             &::after {
-                right: 7px;
+                right: 5px;
                 border-left-width: 7px;
                 border-right-width: 7px;
                 border-top-width: 7px;
