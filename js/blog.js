@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         top: 0,
                         behavior: 'smooth'
                     });
-                    this.classList.add('blog-header__button--hidden');
+                    this.classList.add('page-header__button--hidden');
                     this.addEventListener('transitionend', () => {
                         this.style.display = 'none';
                     });

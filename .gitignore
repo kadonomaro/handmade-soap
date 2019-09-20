@@ -9,3 +9,4 @@ sftp.json
 dist
 text
 node_modules/
+.cache
