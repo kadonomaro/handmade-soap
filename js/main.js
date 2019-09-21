@@ -80,9 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
     );
 
 
-
     //fade observer
     const fadeItemsParent = document.querySelectorAll('.stages-item');
     fadeObserver(fadeItemsParent, 'fade-in', '.stages-item__caption, .stages-item__image');
-
 });

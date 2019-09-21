@@ -110,10 +110,11 @@
 
 @include media(768) {
     .ingredients-types {
+        &__row {
+            display: block;
+        }
         &__col {
-            &:first-child {
-                width: 100%;
-            }
+            &:first-child,
             &:last-child {
                 width: 100%;
             }
