@@ -10,3 +10,6 @@ dist
 text
 node_modules/
 .cache
+
+#temporary ignore
+header.css
