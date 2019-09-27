@@ -552,8 +552,8 @@
 
                             <div class="blog-article__content">
                                 <picture>
-                                    <source media="(max-width: 600px)" srcset="images/blog/mobile/soap-splash-1-mobile.jpg">
-                                    <img src="images/blog/soap-splash-1.jpg" alt="мыло ручной работы" class="blog-article__image">
+                                    <source media="(max-width: 600px)" data-srcset="images/blog/mobile/soap-splash-1-mobile.jpg">
+                                    <img data-src="images/blog/soap-splash-1.jpg" alt="мыло ручной работы" class="blog-article__image lazyload">
                                 </picture>
                                 <div class="blog-article__text">
                                     <p>
@@ -573,8 +573,8 @@
 
                             <div class="blog-article__content">
                                 <picture>
-                                    <source media="(max-width: 600px)" srcset="images/blog/mobile/soap-splash-2-mobile.jpg">
-                                    <img src="images/blog/soap-splash-2.jpg" alt="мыло своими руками" class="blog-article__image">
+                                    <source media="(max-width: 600px)" data-srcset="images/blog/mobile/soap-splash-2-mobile.jpg">
+                                    <img data-src="images/blog/soap-splash-2.jpg" alt="мыло своими руками" class="blog-article__image lazyload">
                                 </picture>
                                 <div class="blog-article__text">
                                     <p>
@@ -815,5 +815,6 @@
     <script src="plugins/slick/slick.min.js"></script>
     <script src="js/main.js" type="module"></script>
     <script src="js/sliders.js"></script>
+    <script src="plugins/lazysizes.min.js" async=""></script>
 </body>
 </html>
