@@ -93,7 +93,6 @@
     }
     &__text {
         padding: 20px;
-
         h3,
         h4,
         h5
@@ -173,8 +172,14 @@
             right: 10px;
             font-size: 0.8em;
         }
+        &__content {
+            overflow: hidden;
+        }
         &__text {
+            position: relative;
             padding: 10px;
+            max-height: 300px;
+            overflow: scroll;
         }
     }
     .blog-article--small {
