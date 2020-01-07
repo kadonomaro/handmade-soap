@@ -1,3 +1,5 @@
+@import 'common/variables';
+@import 'common/mixins';
 .header {
     position: relative;
     display: flex;
@@ -105,7 +107,6 @@
         border: 0;
         transform: translateX(100%);
         cursor: pointer;
-        
         &:hover .header-nav__toggle-right, 
         &:focus .header-nav__toggle-right {
             fill: #427FF5;
@@ -115,8 +116,22 @@
             fill: #429EF2;
         }
     }
-    &__toggle-right, &__toggle-left {
+    &__toggle--active &__toggle-center {
+        opacity: 0;
+    }
+    &__toggle--active &__toggle-top {
+        transform: rotate(40deg) translate(0, 7px);
+    }
+    &__toggle--active &__toggle-bottom {
+        transform: rotate(-40deg) translate(0, -5px);
+    }
+    &__toggle-right, 
+    &__toggle-left,
+    &__toggle-top,
+    &__toggle-center,
+    &__toggle-bottom {
         transition: all 0.3s;
+        transform-origin: center;
     }
     &__social {
         position: absolute;

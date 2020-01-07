@@ -19,10 +19,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     headerNavToggle.addEventListener('click', function () {
         headerNav.classList.toggle('header-nav--hidden');
+        headerNavToggle.classList.toggle('header-nav__toggle--active');
     });
     window.addEventListener('scroll', function () {
         if (!headerNav.classList.contains('header-nav--hidden')) {
             headerNav.classList.add('header-nav--hidden');
+            headerNavToggle.classList.remove('header-nav__toggle--active');
         }
     });
 
