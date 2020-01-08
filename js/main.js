@@ -32,11 +32,12 @@ document.addEventListener('DOMContentLoaded', function () {
     // swipe detection and close navigation by swipe
     detectSwipeDirection(headerNav, 'left', function () {
         headerNav.classList.add('header-nav--hidden');
+        headerNavToggle.classList.remove('header-nav__toggle--active');
     });
 
     
     //active or hidden button for scroll page to top
-    let scrollTopButton = document.querySelector('.scroll-top');
+    const scrollTopButton = document.querySelector('.scroll-top');
     window.addEventListener('scroll', function () {
 
         if (window.pageYOffset > window.innerHeight) {
@@ -58,9 +59,9 @@ document.addEventListener('DOMContentLoaded', function () {
     );
 
     
-    let soapBaseTabsContainer = document.querySelector('#soap-base');
-    let soapAromaTabsContainer = document.querySelector('#soap-aroma');
-    let soapOilTabsContainer = document.querySelector('#soap-oil');
+    const soapBaseTabsContainer = document.querySelector('#soap-base');
+    const soapAromaTabsContainer = document.querySelector('#soap-aroma');
+    const soapOilTabsContainer = document.querySelector('#soap-oil');
 
     tabs(
         soapBaseTabsContainer.querySelectorAll('.ingredients-types-item'),

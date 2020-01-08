@@ -39,8 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function getDegrees(matrix) {
         matrix = matrix.split('(')[1].split(')')[0].split(',');
-        let angle = Math.round(Math.atan2(matrix[1], matrix[0]) * (180 / Math.PI));
-        return angle;
+        return Math.round(Math.atan2(matrix[1], matrix[0]) * (180 / Math.PI));;
     }
 
 
