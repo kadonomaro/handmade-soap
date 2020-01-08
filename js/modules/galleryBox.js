@@ -15,9 +15,6 @@ let galleryBox = {
         const galleryOverlay = document.createElement('div');
         let focusedElement;
 
-        //duplicate HTMLCollection for array map function
-        let imagesArr = [...images];
-
         
         document.addEventListener('click', function (evt) {
             images.forEach((image, index) => {
@@ -55,7 +52,7 @@ let galleryBox = {
                         
 
 
-                        ${imagesArr.map(image => {
+                        ${[...images].map(image => {
                             return `
                             <div class="gallery-box__slide">
                                 <img class="gallery-box__image" src="${image.src}" alt="${image.getAttribute('alt')}">

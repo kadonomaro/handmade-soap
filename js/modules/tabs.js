@@ -9,8 +9,6 @@ export default function tabs(tabs, content, tabActiveClass, contentActiveClass) 
                 switchTab(tab);
             }
         });
-
-
     });
 
     function switchTab(tab) {
