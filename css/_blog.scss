@@ -67,8 +67,8 @@
     &__header {
         position: absolute;
         z-index: 10;
-        top: 10px;
-        left: 10px;
+        top: 20px;
+        left: 20px;
         padding: 0.7em 1em;
         background-color: rgba($color: $color-sea-blue, $alpha: 0.9);
         border-radius: 15px;
@@ -169,6 +169,7 @@
             margin-bottom: 20px;
         }
         &__header {
+            top: 10px;
             right: 10px;
             font-size: 0.8em;
         }
