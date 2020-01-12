@@ -9,16 +9,23 @@ export default function subscribe() {
 
     subscribeButton.addEventListener('click', function (evt) {
         evt.preventDefault();
+        emailValidation(this);
 
+    });
+
+    function emailValidation(handle) {
         if (subscribeEmail.validity.valid) {
-            modal(this.dataset.target);
+            modal(handle.dataset.target);
         } else {
+            handle.disabled = true;
             subscribeEmail.classList.add('subscribe__input--invalid');
+            subscribeInvalidText.classList.add('subscribe__info--active');
             subscribeInvalidText.textContent = subscribeEmail.validationMessage;
             setTimeout(() => {
+                handle.disabled = false;
                 subscribeEmail.classList.remove('subscribe__input--invalid');
-                subscribeInvalidText.textContent = '';
-            }, 300000);
+                subscribeInvalidText.classList.remove('subscribe__info--active');
+            }, 4000);
         }
-    });
+    }
 }
