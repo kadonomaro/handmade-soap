@@ -88,5 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const fadeItemsParent = document.querySelectorAll('.stages-item');
     fadeObserver(fadeItemsParent, 'fade-in', '.stages-item__caption, .stages-item__image');
 
+    
+    //subscribe to newsletter
     subscribe();
 });
