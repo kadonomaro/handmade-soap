@@ -8,6 +8,7 @@
     background-size: cover;
     transform: scale(0.5);
     transition: transform 1s;
+    filter: drop-shadow(0px 0px 30px rgba(0,0,0,0.4));
     &::before {
         content: '';
         display: block;
