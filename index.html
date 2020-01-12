@@ -600,9 +600,9 @@
                 <div class="subscribe__col">
                     <form action="" method="POST" class="subscribe__form">
                         <label class="subscribe__label" aria-label="input email">
-                            <input class="subscribe__input" type="email" name="subscribe-email" placeholder="адрес электронной почты">
+                            <input class="subscribe__input" type="email" name="subscribe-email" placeholder="адрес электронной почты" required>
                         </label>
-                        <button class="subscribe__button button" type="submit">Подписаться</button>
+                        <button class="subscribe__button button js-open-modal" type="submit">Подписаться</button>
                     </form>
                 </div>
 
@@ -804,6 +804,21 @@
                 </div>
             </div><!--container-->
         </footer>
+
+        <div class="modal-overlay">
+            <div class="modal" id="modal-thanks">
+                <button class="modal__close">X</button>
+                <header class="modal__header">
+                    <h2 class="modal__title">Благодарим за подписку</h2>
+                    <span class="modal__subtitle">
+                        Теперь вы будете получать все самые свежие новости о мыле ручной работы
+                    </span>
+                </header>
+                <div class="modal__content">
+
+                </div>
+            </div>
+        </div>
 
     </div><!--all-wrapper-->
     
