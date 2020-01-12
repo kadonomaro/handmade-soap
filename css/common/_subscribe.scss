@@ -17,6 +17,10 @@
         flex: 1 0 50%;
         box-sizing: border-box;
     }
+    &__form {
+        position: relative;
+        display: inline-block;
+    }
     &__title {
         margin-bottom: 10px;
         color: #ffffff;
@@ -50,6 +54,12 @@
             color: inherit;
         }
     }
+    &__input--invalid {
+        border-color: $color-danger;
+        &:focus {
+            border-color: $color-danger;
+        }
+    }
     &__button {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
@@ -58,6 +68,15 @@
         &:hover {
             border-color: $color-text-light;
         }
+    }
+    &__info {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        display: block;
+        color: $color-danger;
+        text-align: center;
     }
 }
 
