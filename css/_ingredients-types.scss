@@ -105,6 +105,9 @@
                 margin-right: 10px;
             }
         }
+        &__desc {
+            font-size: 1em;
+        }
     }
 }
 
@@ -122,9 +125,6 @@
         }
         &__col--order {
             order: initial;
-        }
-        &__desc {
-            font-size: 1em;
         }
     }
 }
