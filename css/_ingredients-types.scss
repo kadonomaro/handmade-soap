@@ -68,6 +68,7 @@
     box-sizing: border-box;
     cursor: pointer;
     outline: none;
+    -webkit-tap-highlight-color: transparent;
     &:hover,
     &:focus {
         box-shadow: 0 5px 15px rgba($color: #000000, $alpha: 0.1);
@@ -121,6 +122,9 @@
         }
         &__col--order {
             order: initial;
+        }
+        &__desc {
+            font-size: 1em;
         }
     }
 }

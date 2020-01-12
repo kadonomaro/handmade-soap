@@ -10,7 +10,6 @@ export default function subscribe() {
     subscribeButton.addEventListener('click', function (evt) {
         evt.preventDefault();
         emailValidation(this);
-
     });
 
     function emailValidation(handle) {
