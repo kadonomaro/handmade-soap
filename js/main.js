@@ -4,6 +4,7 @@ import fadeInAnimation from "./modules/fadeInAnimation.js";
 import tabs from "./modules/tabs.js";
 import floatingBubbles from "./modules/floatingBubbles.js";
 import fadeObserver from "./modules/fadeObserver.js";
+import subscribe from "./modules/subscribe.js";
 
 
 
@@ -86,4 +87,6 @@ document.addEventListener('DOMContentLoaded', function () {
     //fade observer
     const fadeItemsParent = document.querySelectorAll('.stages-item');
     fadeObserver(fadeItemsParent, 'fade-in', '.stages-item__caption, .stages-item__image');
+
+    subscribe();
 });
