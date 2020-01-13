@@ -12,8 +12,8 @@ export default function modal(id) {
     }, 10);
     
     modal.focus();
-    modalOverlay.addEventListener('click', closeModal, {once: true});
-    modalOverlay.addEventListener('keydown', closeModal, {once: true});
+    modalOverlay.addEventListener('click', closeModal);
+    modalOverlay.addEventListener('keydown', closeModal);
 
     function closeModal(evt) {
         if (evt.target === modalOverlay || evt.target === modalClose || evt.keyCode === 27) {
@@ -22,6 +22,9 @@ export default function modal(id) {
             modal.classList.remove('modal--active');
             modal.classList.remove('modal--fade-in');
             document.body.classList.remove('page--modal-open');
+
+            modalOverlay.removeEventListener('click', modalClose);
+            modalOverlay.removeEventListener('keydown', modalClose);
         }
     }
 
