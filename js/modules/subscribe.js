@@ -24,7 +24,7 @@ export default function subscribe() {
                 handle.disabled = false;
                 subscribeEmail.classList.remove('subscribe__input--invalid');
                 subscribeInvalidText.classList.remove('subscribe__info--active');
-            }, 4000);
+            }, 3000);
         }
     }
 }

@@ -6,16 +6,22 @@ export default function modal(id) {
     modalOverlay.classList.add('modal-overlay--active');
     modal.classList.add('modal--active');
     document.body.classList.add('page--modal-open');
+    setTimeout(() => {
+        modalOverlay.classList.add('modal-overlay--fade-in');
+        modal.classList.add('modal--fade-in');
+    }, 10);
     
-    modalClose.focus();
-    modalOverlay.addEventListener('click', closeModal);
+    modal.focus();
+    modalOverlay.addEventListener('click', closeModal, {once: true});
+    modalOverlay.addEventListener('keydown', closeModal, {once: true});
 
     function closeModal(evt) {
-        if (evt.target === modalOverlay || evt.target === modalClose) {
+        if (evt.target === modalOverlay || evt.target === modalClose || evt.keyCode === 27) {
             modalOverlay.classList.remove('modal-overlay--active');
+            modalOverlay.classList.remove('modal-overlay--fade-in');
             modal.classList.remove('modal--active');
+            modal.classList.remove('modal--fade-in');
             document.body.classList.remove('page--modal-open');
-            modalOverlay.removeEventListener('click', closeModal);
         }
     }
 

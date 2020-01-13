@@ -600,7 +600,7 @@
                 <div class="subscribe__col">
                     <form action="" method="POST" class="subscribe__form">
                         <label class="subscribe__label" aria-label="input email">
-                            <input class="subscribe__input js-subsribe-email" type="email" name="subscribe-email" placeholder="адрес электронной почты" required>
+                            <input class="subscribe__input js-subsribe-email" type="email" name="subscribe-email" placeholder="адрес электронной почты" required novalidate>
                         </label>
                         <button class="subscribe__button button js-subscribe-button" data-target="modal-thanks">Подписаться</button>
                         <span class="subscribe__info js-subscribe-invalid"></span>
@@ -807,7 +807,7 @@
         </footer>
 
         <div class="modal-overlay">
-            <div class="modal" id="modal-thanks">
+            <div class="modal" id="modal-thanks" tabindex="0">
                 <button class="modal__close js-close-modal">
                     <svg class="modal__close-icon" width="100%" height="100%">
                         <path d="M20.13 8.11l-5.61 5.61-5.6-5.61-.81.8 5.61 5.61-5.61 5.61.8.8 5.61-5.6 5.61 5.6.8-.8-5.6-5.6 5.6-5.62" fill-rule="evenodd"></path>
