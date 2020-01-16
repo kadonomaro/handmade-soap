@@ -1,6 +1,6 @@
 .navigation {
     position: relative;
-    background-color: rgba($color: $color-sea-blue, $alpha: 0.7);
+    background-color: rgba($color: $color-sea-blue, $alpha: 0.8);
     border-radius: 25px;
     &__toggle {
         display: none;
@@ -51,6 +51,7 @@
         padding: 8px 4px;
         color: #ffffff;
         text-decoration: none;
+        text-shadow: 0 0 3px rgba($color: #000000, $alpha: 0.3);
     }
     &__dropdown {
         position: absolute;
