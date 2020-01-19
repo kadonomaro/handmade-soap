@@ -79,5 +79,6 @@
 @include media(1023) {
     .fade {
         display: none;
+        background-image: none;
     }
 }

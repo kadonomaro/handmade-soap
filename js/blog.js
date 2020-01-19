@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
         sectionCounter++;
         let scrollInterval = setInterval(() => {
             sections[sectionCounter].scrollIntoView(sectionScrollSettings);
+
             sectionCounter++;
             if (sectionCounter >= sections.length) {
                 setTimeout(() => {
