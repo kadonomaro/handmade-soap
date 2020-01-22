@@ -14,7 +14,19 @@ export default function subscribe() {
 
     function emailValidation(handle) {
         if (subscribeEmail.validity.valid) {
-            modal(handle.dataset.target);
+            
+            sendData('https://jsonplaceholder.typicode.com/posts', subscribeEmail.value)
+                .then((responce) => {
+                    responce.json();
+                })
+                .then(() => {
+                    modal(handle.dataset.target);
+                    subscribeEmail.value = '';
+                })
+                .catch(err => {
+                    console.log(err);
+                });
+            
         } else {
             handle.disabled = true;
             subscribeEmail.classList.add('subscribe__input--invalid');
@@ -27,4 +39,17 @@ export default function subscribe() {
             }, 3000);
         }
     }
+}
+
+function sendData(url, email) {
+    let data = {
+        email
+    };
+    return fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json;charset=utf-8'
+        },
+        body: JSON.stringify(email)
+    });
 }
