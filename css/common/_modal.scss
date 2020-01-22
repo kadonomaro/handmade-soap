@@ -24,8 +24,8 @@
     position: relative;
     display: none;
     max-width: 600px;
-    min-height: 300px;
-    padding: 20px 80px;
+    min-height: 260px;
+    padding: 20px 70px;
     background-color: #ffffff;
     background-image:
                     url('../images/background/modal-background-2.png'),
@@ -69,7 +69,21 @@
         font-size: 24px;
     }
     &__subtitle {
+        display: block;
+        margin-bottom: 30px;
         color: #606060;
+    }
+    &__content {
+        color: $color-text;
+    }
+    &__link {
+        color: $color-sea-blue;
+        text-decoration: none;
+        transition: color 0.2s ease-in;
+        &:hover,
+        &:focus {
+            color: darken($color: $color-sea-blue, $amount: 20);
+        }
     }
 }
 .modal--active {
