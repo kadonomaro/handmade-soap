@@ -9,6 +9,7 @@
         margin: 0 5px;
     }
     &__link {
+        position: relative;
         display: block;
         width: 50px;
         height: 50px;
@@ -17,14 +18,40 @@
         background-size: cover;
         background-repeat: no-repeat;
         transition: transform 0.2s ease-in;
-        &:hover, &:focus {
+        &:hover, 
+        &:focus {
             transform: translateY(-3px);
         }
+
+
+
     }
     &__link--two {
         background-position-x: -60px;
     }
     &__link--three {
         background-position-x: -120px;
+    }
+}
+
+
+.social--effect-shadow .social__link {
+    &:hover::before,
+    &:focus::before {
+        transform: scale(1) translateY(3px);
+        opacity: 1;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        left: 0;
+        width: 100%;
+        height: 10px;
+        background-color: rgba($color: #000000, $alpha: 0.2);
+        border-radius: 50%;
+        transform: scale(0);
+        transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+        opacity: 0;
     }
 }
