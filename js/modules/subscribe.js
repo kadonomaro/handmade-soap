@@ -4,7 +4,7 @@ export default function subscribe() {
 
     const subscribeBlock = document.querySelector('.subscribe');
     const subscribeButton = subscribeBlock.querySelector('.js-subscribe-button');
-    const subscribeEmail = subscribeBlock.querySelector('.js-subsribe-email');
+    const subscribeEmail = subscribeBlock.querySelector('.js-subscribe-email');
     const subscribeInvalidText = subscribeBlock.querySelector('.js-subscribe-invalid');
 
     subscribeButton.addEventListener('click', function (evt) {
@@ -15,13 +15,14 @@ export default function subscribe() {
     function emailValidation(handle) {
         if (subscribeEmail.validity.valid) {
             
-            sendData('https://jsonplaceholder.typicode.com/posts', subscribeEmail.value)
+            sendData('/test/', subscribeEmail.value)
                 .then((responce) => {
-                    responce.json();
+                    // responce.json();
                 })
-                .then(() => {
+                .then((responceData) => {
                     modal(handle.dataset.target);
                     subscribeEmail.value = '';
+                    console.log(responceData);
                 })
                 .catch(err => {
                     console.log(err);
@@ -47,9 +48,10 @@ function sendData(url, email) {
     };
     return fetch(url, {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/json;charset=utf-8'
+        headers : { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
         },
-        body: JSON.stringify(email)
+        body: JSON.stringify(data)
     });
 }
