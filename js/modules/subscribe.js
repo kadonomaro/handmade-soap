@@ -15,18 +15,14 @@ export default function subscribe() {
     function emailValidation(handle) {
         if (subscribeEmail.validity.valid) {
             
-            sendData('/test/', subscribeEmail.value)
-                .then((responce) => {
-                    // responce.json();
-                })
-                .then((responceData) => {
+            $.post("/test", { email: subscribeEmail.value },
+                function (data) {
+                    console.log(data);
                     modal(handle.dataset.target);
-                    subscribeEmail.value = '';
-                    console.log(responceData);
-                })
-                .catch(err => {
-                    console.log(err);
-                });
+                }
+            ).fail(function (error) {
+                console.error(error.statusText);
+            });
             
         } else {
             handle.disabled = true;
@@ -40,18 +36,4 @@ export default function subscribe() {
             }, 3000);
         }
     }
-}
-
-function sendData(url, email) {
-    let data = {
-        email
-    };
-    return fetch(url, {
-        method: 'POST',
-        headers : { 
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        },
-        body: JSON.stringify(data)
-    });
 }
