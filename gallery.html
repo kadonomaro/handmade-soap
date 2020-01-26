@@ -176,7 +176,7 @@
         </section>
 
 
-        <div class="subscribe">
+        <section class="subscribe">
             <div class="subscribe__inner">
             <div class="subscribe__background background"></div>
 
@@ -188,14 +188,15 @@
                 <div class="subscribe__col">
                     <form action="" method="POST" class="subscribe__form">
                         <label class="subscribe__label" aria-label="input email">
-                            <input class="subscribe__input" type="email" name="subscribe-email" placeholder="адрес электронной почты">
+                            <input class="subscribe__input js-subscribe-email" type="email" name="subscribe-email" placeholder="адрес электронной почты" required novalidate>
                         </label>
-                        <button class="subscribe__button button" type="submit">Подписаться</button>
+                        <button class="subscribe__button button js-subscribe-button" data-target="modal-thanks">Подписаться</button>
+                        <span class="subscribe__info js-subscribe-invalid"></span>
                     </form>
                 </div>
 
             </div>
-        </div>
+        </section>
 
 
         <footer class="footer" id="footer">
