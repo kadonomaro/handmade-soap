@@ -161,6 +161,9 @@
         &__title {
             margin-bottom: 20px;
         }
+        &__articles--small  {
+            display: block;
+        }
     }
 
     .blog-article {
@@ -181,7 +184,7 @@
             position: relative;
             padding: 10px;
             max-height: 300px;
-            overflow: scroll;
+            overflow-y: scroll;
         }
     }
     .blog-article--small {

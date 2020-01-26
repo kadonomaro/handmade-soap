@@ -34,6 +34,7 @@
     &__input {
         min-width: 200px;
         max-height: 43px;
+        margin: 0;
         margin-right: -4px; 
         padding: 10px 20px;
         color: $color-text-light;
@@ -61,6 +62,7 @@
         }
     }
     &__button {
+        margin: 0;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
         border-left-width: 1px;
@@ -128,6 +130,9 @@
 
 @include media(600) {
     .subscribe {
+        &__form {
+            display: block;
+        }
         &__input,
         &__button {
             width: 100%;
@@ -139,7 +144,10 @@
         &__input {
             border-bottom-width: 1px;
             border-top-left-radius: 25px;
-            border-top-right-radius: 25px; 
+            border-top-right-radius: 25px;
+            &::placeholder {
+                text-align: center;
+            }
         }
         &__button {
             border-top-width: 1px;
