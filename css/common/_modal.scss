@@ -61,6 +61,7 @@
         pointer-events: none;
     }
     &__header {
+        margin-bottom: 30px;
         color: #303030;
         text-align: center;
     }
@@ -70,7 +71,6 @@
     }
     &__subtitle {
         display: block;
-        margin-bottom: 30px;
         color: #606060;
     }
     &__content {
@@ -97,7 +97,18 @@
 
 @include media(767) {
     .modal {
+        padding: 20px;
         background-image: url('../images/background/modal-background-1.png');
         background-position: right 100%;
+        &__close {
+            top: 5px;
+            right: 5px;
+        }
+        &__header {
+            margin-bottom: 15px;
+        }
+        &__title {
+            font-size: 20px;
+        }
     }
 }

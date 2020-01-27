@@ -115,6 +115,7 @@
         left: 10px;
         bottom: 10px;
         text-decoration: none;
+        -webkit-tap-highlight-color: transparent;
     }
 }
 .blog-article--small {
@@ -185,6 +186,9 @@
             padding: 10px;
             max-height: 300px;
             overflow-y: scroll;
+        }
+        &__link {
+            right: 10px;
         }
     }
     .blog-article--small {
