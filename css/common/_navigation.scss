@@ -7,10 +7,24 @@
         width: 50px;
         height: 50px;
         margin-left: 10px;
+        padding: 0;
         background-color: transparent;
-        background-image: url('../images/icons/soap-burger.svg');
-        background-size: cover;
         border: none;
+    }
+    &__toggle--active &__toggle-mid {
+        opacity: 0;
+    }
+    &__toggle--active &__toggle-top {
+        transform: rotate(45deg) translate(0, 5px);
+    }
+    &__toggle--active &__toggle-bot {
+        transform: rotate(-45deg) translate(-3px, -6px);
+    }
+    &__toggle-top,
+    &__toggle-mid,
+    &__toggle-bot {
+        transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+        transform-origin: center;
     }
     &__list {
         display: flex;
@@ -19,7 +33,6 @@
         text-align: center;
         list-style: none;
     }
-
     &__item {
         position: relative;
         flex: 1;

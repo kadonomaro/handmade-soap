@@ -25,6 +25,7 @@ export default function navigation() {
 
         if (navList.classList.contains('navigation__list--active')) {
             navList.classList.remove('navigation__list--active');
+            navToggle.classList.remove('navigation__toggle--active');
             setTimeout(function () {
                 navList.style.display = 'none';
             },500);
@@ -32,6 +33,7 @@ export default function navigation() {
             navList.style.display = 'flex';
             setTimeout(function () {
                 navList.classList.add('navigation__list--active');
+                navToggle.classList.add('navigation__toggle--active');
             }, 100);
         }
         
